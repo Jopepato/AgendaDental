@@ -1,0 +1,22 @@
+Identificador: 4
+
+Caso de uso: Modificar.
+
+Actor principal: Administrativo.
+
+Breve descripción: Cambia los datos almacenados de un cliente existente.
+
+Precondiciones: 1.- Debe existir el cliente solicitado en la lista.
+
+Flujo principal: 1.- Introducir apellido.
+                 2.- Comprobar si existe el cliente.
+                  2.1.- Leer la lista.
+                  2.2.- Buscar apellido en la lista.
+                 3.- Introducir todos los datos del cliente modificados.
+                 4.- Sobreescribir datos en la lista.
+                 5.- Imprimir lista en el fichero.
+                 6.- Ordenar la lista.
+
+Flujo alternativo: Ninguno.
+
+Ámbito: General (Clínica)

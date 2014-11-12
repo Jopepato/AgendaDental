@@ -1,0 +1,17 @@
+Identificador: 6
+
+Caso de uso: HacerCopia.
+
+Actor principal: Administrativo.
+
+Breve descripción: Realiza una copia de seguridad del fichero
+
+Precondiciones: 1.- Debe existir un fichero de agenda.
+
+Flujo principal: 1.- Leer fichero.
+                 2.- Pedir nombre para copia de seguridad.
+                 3.- Imprimir la lista en el nuevo fichero.
+
+Flujo alternativo: Ninguno.
+
+Ámbito: General (Clínica)

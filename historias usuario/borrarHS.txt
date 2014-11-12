@@ -1,0 +1,18 @@
+Identificador: Borrar.
+
+Titulo: BorrarCliente.
+
+
+Descripción: Borra un cliente de la agenda, el administrativo introducirá el nombre del cliente que quiere borrar.
+
+Estimación: /*Preguntar*/
+
+Prioridad: 1.
+
+Dependencias: Busqueda.
+
+Pruebas de aceptación: 1.- Introducir el apellido del cliente a borrar.
+                       2.- Buscar al cliente introducido en la agenda.
+                       3.
+                          - Dar error si no se encuentra en la agenda al cliente introducido.
+                          - Si se encuentra dicho cliente, se borra de la agenda.

@@ -1,0 +1,19 @@
+Identificador: 1
+Caso de uso: Búsqueda.
+
+Actor principal: Administrativo.
+
+Breve descripción: Búsqueda de datos del cliente por apellidos.
+
+Precondiciones: 1.- Que los datos del usuario estén introducidos en la lista.
+
+
+Flujo principal: 1.- Introducir el apellido.
+                 2.- Leer la lista del fichero.
+                 3.- Búsqueda del cliente en la lista del fichero.
+                 4.- Si no existe, avisar al administrativo.
+                     Si existe, imprimir por pantalla de los datos del cliente.
+
+Flujos alternativos: Ninguno.
+
+Ámbito: General (Clínica)

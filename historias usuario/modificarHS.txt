@@ -1,0 +1,17 @@
+Identificador: Modificar.
+
+Titulo: ModificarCliente.
+
+
+Descripción: Modifica los datos de un cliente ya existente en la agenda por parte del administrativo.
+
+Estimación: /*Preguntar*/
+
+Prioridad: 1.
+
+Dependencias: Busqueda.
+
+Pruebas de aceptación: 1.- Introducir los nuevos datos del cliente.
+                       2.- Comprobar si el cliente esta en la agenda.
+                       3.- Si no esta introducido, se avisará al administrativo.
+                         - Si está se modificarán los datos del mismo.

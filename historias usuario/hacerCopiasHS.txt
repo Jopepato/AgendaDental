@@ -1,0 +1,16 @@
+Identificador: HacerCopia.
+
+Titulo: HacerCopiaDeSeguridad.
+
+
+Descripción: Hace una copia de seguridad de la agenda.
+
+Estimación: /*Preguntar*/
+
+Prioridad: 1.
+
+Dependencias: Ninguna.
+
+Pruebas de aceptación: 1.- Pide un nombre para la copia de seguridad.
+                       2.- Comprobar que existe un fichero primigenio, si no existe dará error.
+                       3.- Lee la agenda y la traspasa a la copia de seguridad.
