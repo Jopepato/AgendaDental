@@ -1,12 +1,6 @@
 Caso de uso: Borrar
 ===================
 
-<<<<<<< HEAD
-Identificador: 5
-----------------
-
-#### __Huehue__
-=======
 Identificador: BorrarCliente
 ----------------------------
 
@@ -38,4 +32,4 @@ Identificador: BorrarCliente
 
 **Ámbito**:
 >General *Clínica*
->>>>>>> 42cf2c27b5fececbbb5970b914c10da212995489
+
