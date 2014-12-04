@@ -19,10 +19,10 @@ Primero se subirán las historias de usuario y los casos de uso. Para la primera
 
 ***
 
-Tareas pendientes:
+###Tareas pendientes:
 
-[x] Casos de uso. :+1:
-[x] Historias de usuario. :+1:
-[x] Diagrama de clases. :+1:
-[x] Diagramas secuenciales. :+1:
-[] Implementación.
+- [x] Casos de uso. :+1:
+- [x] Historias de usuario. :+1:
+- [x] Diagrama de clases. :+1:
+- [x] Diagramas secuenciales. :+1:
+- [] Implementación.
