@@ -15,3 +15,14 @@ Primero se subirán las historias de usuario y los casos de uso. Para la primera
 |Pérez - Parras Toledano, José   | [i32petoj  ](https://github.com/i32petoj)                |
 |Ruano Ruiz, José Manuel         | [Ruanorz    ](https://github.com/ruanorz)                 |
 |Torres Vidal, Francisco         | [FranTorresVidal  ](https://github.com/FranTorresVidal)   |
+
+
+***
+
+Tareas pendientes:
+
+[x] Casos de uso. :+1:
+[x] Historias de usuario. :+1:
+[x] Diagrama de clases. :+1:
+[x] Diagramas secuenciales. :+1:
+[] Implementación.
