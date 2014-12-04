@@ -7,7 +7,7 @@ Descripción: Ordena los clientes de la agenda por apellido, es decir alfabetica
 
 Estimación: /*Preguntar*/
 
-Prioridad: 2.
+Prioridad: 3.
 
 Dependencias: Insertar.
 

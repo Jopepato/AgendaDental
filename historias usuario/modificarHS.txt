@@ -7,7 +7,7 @@ Descripción: Modifica los datos de un cliente ya existente en la agenda por par
 
 Estimación: /*Preguntar*/
 
-Prioridad: 1.
+Prioridad: 5.
 
 Dependencias: Busqueda.
 

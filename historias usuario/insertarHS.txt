@@ -7,7 +7,7 @@ Descripción: Inserta un nuevo cliente en la agenda, el cliente se le pregunta a
 
 Estimación: /*Preguntar*/
 
-Prioridad: 1.
+Prioridad: 4.
 
 Dependencias: Ninguna.
 

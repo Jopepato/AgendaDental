@@ -7,7 +7,7 @@ Descripción: Busca un cliente en el fichero, dicho cliente ha sido pedido por e
 
 Estimación: /*Preguntar*/
 
-Prioridad: 1.
+Prioridad: 2.
 
 Dependencias: Insertar.
 

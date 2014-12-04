@@ -8,15 +8,20 @@ Breve descripción: Elimina el registro de un cliente.
 
 Precondiciones: 1.- Deben existir el cliente solicitado en la lista
 
-Flujo principal: 1.- Introducir apellido.
+Flujo principal: 
+1. El usuario selecciona la opción "Borrar"
+1.- Introducir apellido.
                  2.- Comprobar si existe el cliente.
-                  2.1.- Leer la lista.
-                  2.2.- Buscar apellido en la lista.
+                  2.1.- Leer la lista de apellidos coincidentes.
+                  2.2.- Seleccionar el apellido en la lista.
                  3.- Se borra el cliente de la lista.
-                 4.- Imprimir lista en el fichero.
+                 4.- Guardar lista en el fichero.
                  5.- Ordenar lista.
 
 
 Flujo alternativo: Ninguno.
 
 Ámbito: General (Clínica)
+
+Postcondiciones: 
+El fichero en disco no debe contener el cliente y debe seguir ordenado. 
