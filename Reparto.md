@@ -5,6 +5,7 @@ Reparto de tareas
 ###Fran
 + HacerCopia
 + RestaurarCopia
+
 -------------------
 ###Ruano
 + Ordenación
