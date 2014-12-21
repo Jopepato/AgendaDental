@@ -1,0 +1,298 @@
+/tmp/ccK7lIj6.o: En la función `main':
+/home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:12: referencia a `std::allocator<char>::allocator()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:12: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:12: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:12: referencia a `std::allocator<char>::~allocator()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:17: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:17: referencia a `std::allocator<char>::~allocator()' sin definir
+/tmp/ccK7lIj6.o: En la función `__static_initialization_and_destruction_0':
+/usr/include/c++/4.8/iostream:74: referencia a `std::ios_base::Init::Init()' sin definir
+/usr/include/c++/4.8/iostream:74: referencia a `std::ios_base::Init::~Init()' sin definir
+/tmp/ccK7lIj6.o: En la función `RedesSociales::operator=(RedesSociales const&)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::string::operator=(std::string const&)' sin definir
+/tmp/ccK7lIj6.o: En la función `Direcciones::operator=(Direcciones const&)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::string::operator=(std::string const&)' sin definir
+/tmp/ccK7lIj6.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: más referencias a `std::string::operator=(std::string const&)' sin definir a continuación
+/tmp/ccK7lIj6.o:(.eh_frame+0xab): referencia a `__gxx_personality_v0' sin definir
+/tmp/ccRMoYb9.o: En la función `Agenda::Agenda(std::string)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:16: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:16: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o: En la función `Agenda::pedirDatos()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:42: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:42: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:42: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:42: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:47: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/tmp/ccRMoYb9.o:/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:47: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir a continuación
+/tmp/ccRMoYb9.o: En la función `Agenda::pedirDatos()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:71: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:71: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:72: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:72: referencia a `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:73: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:73: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:74: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:74: referencia a `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:75: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:75: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:76: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:76: referencia a `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:78: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:78: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:79: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:79: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:82: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:82: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:83: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:83: referencia a `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:84: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:84: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:85: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:85: referencia a `std::istream::operator>>(int&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:86: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:86: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:87: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:87: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:88: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:89: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:97: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:97: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:98: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:98: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:101: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:101: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:102: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:102: referencia a `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:108: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:108: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:109: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:109: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:120: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:120: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:121: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:121: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:126: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:126: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:126: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:126: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:127: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:127: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:127: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:127: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:128: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:128: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:128: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:128: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:129: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:129: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:129: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:129: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:130: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:130: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:130: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:130: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:131: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:131: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:132: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:132: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:133: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:133: referencia a `std::istream::operator>>(int&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:139: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:139: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:140: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:140: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:141: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:144: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:144: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:145: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:145: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:146: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:149: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:149: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:150: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:150: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:151: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:154: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:154: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:155: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:155: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:156: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:159: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:159: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:172: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:172: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:173: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:173: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:178: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:178: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:178: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:178: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:179: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:179: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:179: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:179: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:180: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:180: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:180: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:180: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:181: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:181: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:181: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:181: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:182: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:182: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:183: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:183: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:184: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:184: referencia a `std::istream::operator>>(int&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:190: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:190: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:191: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:191: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:192: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:195: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:195: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:196: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:196: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:197: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:200: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:200: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:201: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:201: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:202: referencia a `std::string::operator=(std::string const&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:205: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:205: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:216: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:216: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:217: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:217: referencia a `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:222: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:222: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:222: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:222: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:223: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:223: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:223: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:223: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:224: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:224: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:224: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:224: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:225: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:225: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:225: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:225: referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:226: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:226: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:227: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:227: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:228: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:228: referencia a `std::istream::operator>>(int&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:234: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:234: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:235: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:235: referencia a `std::istream::operator>>(int&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:239: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:239: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:240: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:240: referencia a `std::istream::operator>>(int&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:244: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:244: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:245: referencia a `std::cin' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:245: referencia a `std::istream::operator>>(int&)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:249: referencia a `std::cout' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:249: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:61: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:60: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:59: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:54: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:53: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o:/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:52: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
+/tmp/ccRMoYb9.o: En la función `Agenda::~Agenda()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:314: referencia a `operator delete(void*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:312: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o: En la función `Agenda::~Agenda()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:314: referencia a `operator delete(void*)' sin definir
+/tmp/ccRMoYb9.o: En la función `__static_initialization_and_destruction_0':
+/usr/include/c++/4.8/iostream:74: referencia a `std::ios_base::Init::Init()' sin definir
+/usr/include/c++/4.8/iostream:74: referencia a `std::ios_base::Init::~Init()' sin definir
+/tmp/ccRMoYb9.o: En la función `Agenda::setNombreFichero(std::string const&)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.h:51: referencia a `std::string::operator=(std::string const&)' sin definir
+/tmp/ccRMoYb9.o: En la función `Direcciones::Direcciones()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o: En la función `Direcciones::~Direcciones()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o: En la función `RedesSociales::RedesSociales()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o: En la función `RedesSociales::~RedesSociales()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
+/tmp/ccRMoYb9.o: En la función `Correos::Correos()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o: En la función `Correos::~Correos()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccRMoYb9.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
+/tmp/ccRMoYb9.o: En la función `__gnu_cxx::new_allocator<std::_List_node<Cliente> >::deallocate(std::_List_node<Cliente>*, unsigned int)':
+/usr/include/c++/4.8/ext/new_allocator.h:110: referencia a `operator delete(void*)' sin definir
+/tmp/ccRMoYb9.o:(.rodata._ZTI6Agenda[_ZTI6Agenda]+0x0): referencia a `vtable for __cxxabiv1::__class_type_info' sin definir
+/tmp/ccRMoYb9.o:(.eh_frame+0x6b): referencia a `__gxx_personality_v0' sin definir
+/tmp/ccrwIsjd.o: En la función `Cliente::Cliente()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccrwIsjd.o: En la función `Cliente::Cliente(std::string, std::string, std::string, std::string, bool, int, RedesSociales, Direcciones, Correos, Telefonos)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccrwIsjd.o: En la función `Cliente::~Cliente()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccrwIsjd.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
+/tmp/ccrwIsjd.o: En la función `Cliente::~Cliente()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:39: referencia a `operator delete(void*)' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/tmp/ccrwIsjd.o: En la función `Cliente::~Cliente()':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:39: referencia a `operator delete(void*)' sin definir
+/tmp/ccrwIsjd.o: En la función `Cliente::setAnotaciones(std::string const&)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:46: referencia a `std::string::operator=(std::string const&)' sin definir
+/tmp/ccrwIsjd.o: En la función `Cliente::setApellidos(std::string const&)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:54: referencia a `std::string::operator=(std::string const&)' sin definir
+/tmp/ccrwIsjd.o: En la función `Cliente::setDni(std::string const&)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:78: referencia a `std::string::operator=(std::string const&)' sin definir
+/tmp/ccrwIsjd.o: En la función `Cliente::setNombre(std::string const&)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:102: referencia a `std::string::operator=(std::string const&)' sin definir
+/tmp/ccrwIsjd.o:(.rodata._ZTI7Cliente[_ZTI7Cliente]+0x0): referencia a `vtable for __cxxabiv1::__class_type_info' sin definir
+/tmp/ccrwIsjd.o:(.eh_frame+0x13): referencia a `__gxx_personality_v0' sin definir
+collect2: error: ld returned 1 exit status

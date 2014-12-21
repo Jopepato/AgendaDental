@@ -1,7 +1,9 @@
 #include <iostream>
 #include "Agenda.h"
 #include "Cliente.h"
+#include <string>
 
+using namespace std;
 
 int main (){
 
