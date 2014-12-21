@@ -6,8 +6,12 @@
  */
 
 #include "Agenda.h"
+#include "Cliente.h"
 #include <string>
 #include <iostream>
+#include <list>
+
+using namespace std;
 
 Agenda::Agenda(std::string ficheroAgenda) {
 	setNombreFichero(ficheroAgenda);
@@ -19,7 +23,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 
 
 
-																						FUNCION PEDIR DATOS
+									FUNCION PEDIR DATOS
 
 
 
@@ -30,30 +34,31 @@ Agenda::Agenda(std::string ficheroAgenda) {
 
 **********/
 
-	Agenda::Cliente pedirDatos(){
+	Cliente Agenda::pedirDatos(){
 		
 		
 		Cliente aux;
 		
-		std::string nombre, apellidos, DNI, anotaciones;
+		string nombre, apellidos, DNI, anotaciones;
 		char opcion;
 		bool favorito;
+		int opcionMenu;
 		
-		std::string calle, puerta;
+		string calle, puerta;
 		int portal;
 		Direcciones direccion;
 		
-		std::string facebook;
-		std::string twitter;
-		std::string tuenti;
-		std::string linkedin;
+		string facebook;
+		string twitter;
+		string tuenti;
+		string linkedin;
 		Redes redes;
 		int opcionRedes;
 		
 		
-		std::string hotmail;
-		std::string gmail;
-		std::string yahoo;
+		string hotmail;
+		string gmail;
+		string yahoo;
 		Correos correos;
 		
 		
@@ -64,22 +69,22 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		
 		
 		cout<<"Introduce el nombre: ";
-		std::getline(std::cin, nombre);
+		getline(cin, nombre);
 		cout<<"Introduce los apellidos: ";
-		std::getline(std::cin, apellidos);
+		getline(cin, apellidos);
 		cout<<"Introduce DNI: ";
-		std::getline(std::cin, DNI);
+		getline(cin, DNI);
 		do{
 			cout<<"¿Introducir direccion? (s/n): ";
-			std::getline(std::cin, opcion);
+			cin>>opcion;
 			
 				if(opcion=='s'){
 					cout<<"Introduce calle: ";
-					std::getline(std::cin, calle);
+					getline(cin, calle);
 					cout<<"Introduce numero: ";
-					std::getline(std::cin, portal);
+					cin>>portal;
 					cout<<"Introduce puerta: ";
-					std::getline(std::cin, puerta);
+					cin>>puerta;
 					direccion.calle=calle;
 					direccion.puerta=puerta;
 					direccion.portal=portal;
@@ -90,18 +95,18 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		
 		do{
 			cout<<"¿Introducir anotacion? (s/n): ";
-			std::getline(std::cin, opcion);
+			cin>>opcion;
 			
 				if(opcion=='s'){
 					cout<<"Introduce anotacion: ";
-					std::getline(std::cin, anotaciones);
+					getline(cin, anotaciones);
 				}
 		
 		}while(opcion!='s'||opcion!='n');
 
 		do{
 			cout<<"¿Es favorito? (s/n): ";
-			std::getline(std::cin, opcion);
+			cin>>opcion;
 			
 				if(opcion=='s'){
 					favorito=1;
@@ -113,7 +118,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		
 		do{
 			cout<<"¿Introducir redes? (s/n): ";
-			std::getline(std::cin, opcion);
+			cin>>opcion;
 			
 				if(opcion=='s'){
 					
@@ -123,7 +128,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 					cout<<"2.Facebook"<<endl;					
 					cout<<"3.Tuenti"<<endl;
 					cout<<"4.Linkedin"<<endl;
-					cout<<"0.Salir"
+					cout<<"0.Salir";
 					cout<<"Opcion: ";
 					cin>>opcionMenu;
 					
@@ -132,22 +137,22 @@ Agenda::Agenda(std::string ficheroAgenda) {
 						case 0: break;
 					
 						case 1: cout<<"Introduce usuario twitter: ";
-								std::getline(std::cin, twitter);
+								cin>>twitter;
 								redes.twitter = twitter;
 								break;
 								
 						case 2: cout<<"Introduce usuario facebook: ";
-								std::getline(std::cin, facebook);
+								cin>>facebook;
 								redes.facebook = facebook;
 								break;
 								
 						case 3: cout<<"Introduce usuario tuenti: ";
-								std::getline(std::cin, tuenti);
+								cin>>tuenti;
 								redes.tuenti = tuenti;
 								break;
 								
 						case 4: cout<<"Introduce usuario linkedin: ";
-								std::getline(std::cin, linkedin);
+								cin>>linkedin;
 								redes.linkedin = linkedin;
 								break;
 								
@@ -165,7 +170,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		
 		do{
 			cout<<"¿Tienes correo? (s/n): ";
-			std::getline(std::cin, opcion);
+			cin>>opcion;
 			
 				if(opcion=='s'){
 					
@@ -174,7 +179,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 						cout<<"1.Gmail"<<endl;
 						cout<<"2.Hotmail"<<endl;					
 						cout<<"3.Yahoo"<<endl;
-						cout<<"0.Salir"
+						cout<<"0.Salir";
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
 					
@@ -183,17 +188,17 @@ Agenda::Agenda(std::string ficheroAgenda) {
 							case 0: break;
 						
 							case 1: cout<<"Introduce tu direccion: ";
-									std::getline(std::cin, gmail);
+									cin>>gmail;
 									correos.gmail=gmail;
 									break;
 									
 							case 2: cout<<"Introduce tu direccion: ";
-									std::getline(std::cin, hotmail);
+									cin>>hotmail;
 									correos.hotmail=hotmail;
 									break;
 									
 							case 3: cout<<"Introduce tu direccion: ";
-									std::getline(std::cin, yahoo);
+									cin>>yahoo;
 									correos.yahoo=yahoo;
 									break;
 									
@@ -209,7 +214,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		
 		do{
 			cout<<"¿Tienes telefono? (s/n): ";
-			std::getline(std::cin, opcion);
+			cin>>opcion;
 			
 				if(opcion=='s'){
 					
@@ -218,7 +223,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 						cout<<"1.Fijo"<<endl;
 						cout<<"2.Movil1"<<endl;					
 						cout<<"3.Movil2"<<endl;
-						cout<<"0.Salir"
+						cout<<"0.Salir";
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
 					
@@ -227,17 +232,17 @@ Agenda::Agenda(std::string ficheroAgenda) {
 							case 0: break;
 						
 							case 1: cout<<"Introduce tu numero fijo: ";
-									std::getline(std::cin, numeroFijo);
+									cin>>numeroFijo;
 									telefonos.numeroFijo=numeroFijo;
 									break;
 									
 							case 2: cout<<"Introduce tu movil: ";
-									std::getline(std::cin, numeroMovil1);
+									cin>>numeroMovil1;
 									telefonos.numeroMovil1=numeroMovil1;
 									break;
 									
 							case 3: cout<<"Introduce tu movil2: ";
-									std::getline(std::cin, numeroMovil2);
+									cin>>numeroMovil2;
 									telefonos.numeroMovil2=numeroMovil2;
 									break;
 									
@@ -259,7 +264,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		aux.setFavorito(favorito);
 		aux.setMasUsados(0);
 		aux.setRedes(redes);
-		aux.setDirecciones(direcciones);
+		aux.setDirecciones(direccion);
 		aux.setCorreos(correos);
 		aux.setTelefonos(telefonos);
 		
@@ -286,7 +291,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
  
  
  *******************/	
-
+/*
 	bool Agenda::insertarCliente();
 	bool Agenda::borrarCliente(std::string apellido);
 	bool Agenda::modificarCliente(std::string apellido);
@@ -299,7 +304,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 
 	bool Agenda::hacerCopiaSeguridad(std::string ficheroCopia);
 	bool Agenda::restaurarCopiaSeguridad(std::string ficheroCopia);
-
+*/
 
 
 

@@ -7,7 +7,8 @@ int main (){
 
 
 	Cliente aux;
-	aux = aux.pedirDatos();
+	Agenda ag("Agenda.txt");
+	aux = ag.pedirDatos();
 
 
 
