@@ -8,6 +8,8 @@
 #ifndef CLIENTE_H_
 #define CLIENTE_H_
 
+#include <string>
+
 typedef struct Telefonos{
 	int numeroFijo;
 	int numeroMovil1;
