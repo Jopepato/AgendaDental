@@ -23,7 +23,9 @@ public:
 	Agenda(std::string ficheroAgenda);
 	virtual ~Agenda();
 
-	bool insertarCliente(Cliente c);
+	
+	Cliente pedirDatos();
+	bool insertarCliente();
 	bool borrarCliente(std::string apellido);
 	bool modificarCliente(std::string apellido);
 	std::list <Cliente> buscarCliente(std::string apellido);
@@ -36,13 +38,13 @@ public:
 	bool hacerCopiaSeguridad(std::string ficheroCopia);
 	bool restaurarCopiaSeguridad(std::string ficheroCopia);
 
-	inline const std::list<Cliente>& Agenda::getArrayClientes() const {return arrayClientes_;};
+	inline const std::list<Cliente>& getArrayClientes() const {return arrayClientes_;};
 
-	inline void Agenda::setArrayClientes(const std::list<Cliente>& arrayClientes) {arrayClientes_ = arrayClientes;};
+	inline void setArrayClientes(const std::list<Cliente>& arrayClientes) {arrayClientes_ = arrayClientes;};
 
-	inline const std::string& Agenda::getNombreFichero() const {return nombreFichero_;};
+	inline const std::string& getNombreFichero() const {return nombreFichero_;};
 
-	inline void Agenda::setNombreFichero(const std::string& nombreFichero) {nombreFichero_ = nombreFichero;};
+	inline void setNombreFichero(const std::string& nombreFichero) {nombreFichero_ = nombreFichero;};
 };
 
 #endif /* AGENDA_H_ */

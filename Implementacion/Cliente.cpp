@@ -6,6 +6,7 @@
  */
 
 #include "Cliente.h"
+#include <string>
 
 Cliente::Cliente() {
 	setFavorito(false);
@@ -30,7 +31,7 @@ Cliente::Cliente(std::string nombre, std::string apellidos, std::string DNI,	std
 
 
 Cliente::~Cliente() {
-	// NA PAE
+	// NA
 }
 
 const std::string& Cliente::getAnotaciones() const {
