@@ -65,23 +65,23 @@ using namespace std;
 	**************************************************************************************************/
 
 					void Agenda::introducirEnLista(const Cliente &c){
-						arrayClientes_.push_back();
+						arrayClientes_.push_back(c);
 					}
 
 					bool Agenda::imprimirListaComprobando(const list <Cliente> &aux, const string &apellido){
 
-						list<Cliente>::iterator i;
+						std::list<Cliente>::iterator i;
 						bool variable=false;
-						int i=1;
+						int j=1;
 
 						cout<<"CLIENTES CON APELLIDO < "<<apellido<<" >\n";
 						cout<<"-----------------------------------------\n\n";
 
 						for(i=aux.begin(); i!=aux.end(); i++){
 							if((i->getApellidos())==apellido){
-								cout<<i<<" ) Cliente con nombre < "<<i->getApellidos<<", "<<i->getNombre<<" > y DNI < "<<i->getDNI<<" >\n";
+								cout<<j<<" ) Cliente con nombre < "<<i->getApellidos()<<", "<<i->getNombre()<<" > y DNI < "<<i->getDni()<<" >\n";
 								variable=true;
-								i++;
+								j++;
 							}else{
 								cout<<"Los clientes no tienen este apellido\n";
 								variable=false;
@@ -116,7 +116,12 @@ using namespace std;
 		if(encontrado==true){
 			cout<<"Introduce el numero del cliente para eliminar: ";
 			cin>>posicion;
-
+			c = sacarClienteListaComprobando(aux, posicion);
+			if(eliminarClienteListaComprobando(arrayClientes_, c)==true){
+				return(true);
+			}else{
+				return(false);
+			}
 
 		/*SEGUN LA POSICION, COGER EL CLIENTE DE AUX
 		Y CON EL DNI BORRARLO EN LA LISTA GENERAL
@@ -130,6 +135,39 @@ using namespace std;
 		}
 
 	}
+
+						Cliente Agenda::sacarClienteListaComprobando(list <Cliente> &aux, const int &posicion){
+
+						list<Cliente>::iterator i;
+						bool variable=false;
+						int j=1;
+						Cliente caux;
+
+						for(i=aux.begin(); i!=aux.end(); i++){
+							if(j==posicion){
+								caux = *i;
+								aux.erase(i);	
+							}
+							j++;
+						}
+
+						return (caux);
+						}
+
+						bool Agenda::eliminarClienteListaComprobando(list <Cliente> &laux, const Cliente &caux){
+
+							string DNI;
+							DNI = caux.getDni();
+							std::list<Cliente>::iterator i;
+							bool variable=false;
+
+							for(i=laux.begin(); i!=laux.end(); i++){
+								if(DNI==i->getDni()){
+									laux.erase(i);
+									variable=true;
+								}
+							}
+						}
 
 	bool Agenda::modificarCliente(string apellido){
 
@@ -151,8 +189,6 @@ using namespace std;
 		BORRANDO EL ANTERIOR Y PONIENDO EL NUEVO*/
 
 		}else{
-
 			return (false); /*NO SE ENCUENTRA EL CLIENTE Y PREGUNTAR EN EL MAIN SI DESEA INTRODUCIRLO*/
-
 		}
 	}

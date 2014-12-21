@@ -28,8 +28,14 @@ public:
 
 	
 	Cliente pedirDatos();
+	bool imprimirListaComprobando(const list <Cliente> &aux, const string &apellido);
+	void introducirEnLista(const Cliente &c);
 	bool insertarCliente();
+
+	Cliente sacarClienteListaComprobando(list <Cliente> &aux, const int &posicion);
+	bool eliminarClienteListaComprobando(list <Cliente> &laux, const Cliente &caux);
 	bool borrarCliente(string apellido);
+
 	bool modificarCliente(string apellido);
 	list <Cliente> buscarCliente(string apellido);
 	bool ordenarClientes();
