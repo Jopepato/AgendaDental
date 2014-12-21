@@ -8,8 +8,9 @@ Reparto de tareas
 
 -------------------
 ###Ruano
-+ Ordenación
++ Ordenación(Por apellido)
 + Programa principal (menú y esas cosas)
++ BuscarCliente(Si hay apellidos coincidentes te muestra lista con apellidos coincidentes)
 
 -------------------
 
