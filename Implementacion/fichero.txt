@@ -1,33 +1,34 @@
-/tmp/ccK7lIj6.o: En la función `main':
+gcc ProgramaPrincipal.cpp Agenda.cpp Cliente.cpp -g -o ProgramaPrincipal
+/tmp/ccFIxo0a.o: En la función `main':
 /home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:12: referencia a `std::allocator<char>::allocator()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:12: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:12: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:12: referencia a `std::allocator<char>::~allocator()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:17: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/ProgramaPrincipal.cpp:17: referencia a `std::allocator<char>::~allocator()' sin definir
-/tmp/ccK7lIj6.o: En la función `__static_initialization_and_destruction_0':
+/tmp/ccFIxo0a.o: En la función `__static_initialization_and_destruction_0':
 /usr/include/c++/4.8/iostream:74: referencia a `std::ios_base::Init::Init()' sin definir
 /usr/include/c++/4.8/iostream:74: referencia a `std::ios_base::Init::~Init()' sin definir
-/tmp/ccK7lIj6.o: En la función `RedesSociales::operator=(RedesSociales const&)':
+/tmp/ccFIxo0a.o: En la función `RedesSociales::operator=(RedesSociales const&)':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::string::operator=(std::string const&)' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::string::operator=(std::string const&)' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::string::operator=(std::string const&)' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::string::operator=(std::string const&)' sin definir
-/tmp/ccK7lIj6.o: En la función `Direcciones::operator=(Direcciones const&)':
+/tmp/ccFIxo0a.o: En la función `Direcciones::operator=(Direcciones const&)':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::string::operator=(std::string const&)' sin definir
-/tmp/ccK7lIj6.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: más referencias a `std::string::operator=(std::string const&)' sin definir a continuación
-/tmp/ccK7lIj6.o:(.eh_frame+0xab): referencia a `__gxx_personality_v0' sin definir
-/tmp/ccRMoYb9.o: En la función `Agenda::Agenda(std::string)':
+/tmp/ccFIxo0a.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: más referencias a `std::string::operator=(std::string const&)' sin definir a continuación
+/tmp/ccFIxo0a.o:(.eh_frame+0xab): referencia a `__gxx_personality_v0' sin definir
+/tmp/ccwrgJZy.o: En la función `Agenda::Agenda(std::string)':
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:16: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:16: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o: En la función `Agenda::pedirDatos()':
+/tmp/ccwrgJZy.o: En la función `Agenda::pedirDatos()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:42: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:42: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:42: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:42: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:47: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
-/tmp/ccRMoYb9.o:/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:47: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir a continuación
-/tmp/ccRMoYb9.o: En la función `Agenda::pedirDatos()':
+/tmp/ccwrgJZy.o:/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:47: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir a continuación
+/tmp/ccwrgJZy.o: En la función `Agenda::pedirDatos()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:71: referencia a `std::cout' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:71: referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:72: referencia a `std::cin' sin definir
@@ -210,26 +211,26 @@
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:59: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:54: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:53: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o:/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:52: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
-/tmp/ccRMoYb9.o: En la función `Agenda::~Agenda()':
+/tmp/ccwrgJZy.o:/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:52: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
+/tmp/ccwrgJZy.o: En la función `Agenda::~Agenda()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:314: referencia a `operator delete(void*)' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:312: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o: En la función `Agenda::~Agenda()':
+/tmp/ccwrgJZy.o: En la función `Agenda::~Agenda()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Agenda.cpp:314: referencia a `operator delete(void*)' sin definir
-/tmp/ccRMoYb9.o: En la función `__static_initialization_and_destruction_0':
+/tmp/ccwrgJZy.o: En la función `__static_initialization_and_destruction_0':
 /usr/include/c++/4.8/iostream:74: referencia a `std::ios_base::Init::Init()' sin definir
 /usr/include/c++/4.8/iostream:74: referencia a `std::ios_base::Init::~Init()' sin definir
-/tmp/ccRMoYb9.o: En la función `Agenda::setNombreFichero(std::string const&)':
-/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.h:51: referencia a `std::string::operator=(std::string const&)' sin definir
-/tmp/ccRMoYb9.o: En la función `Direcciones::Direcciones()':
+/tmp/ccwrgJZy.o: En la función `Agenda::setNombreFichero(std::string const&)':
+/home/ruben/Documentos/AgendaDental/Implementacion/Agenda.h:50: referencia a `std::string::operator=(std::string const&)' sin definir
+/tmp/ccwrgJZy.o: En la función `Direcciones::Direcciones()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o: En la función `Direcciones::~Direcciones()':
+/tmp/ccwrgJZy.o: En la función `Direcciones::~Direcciones()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:28: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o: En la función `RedesSociales::RedesSociales()':
+/tmp/ccwrgJZy.o: En la función `RedesSociales::RedesSociales()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
@@ -237,26 +238,26 @@
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o: En la función `RedesSociales::~RedesSociales()':
+/tmp/ccwrgJZy.o: En la función `RedesSociales::~RedesSociales()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
-/tmp/ccRMoYb9.o: En la función `Correos::Correos()':
+/tmp/ccwrgJZy.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:35: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
+/tmp/ccwrgJZy.o: En la función `Correos::Correos()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o: En la función `Correos::~Correos()':
+/tmp/ccwrgJZy.o: En la función `Correos::~Correos()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccRMoYb9.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
-/tmp/ccRMoYb9.o: En la función `__gnu_cxx::new_allocator<std::_List_node<Cliente> >::deallocate(std::_List_node<Cliente>*, unsigned int)':
+/tmp/ccwrgJZy.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.h:22: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
+/tmp/ccwrgJZy.o: En la función `__gnu_cxx::new_allocator<std::_List_node<Cliente> >::deallocate(std::_List_node<Cliente>*, unsigned int)':
 /usr/include/c++/4.8/ext/new_allocator.h:110: referencia a `operator delete(void*)' sin definir
-/tmp/ccRMoYb9.o:(.rodata._ZTI6Agenda[_ZTI6Agenda]+0x0): referencia a `vtable for __cxxabiv1::__class_type_info' sin definir
-/tmp/ccRMoYb9.o:(.eh_frame+0x6b): referencia a `__gxx_personality_v0' sin definir
-/tmp/ccrwIsjd.o: En la función `Cliente::Cliente()':
+/tmp/ccwrgJZy.o:(.rodata._ZTI6Agenda[_ZTI6Agenda]+0x0): referencia a `vtable for __cxxabiv1::__class_type_info' sin definir
+/tmp/ccwrgJZy.o:(.eh_frame+0x6b): referencia a `__gxx_personality_v0' sin definir
+/tmp/cchAekGY.o: En la función `Cliente::Cliente()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
@@ -265,7 +266,7 @@
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:15: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccrwIsjd.o: En la función `Cliente::Cliente(std::string, std::string, std::string, std::string, bool, int, RedesSociales, Direcciones, Correos, Telefonos)':
+/tmp/cchAekGY.o: En la función `Cliente::Cliente(std::string, std::string, std::string, std::string, bool, int, RedesSociales, Direcciones, Correos, Telefonos)':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
@@ -274,25 +275,26 @@
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:21: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccrwIsjd.o: En la función `Cliente::~Cliente()':
+/tmp/cchAekGY.o: En la función `Cliente::~Cliente()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccrwIsjd.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
-/tmp/ccrwIsjd.o: En la función `Cliente::~Cliente()':
+/tmp/cchAekGY.o:/home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: más referencias a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir a continuación
+/tmp/cchAekGY.o: En la función `Cliente::~Cliente()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:39: referencia a `operator delete(void*)' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:37: referencia a `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
-/tmp/ccrwIsjd.o: En la función `Cliente::~Cliente()':
+/tmp/cchAekGY.o: En la función `Cliente::~Cliente()':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:39: referencia a `operator delete(void*)' sin definir
-/tmp/ccrwIsjd.o: En la función `Cliente::setAnotaciones(std::string const&)':
+/tmp/cchAekGY.o: En la función `Cliente::setAnotaciones(std::string const&)':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:46: referencia a `std::string::operator=(std::string const&)' sin definir
-/tmp/ccrwIsjd.o: En la función `Cliente::setApellidos(std::string const&)':
+/tmp/cchAekGY.o: En la función `Cliente::setApellidos(std::string const&)':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:54: referencia a `std::string::operator=(std::string const&)' sin definir
-/tmp/ccrwIsjd.o: En la función `Cliente::setDni(std::string const&)':
+/tmp/cchAekGY.o: En la función `Cliente::setDni(std::string const&)':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:78: referencia a `std::string::operator=(std::string const&)' sin definir
-/tmp/ccrwIsjd.o: En la función `Cliente::setNombre(std::string const&)':
+/tmp/cchAekGY.o: En la función `Cliente::setNombre(std::string const&)':
 /home/ruben/Documentos/AgendaDental/Implementacion/Cliente.cpp:102: referencia a `std::string::operator=(std::string const&)' sin definir
-/tmp/ccrwIsjd.o:(.rodata._ZTI7Cliente[_ZTI7Cliente]+0x0): referencia a `vtable for __cxxabiv1::__class_type_info' sin definir
-/tmp/ccrwIsjd.o:(.eh_frame+0x13): referencia a `__gxx_personality_v0' sin definir
+/tmp/cchAekGY.o:(.rodata._ZTI7Cliente[_ZTI7Cliente]+0x0): referencia a `vtable for __cxxabiv1::__class_type_info' sin definir
+/tmp/cchAekGY.o:(.eh_frame+0x13): referencia a `__gxx_personality_v0' sin definir
 collect2: error: ld returned 1 exit status
+make: *** [ProgramaPrincipal] Error 1

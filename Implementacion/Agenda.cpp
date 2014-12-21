@@ -13,7 +13,7 @@
 
 using namespace std;
 
-Agenda::Agenda(std::string ficheroAgenda) {
+Agenda::Agenda(string ficheroAgenda) {
 	setNombreFichero(ficheroAgenda);
 }
 
@@ -293,17 +293,17 @@ Agenda::Agenda(std::string ficheroAgenda) {
  *******************/	
 /*
 	bool Agenda::insertarCliente();
-	bool Agenda::borrarCliente(std::string apellido);
-	bool Agenda::modificarCliente(std::string apellido);
-	std::list <Cliente> Agenda::buscarCliente(std::string apellido);
+	bool Agenda::borrarCliente(string apellido);
+	bool Agenda::modificarCliente(string apellido);
+	list <Cliente> Agenda::buscarCliente(string apellido);
 	bool Agenda::ordenarClientes();
 
-	std::list <Cliente> Agenda::mostrarClientesMasBuscados();
-	std::list <Cliente> Agenda::muestraFavoritos();
-	std::list <Cliente> Agenda::imprimirClientes();
+	list <Cliente> Agenda::mostrarClientesMasBuscados();
+	list <Cliente> Agenda::muestraFavoritos();
+	list <Cliente> Agenda::imprimirClientes();
 
-	bool Agenda::hacerCopiaSeguridad(std::string ficheroCopia);
-	bool Agenda::restaurarCopiaSeguridad(std::string ficheroCopia);
+	bool Agenda::hacerCopiaSeguridad(string ficheroCopia);
+	bool Agenda::restaurarCopiaSeguridad(string ficheroCopia);
 */
 
 
