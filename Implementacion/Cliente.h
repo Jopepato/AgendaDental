@@ -5,8 +5,8 @@
  *      Author: i32mezar
  */
 
-#ifndef CLIENTE_H_
-#define CLIENTE_H_
+#ifndef CLIENTE_H
+#define CLIENTE_H
 
 
 #include <string>
@@ -61,38 +61,37 @@ private:
 public:
 	Cliente(string nombre, string apellidos, string DNI, string anotaciones, bool favorito, int masUsados, Redes redes, Direcciones direcciones, Correos correos, Telefonos telefonos);
 	Cliente();
-	virtual ~Cliente();
 
 
 	const string& getAnotaciones() const;
-	void setAnotaciones(const string& anotaciones);
+	void setAnotaciones(string anotaciones);
 
 	const string& getApellidos() const;
-	void setApellidos(const string& apellidos);
+	void setApellidos(string apellidos);
 
 	const Correos& getCorreos() const;
-	void setCorreos(const Correos& correos);
+	void setCorreos(Correos correos);
 
 	const Direcciones& getDirecciones() const;
-	void setDirecciones(const Direcciones& direcciones);
+	void setDirecciones(Direcciones direcciones);
 
 	const string& getDni() const;
-	void setDni(const string& dni);
+	void setDni(string dni);
 
-	bool isFavorito() const;
+	bool getFavorito() const;
 	void setFavorito(bool favorito);
 
 	int getMasUsados() const;
 	void setMasUsados(int masUsados);
 
 	const string& getNombre() const;
-	void setNombre(const string& nombre);
+	void setNombre(string nombre);
 
 	const Redes& getRedes() const;
-	void setRedes(const Redes& redes);
+	void setRedes(Redes redes);
 
 	const Telefonos& getTelefonos() const;
-	void setTelefonos(const Telefonos& telefonos);
+	void setTelefonos(Telefonos telefonos);
 };
 
-#endif /* CLIENTE_H_ */
+#endif /* CLIENTE_H */

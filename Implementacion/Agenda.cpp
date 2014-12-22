@@ -10,6 +10,7 @@
 #include <string>
 #include <iostream>
 #include <list>
+#include <cstdio>
 
 using namespace std;
 
@@ -74,10 +75,13 @@ Agenda::Agenda(string ficheroAgenda) {
 		getline(cin, apellidos);
 		cout<<"Introduce DNI: ";
 		getline(cin, DNI);
+
 		do{
 			cout<<"¿Introducir direccion? (s/n): ";
 			cin>>opcion;
 			
+			getchar();
+
 				if(opcion=='s'){
 					cout<<"Introduce calle: ";
 					getline(cin, calle);
@@ -91,22 +95,26 @@ Agenda::Agenda(string ficheroAgenda) {
 
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'&&opcion!='n');
 		
 		do{
 			cout<<"¿Introducir anotacion? (s/n): ";
 			cin>>opcion;
+
+			getchar();
 			
 				if(opcion=='s'){
 					cout<<"Introduce anotacion: ";
 					getline(cin, anotaciones);
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'&&opcion!='n');
 
 		do{
 			cout<<"¿Es favorito? (s/n): ";
 			cin>>opcion;
+
+
 			
 				if(opcion=='s'){
 					favorito=1;
@@ -114,7 +122,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					favorito=0;
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'&&opcion!='n');
 		
 		do{
 			cout<<"¿Introducir redes? (s/n): ";
@@ -128,7 +136,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					cout<<"2.Facebook"<<endl;					
 					cout<<"3.Tuenti"<<endl;
 					cout<<"4.Linkedin"<<endl;
-					cout<<"0.Salir";
+					cout<<"0.Salir"<<endl;
 					cout<<"Opcion: ";
 					cin>>opcionMenu;
 					
@@ -166,7 +174,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'&&opcion!='n');
 		
 		do{
 			cout<<"¿Tienes correo? (s/n): ";
@@ -179,7 +187,7 @@ Agenda::Agenda(string ficheroAgenda) {
 						cout<<"1.Gmail"<<endl;
 						cout<<"2.Hotmail"<<endl;					
 						cout<<"3.Yahoo"<<endl;
-						cout<<"0.Salir";
+						cout<<"0.Salir"<<endl;
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
 					
@@ -209,7 +217,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					}while(opcionMenu!=0);
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'&&opcion!='n');
 		
 		
 		do{
@@ -223,7 +231,7 @@ Agenda::Agenda(string ficheroAgenda) {
 						cout<<"1.Fijo"<<endl;
 						cout<<"2.Movil1"<<endl;					
 						cout<<"3.Movil2"<<endl;
-						cout<<"0.Salir";
+						cout<<"0.Salir"<<endl;
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
 					
@@ -253,7 +261,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					}while(opcionMenu!=0);
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'&&opcion!='n');
 
 		
 		
