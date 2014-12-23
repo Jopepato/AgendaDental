@@ -46,12 +46,13 @@ Direcciones dir;
 Telefonos tlf;
 Correos  cor;
 RedesSociales redes;
+int buscado;
 
   //Mostramos el nombre
-    cout<< C.getNombre <<", "<< C.getApellidos() << "\n";
+    cout << C.getNombre <<", "<< C.getApellidos() << "\n";
 
   //Mostramos el dni
-    cout<< "-" << C.getDNI()<< "\n";
+    cout << "-" << C.getDNI()<< "\n";
 
   //Mostramos las direcciones
     dir = C.getDirecciones();
@@ -83,6 +84,22 @@ RedesSociales redes;
     cout << "- Facebook:\t" << redes.facebook << "\n";
     cout << "- Tuenti:\t" << redes.tuenti << "\n";
     cout << "- Linkedin:\t" << redes.linkedin << "\n";
+
+  //Mostramos si el cliente es favorito
+
+  if(C.isFavorito()){
+    cout << "Favorito: Sí\n";
+  }else
+    cout << "Favorito: No\n";
+
+  //Mostramos el numero de veces que se ha buscado dicho cliente
+
+  buscado = C.getMasUsados();
+  cout << "Numero de veces buscado: " << buscado << "\n";
+
+  //Mostramos las anotaciones del cliente
+
+  cout << C.getAnotaciones() << "\n";
 
 
 }
