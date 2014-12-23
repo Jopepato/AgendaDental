@@ -92,7 +92,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					direccion.calle=calle;
 					direccion.puerta=puerta;
 					direccion.portal=portal;
-
+					
 				}
 		
 		}while(opcion!='s'&&opcion!='n');
@@ -227,7 +227,7 @@ Agenda::Agenda(string ficheroAgenda) {
 				if(opcion=='s'){
 					
 					do{
-						cout<<"¿Numero de telefono??"<<endl;
+						cout<<"¿Numero de telefono?"<<endl;
 						cout<<"1.Fijo"<<endl;
 						cout<<"2.Movil1"<<endl;					
 						cout<<"3.Movil2"<<endl;
