@@ -70,7 +70,7 @@ using namespace std;
 
 					bool Agenda::imprimirListaComprobando(const list <Cliente> &aux, const string &apellido){
 
-						std::list<Cliente>::iterator i;
+						list<Cliente>::iterator i;
 						bool variable=false;
 						int j=1;
 

@@ -10,9 +10,23 @@ int main (){
 
 	Cliente aux;
 	Agenda ag("Agenda.txt");
-	aux = ag.pedirDatos();
+	string apellido;
+
+	if(ag.insertarCliente()){
+		cout<<"Insertado correcto"<<endl;
+	}else{
+		cout<<"no se inserto"<<endl;
+	}
 
 
+	cout<<"Introduce apellido para borrar : ";
+	cin>>apellido;
+
+	if(ag.borrarCliente(apellido)){
+		cout<<"El cliente se borro"<<endl;
+	}else{
+		cout<<"El cliente no se borro"<<endl;
+	}
 
 	return 0;
 }

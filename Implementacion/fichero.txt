@@ -1,0 +1,1 @@
+g++ ProgramaPrincipal.cpp Agenda.cpp Cliente.cpp -g -o ProgramaPrincipal
