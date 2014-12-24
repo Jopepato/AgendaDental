@@ -8,33 +8,33 @@
 #ifndef CLIENTE_H_
 #define CLIENTE_H_
 
-typedef struct Telefonos{
+struct Telefonos{
 	int numeroFijo;
 	int numeroMovil1;
 	int numeroMovil2;
-}Telefonos;
+};
 
-typedef struct Correos{
+struct Correos{
 	std::string hotmail;
 	std::string gmail;
 	std::string yahoo;
-}Correos;
+};
 
-typedef struct Direcciones{
+struct Direcciones{
 	std::string calle;
 	std::string puerta;
 	int portal;
 
-}Direcciones;
+};
 
-typedef struct RedesSociales{
+struct RedesSociales{
 
 	std::string facebook;
 	std::string twitter;
 	std::string tuenti;
 	std::string linkedin;
 
-}Redes;
+};
 
 
 class Cliente {
