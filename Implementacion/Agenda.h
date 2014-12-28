@@ -1,10 +1,3 @@
-/*
- * Agenda.h
- *
- *  Created on: 04/12/2014
- *      Author: i32mezar
- */
-
 #ifndef AGENDA_H_
 #define AGENDA_H_
 
@@ -23,7 +16,7 @@ public:
 	Agenda(std::string ficheroAgenda);
 	virtual ~Agenda();
 
-	
+/*
 	Cliente pedirDatos();
 	bool insertarCliente();
 	bool borrarCliente(std::string apellido);
@@ -34,10 +27,13 @@ public:
 	std::list <Cliente> mostrarClientesMasBuscados();
 	std::list <Cliente> muestraFavoritos();
 	std::list <Cliente> imprimirClientes();
-
+*/
 	bool hacerCopiaSeguridad(std::string ficheroCopia);
 	bool restaurarCopiaSeguridad(std::string ficheroCopia);
-
+/*
+	bool ficheroALista();
+	bool listaAFichero();
+*/
 	inline const std::list<Cliente>& getArrayClientes() const {return arrayClientes_;};
 
 	inline void setArrayClientes(const std::list<Cliente>& arrayClientes) {arrayClientes_ = arrayClientes;};
@@ -47,4 +43,4 @@ public:
 	inline void setNombreFichero(const std::string& nombreFichero) {nombreFichero_ = nombreFichero;};
 };
 
-#endif /* AGENDA_H_ */
+#endif

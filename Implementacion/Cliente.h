@@ -1,10 +1,3 @@
-/*
- * Cliente.h
- *
- *  Created on: 04/12/2014
- *      Author: i32mezar
- */
-
 #ifndef CLIENTE_H_
 #define CLIENTE_H_
 
@@ -92,4 +85,4 @@ public:
 	void setTelefonos(const Telefonos& telefonos);
 };
 
-#endif /* CLIENTE_H_ */
+#endif 
