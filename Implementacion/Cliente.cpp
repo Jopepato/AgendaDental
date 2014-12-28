@@ -13,7 +13,7 @@ Cliente::Cliente() {
 
 }
 
-Cliente::Cliente(std::string nombre, std::string apellidos, std::string DNI,	std::string anotaciones, bool favorito, int masUsados, Redes redes, Direcciones direcciones, Correos correos, Telefonos telefonos){
+Cliente::Cliente(string nombre, string apellidos, string DNI,	string anotaciones, bool favorito, int masUsados, Redes redes, Direcciones direcciones, Correos correos, Telefonos telefonos){
 	setNombre(nombre);
 	setApellidos(apellidos);
 	setDni(DNI);
@@ -33,7 +33,7 @@ Cliente::~Cliente() {
 	// NA PAE
 }
 
-const std::string& Cliente::getAnotaciones() const {
+const string& Cliente::getAnotaciones() const {
 	return anotaciones_;
 }
 
@@ -41,7 +41,7 @@ void Cliente::setAnotaciones(const std::string& anotaciones) {
 	anotaciones_ = anotaciones;
 }
 
-const std::string& Cliente::getApellidos() const {
+const string& Cliente::getApellidos() const {
 	return apellidos_;
 }
 
@@ -65,7 +65,7 @@ void Cliente::setDirecciones(const Direcciones& direcciones) {
 	direcciones_ = direcciones;
 }
 
-const std::string& Cliente::getDni() const {
+const string& Cliente::getDni() const {
 	return DNI_;
 }
 
@@ -89,7 +89,7 @@ void Cliente::setMasUsados(int masUsados) {
 	masUsados_ = masUsados;
 }
 
-const std::string& Cliente::getNombre() const {
+const string& Cliente::getNombre() const {
 	return nombre_;
 }
 
@@ -112,8 +112,3 @@ const Telefonos& Cliente::getTelefonos() const {
 void Cliente::setTelefonos(const Telefonos& telefonos) {
 	telefonos_ = telefonos;
 }
-
-
-
-
-

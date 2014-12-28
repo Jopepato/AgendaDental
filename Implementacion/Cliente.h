@@ -8,42 +8,51 @@
 #ifndef CLIENTE_H_
 #define CLIENTE_H_
 
-struct Telefonos{
+#include <string>
+#include <cstring>
+#include <list>
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+
+using namespace std;
+
+typedef struct Telefonos{
 	int numeroFijo;
 	int numeroMovil1;
 	int numeroMovil2;
-};
+}Telefonos;
 
-struct Correos{
-	std::string hotmail;
-	std::string gmail;
-	std::string yahoo;
-};
+typedef struct Correos{
+	string hotmail;
+	string gmail;
+	string yahoo;
+}Correos;
 
-struct Direcciones{
-	std::string calle;
-	std::string puerta;
+typedef struct Direcciones{
+	string calle;
+	string puerta;
 	int portal;
 
-};
+}Direcciones;
 
-struct RedesSociales{
+typedef struct RedesSociales{
 
-	std::string facebook;
-	std::string twitter;
-	std::string tuenti;
-	std::string linkedin;
+	string facebook;
+	string twitter;
+	string tuenti;
+	string linkedin;
 
-};
+}Redes;
 
 
 class Cliente {
 
 private:
-	std::string nombre_;
-	std::string apellidos_;
-	std::string DNI_;
-	std::string anotaciones_;
+	string nombre_;
+	string apellidos_;
+	string DNI_;
+	string anotaciones_;
 	bool favorito_;
 	int masUsados_;
 	Redes redes_;
@@ -54,15 +63,15 @@ private:
 
 
 public:
-	Cliente(std::string nombre, std::string apellidos, std::string DNI, std::string anotaciones, bool favorito, int masUsados, Redes redes, Direcciones direcciones, Correos correos, Telefonos telefonos);
+	Cliente(string nombre, string apellidos, string DNI, string anotaciones, bool favorito, int masUsados, Redes redes, Direcciones direcciones, Correos correos, Telefonos telefonos);
 	Cliente();
 	virtual ~Cliente();
 
 
-	const std::string& getAnotaciones() const;
+	const string& getAnotaciones() const;
 	void setAnotaciones(const std::string& anotaciones);
 
-	const std::string& getApellidos() const;
+	const string& getApellidos() const;
 	void setApellidos(const std::string& apellidos);
 
 	const Correos& getCorreos() const;
@@ -71,7 +80,7 @@ public:
 	const Direcciones& getDirecciones() const;
 	void setDirecciones(const Direcciones& direcciones);
 
-	const std::string& getDni() const;
+	const string& getDni() const;
 	void setDni(const std::string& dni);
 
 	bool isFavorito() const;
@@ -80,7 +89,7 @@ public:
 	int getMasUsados() const;
 	void setMasUsados(int masUsados);
 
-	const std::string& getNombre() const;
+	const string& getNombre() const;
 	void setNombre(const std::string& nombre);
 
 	const Redes& getRedes() const;

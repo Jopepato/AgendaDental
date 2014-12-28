@@ -7,9 +7,9 @@
 
 #include "Agenda.h"
 
-Agenda::Agenda(std::string ficheroAgenda) {
-	setNombreFichero(ficheroAgenda);
-}
+//Agenda::Agenda(string ficheroAgenda) {
+	//setNombreFichero(ficheroAgenda);
+//}
 /* 	SIN IMPLEMENTAR
 	bool insertarCliente(Cliente c);
 	bool borrarCliente(std::string apellido);
@@ -29,7 +29,6 @@ Agenda::Agenda(std::string ficheroAgenda) {
 
 
 
-Agenda::~Agenda() {
+//Agenda::~Agenda() {
 	// TODO Auto-generated destructor stub
-}
-
+//}
