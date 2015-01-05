@@ -65,12 +65,15 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		fileCopia.close();
 		return true;
 	}
-/*
-	bool Agenda::ficheroALista(){
-		char line[100];
+
+	bool Agenda::ficheroALista(Agenda ag){
+		char line[256];
 		Cliente cl;
-		Agenda ag("Agenda.txt");
 		list <Cliente> aux;
+		Redes red;
+		Direcciones dir;
+		Correos cor;
+		Telefonos tlf;
 
 		ifstream fileAgenda;
 
@@ -79,26 +82,61 @@ Agenda::Agenda(std::string ficheroAgenda) {
 			return false;
 		}
 
-		while(fileAgenda.getline(line,100,',')){
+		while(fileAgenda.getline(line,256,',')){
 			cl.setNombre(line);
-			fileAgenda.getline(line,100,',');
+
+			fileAgenda.getline(line,256,',');
 			cl.setApellidos(line);
-			fileAgenda.getline(line,100,',');
+
+			fileAgenda.getline(line,256,',');
 			cl.setDNI(line);
-			fileAgenda.getline(line,100,',');
+
+			fileAgenda.getline(line,256,',');
 			cl.setAnotaciones(line);
-			fileAgenda.getline(line,100,',');
-			cl.setFavorito();
-			fileAgenda.getline(line,100,',');
+
+			fileAgenda.getline(line,256,',');
+			if(strcmp(line, "si") == 0){
+				cl.setFavorito(true);
+			}else{
+				cl.setFavorito(false);
+			}
+
+			fileAgenda.getline(line,256,',');
 			cl.setMasUsados(atoi(line.c_str()));
-			fileAgenda.getline(line,100,',');
-			cl.setRedes();
-			fileAgenda.getline(line,100,',');
-			cl.setDirecciones();
-			fileAgenda.getline(line,100,',');
-			cl.setCorreos();
-			fileAgenda.getline(line,100,',');
-			cl.setTelefonos();
+
+			fileAgenda.getline(line,256,',');
+			red.twitter = line;
+			fileAgenda.getline(line,256,',');
+			red.facebook = line;
+			fileAgenda.getline(line,256,',');
+			red.tuenti = line;
+			fileAgenda.getline(line,256,',');
+			red.linkedin = line;
+			cl.setRedes(red);
+
+			fileAgenda.getline(line,256,',');
+			dir.calle = line;
+			fileAgenda.getline(line,256,',');
+			dir.puerta = line;
+			fileAgenda.getline(line,256,',');
+			dir.portal = atoi(line.c_str());
+			cl.setDirecciones(dir);
+
+			fileAgenda.getline(line,256,',');
+			cor.gmail = line;
+			fileAgenda.getline(line,256,',');
+			cor.hotmail = line;
+			fileAgenda.getline(line,256,',');
+			cor.yahoo = line;
+			cl.setCorreos(cor);
+
+			fileAgenda.getline(line,256,',');
+			tlf.numeroFijo = atoi(line.c_str());
+			fileAgenda.getline(line,256,',');
+			tlf.numeroMovil1 = atoi(line.c_str());
+			fileAgenda.getline(line,256,'\n');
+			tlf.numeroMovil2 = atoi(line.c_str());
+			cl.setTelefonos(tlf);
 
 			aux.push_back(cl);
 		}
@@ -110,10 +148,13 @@ Agenda::Agenda(std::string ficheroAgenda) {
 
 	}
 
-	bool Agenda::listaAFichero(){
-		char line[100];
+	bool Agenda::listaAFichero(Agenda ag){
+		char line[256];
 		Cliente cl;
-		Agenda ag("Agenda.txt");
+		Redes red;
+		Direcciones dir;
+		Correos cor;
+		Telefonos tlf;
 		list <Cliente> aux;
 		aux = ag.getArrayClientes();
 		list <Cliente>::iterator pos;
@@ -129,16 +170,33 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		}
 
 		while(pos != aux.end()){
-			fileAgenda << (*pos).getNombre << ',';
-			fileAgenda << (*pos).getApellidos << ',';
-			fileAgenda << (*pos).getDNI << ',';
-			fileAgenda << (*pos).getAnotaciones << ',';
-			fileAgenda << (*pos).getFavorito << ',';
-			fileAgenda << (*pos).getMasUsados << ',';
-			fileAgenda << (*pos).getRedes << ',';
-			fileAgenda << (*pos).getDirecciones << ',';
-			fileAgenda << (*pos).getCorreos << ',';
-			fileAgenda << (*pos).getTelefonos << '\n';
+			fileAgenda << (*pos).getNombre() << ',';
+			fileAgenda << (*pos).getApellidos() << ',';
+			fileAgenda << (*pos).getDNI() << ',';
+			fileAgenda << (*pos).getAnotaciones() << ',';
+			if((*pos).getFavorito()){
+				fileAgenda << "si" << ',';
+			}else{
+				fileAgenda << "no" << ',';
+			}
+			fileAgenda << (*pos).getMasUsados() << ',';
+			red = (*pos).getRedes();
+			fileAgenda << red.twitter << ',';
+			fileAgenda << red.facebook << ',';
+			fileAgenda << red.tuenti << ',';
+			fileAgenda << red.linkedin << ',';
+			dir = (*pos).getDirecciones();
+			fileAgenda << dir.calle << ',';
+			fileAgenda << dir.puerta << ',';
+			fileAgenda << dir.portal << ',';
+			cor = (*pos).getCorreos():
+			fileAgenda << cor.gmail << ',';
+			fileAgenda << cor.hotmail << ',';
+			fileAgenda << cor.yahoo << ',';
+			tlf = (*pos).getTelefonos();
+			fileAgenda << tlf.numeroFijo << ',';
+			fileAgenda << tlf.numeroMovil1 << ',';
+			fileAgenda << tlf.numeroMovil2 << '\n';
 
 			pos++;
 		}
@@ -146,7 +204,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		fileAgenda.close();
 		return true;
 	}
-*/
+
 Agenda::~Agenda() {
 	// TODO Auto-generated destructor stub
 }

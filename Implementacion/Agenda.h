@@ -30,10 +30,10 @@ public:
 */
 	bool hacerCopiaSeguridad(std::string ficheroCopia);
 	bool restaurarCopiaSeguridad(std::string ficheroCopia);
-/*
-	bool ficheroALista();
-	bool listaAFichero();
-*/
+
+	bool ficheroALista(Agenda ag);
+	bool listaAFichero(Agenda ag);
+
 	inline const std::list<Cliente>& getArrayClientes() const {return arrayClientes_;};
 
 	inline void setArrayClientes(const std::list<Cliente>& arrayClientes) {arrayClientes_ = arrayClientes;};
