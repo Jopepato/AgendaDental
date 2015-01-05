@@ -4,7 +4,6 @@ En este fichero vamos a implementar las funciones de imprimir
 
 #include "Cliente.h"
 #include "Agenda.cpp"
-//Tengo que aprender POO para poder hacer esto
 
 //Declaamos las funciones
 list<Cliente> imprimirClientes();
@@ -15,8 +14,23 @@ bool esfavorito(Cliente C);
 bool compare_usados(Cliente first, Cliente second);
 
 
+
+//Imprime la lista que sea por pantalla
+//Meter en el .h
+void Agenda::imprimirLista(List<Cliente> Lista){
+
+  List<Cliente>::iterator i;
+
+  for(i = Lista.begin(); i != Lista.end(); ++i){
+    imprimeCliente(*i);
+  }
+
+}
+
+
+
 //Esta función imprimirá los 10 clientes mas buscado por la secretaria
-list<Cliente> mostrarClientesMasBuscados(){
+list<Cliente> Agenda::mostrarClientesMasBuscados(){
   //Esta funcion dependerá de la funcion de imprimre cliente
   list <Cliente> Lista;
   list <Cliente> aux;
@@ -32,10 +46,12 @@ list<Cliente> mostrarClientesMasBuscados(){
   //Una vez ordenada dicha lista pasamos los 10 primeros elementos a otra lista
   //Usaremos la funcion splice
   //void splice (iterator position, list& x, iterator first, iterator last);
+  //Modificar para que coja los 10 primeros
   first = aux.begin();
   last = aux.begin();
+  for(int i=0; i<10;i++){
     ++last;
-    ++last;
+  }
 
     Lista.splice(Lista.begin(), aux, aux.begin(), last);
 
@@ -60,7 +76,7 @@ return Lista;
 
 
 
-list<Cliente> muestraFavoritos(){
+list<Cliente> Agenda::muestraFavoritos(){
 
   list<Cliente> Lista;
   list<Cliente> aux;
@@ -80,7 +96,7 @@ list<Cliente> muestraFavoritos(){
               DEVUELVE UN BOOL
               ************************************************************************/
               bool esfavorito(Cliente C){
-                if(C.isFavorito()){
+                if(C.getFavorito()){
                   return true;
                 }else{
                   return false;
@@ -94,6 +110,10 @@ list<Cliente> muestraFavoritos(){
 
 //Imprime cliente se beneficia de
 
+//DEP :(
+
+
+/*
 list<Cliente> imprimirClientes(){
 
   //Declaramos todas las variables que vamos a usar
@@ -108,9 +128,9 @@ list<Cliente> imprimirClientes(){
   Redes redes;
   //Lo que haremos sera recorrer el fichero de principio a fin e introducir los clientes en una lista
 
-    /****
+    /**
     Primeros abrimos el fichero en modo lectura
-    ***/
+
       myfile.open("fichero.txt");
 
       if(myfile.is_open()){
@@ -202,7 +222,7 @@ list<Cliente> imprimirClientes(){
 
                   AQUI SE PUEDE LLAMAR A LA FUNCIONES DE IMPRIMIR EN PANTALLA PARA IRLOS MOSTRANDO
 
-                  ********************************************************************************/
+
 
           }
     }else{
@@ -215,7 +235,7 @@ list<Cliente> imprimirClientes(){
     //Y devolvemos la lista de clientes
     return(Lista);
 }
-
+      ***/
 //Esta función recibe un cliente de parámetro y lo imprime de forma bonita
 void imprimeCliente(Cliente C){
 
@@ -266,7 +286,7 @@ int buscado;
 
   //Mostramos si el cliente es favorito
 
-  if(C.isFavorito()){
+  if(C.getFavorito()){
     cout << "Favorito: Sí\n";
   }else
     cout << "Favorito: No\n";
