@@ -1,10 +1,3 @@
-/*
- * Cliente.cpp
- *
- *  Created on: 04/12/2014
- *      Author: i32mezar
- */
-
 #include "Cliente.h"
 #include <string>
 
@@ -120,8 +113,3 @@ void Cliente::setTelefonos(Telefonos telefonos) {
 	telefonos_.numeroMovil1 = telefonos.numeroMovil1;
 	telefonos_.numeroMovil2 = telefonos.numeroMovil2;
 }
-
-
-
-
-

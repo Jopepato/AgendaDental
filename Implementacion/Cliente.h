@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Cliente.h
  *
@@ -8,6 +9,10 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
+=======
+#ifndef CLIENTE_H_
+#define CLIENTE_H_
+>>>>>>> 300eb7654cba01bda0638b2b1942d39267e995bc
 
 #include <string>
 
@@ -94,4 +99,8 @@ public:
 	void setTelefonos(Telefonos telefonos);
 };
 
+<<<<<<< HEAD
 #endif /* CLIENTE_H */
+=======
+#endif 
+>>>>>>> 300eb7654cba01bda0638b2b1942d39267e995bc
