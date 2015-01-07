@@ -1,2 +1,0 @@
-ProgramaPrincipal: ProgramaPrincipal.cpp Agenda.cpp Agenda.h Cliente.h Cliente.cpp AgendaRuben.cpp
-	g++ ProgramaPrincipal.cpp Agenda.cpp Cliente.cpp AgendaRuben.cpp -g -o ProgramaPrincipal
