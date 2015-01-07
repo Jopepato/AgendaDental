@@ -66,7 +66,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		return true;
 	}
 
-	bool Agenda::ficheroALista(Agenda ag){
+	bool Agenda::ficheroALista(){
 		char line[256];
 		Cliente cl;
 		list <Cliente> aux;
@@ -141,14 +141,14 @@ Agenda::Agenda(std::string ficheroAgenda) {
 			aux.push_back(cl);
 		}
 
-		ag.setArrayClientes(aux);
+		setArrayClientes(aux);
 
 		fileAgenda.close();
 		return true;
 
 	}
 
-	bool Agenda::listaAFichero(Agenda ag){
+	bool Agenda::listaAFichero(){
 		char line[256];
 		Cliente cl;
 		Redes red;
@@ -156,7 +156,7 @@ Agenda::Agenda(std::string ficheroAgenda) {
 		Correos cor;
 		Telefonos tlf;
 		list <Cliente> aux;
-		aux = ag.getArrayClientes();
+		aux = getArrayClientes();
 		list <Cliente>::iterator pos;
 		pos = aux.begin();
 
