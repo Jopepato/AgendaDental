@@ -8,22 +8,21 @@
 #ifndef AGENDA_H_
 #define AGENDA_H_
 
-#include <list>
+
 #include "Cliente.h"
 
 
 using namespace std;
-
 class Agenda {
 
 private:
 
 
-	std::string nombreFichero_;
-	std::list <Cliente> arrayClientes_;
+	string nombreFichero_;
+	list <Cliente> arrayClientes_;
 
 public:
-	Agenda(std::string ficheroAgenda);
+	Agenda(string ficheroAgenda);
 	virtual ~Agenda();
 
 
@@ -31,34 +30,34 @@ public:
 	void introducirEnLista(const Cliente &c);
 	bool imprimirListaComprobando(const list <Cliente> &aux, const string &apellido);
 
-	bool borrarCliente(std::string apellido);
+	bool borrarCliente(string apellido);
 	Cliente sacarClienteListaComprobando(list <Cliente> &aux, const int &posicion);
 	bool eliminarClienteListaComprobando(list <Cliente> &laux, const Cliente &caux);
 
-	bool modificarCliente(std::string apellido);
+	bool modificarCliente(string apellido);
 	bool modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux);
 
 
 
-	std::list <Cliente> buscarCliente(std::string apellido);
+	list <Cliente> buscarCliente(string apellido);
 	bool ordenarClientes();
 	bool funcionOrdenacion(Cliente first, Cliente second);
 
-	std::list <Cliente> mostrarClientesMasBuscados();
-	std::list <Cliente> muestraFavoritos();
+	list <Cliente> mostrarClientesMasBuscados();
+	list <Cliente> muestraFavoritos();
 	void imprimirLista(list<Cliente> Lista);
 	void imprimeCliente(Cliente C);
 
-	bool hacerCopiaSeguridad(std::string ficheroCopia);
-	bool restaurarCopiaSeguridad(std::string ficheroCopia);
+	bool hacerCopiaSeguridad(string ficheroCopia);
+	bool restaurarCopiaSeguridad(string ficheroCopia);
 
-	inline const std::list<Cliente>& getArrayClientes() const {return arrayClientes_;};
+	inline const list<Cliente>& getArrayClientes() const {return arrayClientes_;};
 
-	inline void setArrayClientes(const std::list<Cliente>& arrayClientes) {arrayClientes_ = arrayClientes;};
+	inline void setArrayClientes(const list<Cliente>& arrayClientes) {arrayClientes_ = arrayClientes;};
 
-	inline const std::string& getNombreFichero() const {return nombreFichero_;};
+	inline const string& getNombreFichero() const {return nombreFichero_;};
 
-	inline void setNombreFichero(const std::string& nombreFichero) {nombreFichero_ = nombreFichero;};
+	inline void setNombreFichero(const string& nombreFichero) {nombreFichero_ = nombreFichero;};
 
 	bool ficheroALista();
 	bool listaAFichero();
