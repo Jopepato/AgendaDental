@@ -310,25 +310,34 @@
 
 	-----------------------------------------------------------------------------------------*/
 
+//Funcion que ordenará la lista de la agenda en función del apellido
+//Orden ascendente
 bool Agenda::ordenarClientes(){
 
-
+  //Para ello hacemos uso de la función sort() de la clase list
 	arrayClientes_.sort(funcionOrdenacion);
 
 	return(true);
 
 }
+      /*---------------------------------------------------------
 
-	bool Agenda::funcionOrdenacion(Cliente first, Cliente second){
+            FUNCION AUXILIAR PARA ORDENAR LA LISTA
+      ----------------------------------------------------------*/
 
-	string aux1,aux2;
+      //Esta función será la que pasaremos a sort() en la funcion ordenarClientes
+      //Comparará los apellidos de dos clientes y devolverá verdadero si el primero es menor que el segundo
+      //Para que se queden ordenador ascendentemente
+    	bool Agenda::funcionOrdenacion(Cliente first, Cliente second){
 
-	aux1=first.getApellidos();
-	aux2=second.getApellidos();
+    	string aux1,aux2;
 
-	return(aux1<aux2);
+    	aux1=first.getApellidos();
+    	aux2=second.getApellidos();
 
-}
+    	return(aux1<aux2);
+
+    }
 
 
 	/*-----------------------------------------------------------------------------------------
@@ -337,13 +346,15 @@ bool Agenda::ordenarClientes(){
 
 	-----------------------------------------------------------------------------------------*/
 
-
+//Funcion buscarCliente, la cual recibe el apellido por parametro
+//Recorrerá toda la lista y nos devolverá una lista con los clientes de apellido coincidente
 list <Cliente> Agenda::buscarCliente(string apellido){
 
 	list <Cliente> aux;
 
 	list <Cliente>::iterator it;
 
+  //Recorremos toda la lista con un iterator
 	for(it=arrayClientes_.begin();it!=arrayClientes_.end();++it){
 
 		if(it->getApellidos()==apellido){
@@ -352,7 +363,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		}
 
 	}
-
+  //Devolvemos los clientes con apellido coincidente
 	return(aux);
 
 
@@ -740,16 +751,14 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 	//Esta función imprimirá los 10 clientes mas buscado por la secretaria
 list<Cliente> Agenda::mostrarClientesMasBuscados(){
-  //Esta funcion dependerá de la funcion de imprimre cliente
+
   list <Cliente> Lista;
   list <Cliente> aux;
   list <Cliente>::iterator first;
   list <Cliente>::iterator last;
   int j = 10;
   //Para coger los mas buscados, podemos ordenar la lista por ese campo
-  //Y despues coger los diez primeros y devolverlos :D
-  //Para eso necesitaremos una funcion que le introduciremos al sort( :D )
-
+  //Una vez ordenada la lista por ese campo, cogeremos los 10 primeros
   aux = getArrayClientes();
 
   aux.sort(compare_usados);
@@ -757,21 +766,24 @@ list<Cliente> Agenda::mostrarClientesMasBuscados(){
   //Una vez ordenada dicha lista pasamos los 10 primeros elementos a otra lista
   //Usaremos la funcion splice
   //void splice (iterator position, list& x, iterator first, iterator last);
-  //Modificar para que coja los 10 primeros
 
-    if(aux.size()<10){//Esto es por si hay menos de 10 clientes en la lista
+    //Esto es por si hay menos de 10 clientes en la lista
+    if(aux.size()<10){
       j = aux.size();
     }
 
   first = aux.begin();
   last = aux.begin();
+  //Incrementamos el segundo iterador hasta 10 o hasta el numero de clientes que haya si hay < 10
   for(int i=0; i<j;i++){
     ++last;
   }
 
     Lista.splice(Lista.begin(), aux, aux.begin(), last);
 
-return Lista;
+
+//Finalmente devolvemos la lista con los clientes mas buscados
+return (Lista);
 }
 
 
@@ -797,6 +809,9 @@ return Lista;
 
 	-----------------------------------------------------------------------------------------*/
 
+
+//Funcion que muestra por pantalla los clientes favoritos
+//Es decir, los clientes que tienen "Si" en el campo favorito
 list<Cliente> Agenda::muestraFavoritos(){
 
   list<Cliente> Lista;
@@ -804,6 +819,8 @@ list<Cliente> Agenda::muestraFavoritos(){
   list<Cliente>::iterator i;
 
   aux = getArrayClientes();
+  //Recorremos la lista con un iterator
+  //Vamos almacenando en otra lista auxiliar los clientes favoritos
   for(i = aux.begin(); i != aux.end(); ++i){
     if(i->getFavorito()){
       Lista.push_back(*i);
@@ -813,37 +830,26 @@ list<Cliente> Agenda::muestraFavoritos(){
     cout << "No hay favoritos entre los clientes" << endl;
   }
 
-  return Lista;
+  //Devolvemos solo la lista con clientes favoritos
+  return (Lista);
 }
-              /*-----------------------------------------------------------------------------------------
-
-              FUNCION AUXILIAR QUE RECIBE UN CLIENTE Y TE DICE SI ES FAVORITO O NO
-              DEVUELVE UN BOOL
-
-              -----------------------------------------------------------------------------------------*/
-              bool esfavorito(Cliente C){
-                if(C.getFavorito()){
-                  return true;
-                }else{
-                  return false;
-                }
-              }
-              /*-----------------------------------------------------------------------------------------
-
-              FIN DE LA FUNCION AUXILIAR PARA SABER SI ES FAVORITO O NO :D
-
-              -----------------------------------------------------------------------------------------*/
-
-//Esta función mostrará los datos del cliente por pantalla
-
-//Imprime cliente se beneficia de
-
-//DEP :(
 
 
+
+/*--------------------------------------------------------------
+
+        FUNCION PARA IMPRIMIR UNA LISTA
+
+----------------------------------------------------------*/
+
+
+//Funcion que imprimirá una lista de clientes pasada por parametro.
+//Para imprimir dicha lista usará el formato de la función imprimeCliente, que recibe un cliente
 	void Agenda::imprimirLista(list<Cliente> Lista){
 
 		  list<Cliente>::iterator i;
+      //Recorremos la lista de principio a fin con un iterator
+      //Pasandole en cada vuelta un cliente a la funcion imprimeCliente
       if(!Lista.empty()){
 		      for(i = Lista.begin(); i != Lista.end(); ++i){
 		      imprimeCliente(*i);
@@ -860,7 +866,8 @@ list<Cliente> Agenda::muestraFavoritos(){
 	-----------------------------------------------------------------------------------------*/
 
 
-
+//Función que imprimirá un cliente por pantalla, el cual ha sido pasado por parametro
+//Estará impreso siguiendo unos estandares de calidad
 void Agenda::imprimeCliente(Cliente C){
 
 //Declaramos unas estructuras auxiliares para facilitarnos las cosas
@@ -884,7 +891,6 @@ int buscado;
          << "\n";
 
   //Mostramos los telefonos
-
     tlf = C.getTelefonos();
     cout << "Telefonos:\n";
     cout << "- Teléfono fijo:\t" <<tlf.numeroFijo << "\n";
@@ -892,7 +898,6 @@ int buscado;
     cout << "- Teléfono auxiliar:\t" << tlf.numeroMovil2 << "\n";
 
   //Mostramos los correos
-
     cor = C.getCorreos();
     cout << "Correos electrónicos:\n";
     cout << "- Gmail:\t" << cor.gmail << "\n";
@@ -900,7 +905,6 @@ int buscado;
     cout << "- Yahoo:\t" << cor.yahoo << "\n";
 
   //Mostramos las redes sociales
-
     redes = C.getRedes();
     cout << "Redes sociales:\n";
     cout << "- Twitter:\t" << redes.twitter << "\n";
@@ -909,23 +913,19 @@ int buscado;
     cout << "- Linkedin:\t" << redes.linkedin << "\n";
 
   //Mostramos si el cliente es favorito
-
   if(C.getFavorito()){
     cout << "Favorito: Sí\n";
   }else
     cout << "Favorito: No\n";
 
   //Mostramos el numero de veces que se ha buscado dicho cliente
-
   buscado = C.getMasUsados();
   cout << "Numero de veces buscado: " << buscado << "\n";
 
   //Mostramos las anotaciones del cliente
-
   cout << C.getAnotaciones() << "\n";
 
   //Damos espaciado
-
   cout << endl << endl;
 
 }
