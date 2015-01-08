@@ -10,6 +10,9 @@ int main(){
 
 int opcion=1;
 Agenda aux("Agenda.txt");
+string apellido;
+string opcion;
+string copia;
 
 cout << "Bienvenido a la agenda dental" << endl;
 
@@ -51,7 +54,9 @@ while(opcion != 0){
 
               break;
 
-      case 2:
+      case 2: cout << "Introduzca el apellido del cliente que desea buscar" << endl;
+              getline(cin,apellido);
+              aux.imprimirLista(aux.buscarCliente(apellido));
               break;
 
       case 3:	if(aux.insertarCliente()){
@@ -61,22 +66,53 @@ while(opcion != 0){
       			}
               break;
 
-      case 4:
+      case 4: cout << "Introduzca el apellido del cliente que desea modificar" << endl;
+              getline(cin,apellido);
+              if(aux.modificarCliente(apellido)){
+                cout << "Cliente modificado" << endl;
+              }else{
+                cout << "El cliente solicitado no se encuentra en la agenda" << endl;
+                do{
+                cout << "¿Desea añadir el cliente a la agenda?S/N" << endl;
+                cin >> opcion;
+                if(opcion=="S"){
+                  aux.insertarCliente();
+                }
+              }while(opcion!=S || opcion!=N);
+              }
               break;
 
-      case 5:
+      case 5: cout << "Introduzca el apellido del cliente que desea borrar" << endl;
+              getline(cin,apellido);
+              if(aux.borrarCliente(apellido)){
+                cout << "Cliente borrado" << endl;
+              }else{
+                cout << "El cliente no se encuentra en la agenda o ya ha sido borrado" << endl;
+              }
               break;
 
-      case 6:
+      case 6: aux.imprimirLista(aux.muestraFavoritos());
               break;
 
-      case 7:
+      case 7: aux.imprimirLista(aux.mostrarClientesMasBuscados());
               break;
 
-      case 8:
+      case 8: cout << "Introduzca el nombre que desea darle a la copia" << endl;
+              getline(cin,copia);
+              if(aux.hacerCopiaSeguridad(copia)){
+                cout << "Copia realizada" << endl;
+              }else{
+                cout << "No se encuentra el fichero de la agenda" << endl;
+              }
               break;
 
-      case 9:
+      case 9: cout << "Introduzca el nombre de la copia que desea restaurar" << endl;
+              getline(cin,copia);
+              if(aux.restaurarCopiaSeguridad(copia)){
+                cout << "Agenda restaurada" << endl;
+              }else{
+                cout << "No se encuentra el fichero de la copia" << endl;
+              }
               break;
 
       default:  cout << "Opción no valida" << endl;
