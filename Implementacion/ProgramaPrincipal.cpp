@@ -15,9 +15,16 @@ string respuesta;
 string copia;
 list<Cliente> Buscados;
 
-cout << "Bienvenido a la agenda dental" << endl;
+    cout<<endl<<endl<<endl<<endl;
+    cout << "---------BIENVENIDO A LA AGENDA DENTAL-----------" << endl<<endl;
 
-aux.ficheroALista();
+    if(aux.ficheroALista()){
+
+        cout<<"Se ha cargado el fichero con exito:"<<endl;
+        cout<<"\t0%==========================100%"<<endl<<endl;
+    }else{
+        cout<<"Fallo al cargar fichero, reiniciando... 99%%"<<endl<<endl;
+    }
 
 while(opcion != 0){
 
@@ -45,18 +52,13 @@ while(opcion != 0){
     switch(opcion){
 
       case 0: aux.listaAFichero();
-              cout << "Gracias por su visita" << endl;
+              cout << endl<< "*** Gracias por su visita ***" << endl<<endl;
               break;
 
 
       case 1:
 
-                aux.imprimirLista(aux.getArrayClientes());
-
-              //else{
-                //cout << "Fallo al cargar fichero, reiniciando... 99%%" << endl;
-              //}
-
+              aux.imprimirLista(aux.getArrayClientes());
               break;
 
       case 2:
@@ -113,30 +115,35 @@ while(opcion != 0){
               }
               break;
 
-      case 6: aux.imprimirLista(aux.muestraFavoritos());
+      case 6: cout<<endl<<"\t*** CLIENTES FAVORITOS ***"<<endl;
+              cout<<"-----------------------------------------"<<endl<<endl;
+              aux.imprimirLista(aux.muestraFavoritos());
               break;
 
-      case 7: aux.imprimirLista(aux.mostrarClientesMasBuscados());
+      case 7: cout<<endl<<"\t*** CLIENTES MAS BUSCADOS ***"<<endl;
+              cout<<"-----------------------------------------"<<endl<<endl;
+              aux.imprimirLista(aux.mostrarClientesMasBuscados());
               break;
 
       case 8:
-              cout << "Introduzca el nombre que desea darle a la copia" << endl;
+              aux.listaAFichero();
+              cout << "Introduzca el nombre que desea darle a la copia: " << endl;
               getline(cin,copia);
               if(aux.hacerCopiaSeguridad(copia)){
-                cout << "Copia realizada" << endl;
+                cout <<endl<< "¡Copia realizada!" << endl<<endl;
               }else{
-                cout << "No se encuentra el fichero de la agenda" << endl;
+                cout << "ERROR!!! No se encuentra el fichero de la agenda" << endl;
               }
               break;
 
       case 9:
-              cout << "Introduzca el nombre de la copia que desea restaurar" << endl;
+              cout << "Introduzca el nombre de la copia que desea restaurar: " << endl;
               getline(cin,copia);
               if(aux.restaurarCopiaSeguridad(copia)){
                 aux.ficheroALista();
-                cout << "Agenda restaurada" << endl;
+                cout <<endl<< "¡Agenda restaurada!" << endl<<endl;
               }else{
-                cout << "No se encuentra el fichero de la copia" << endl;
+                cout << "ERROR!!! No se encuentra el fichero de la copia" << endl;
               }
               break;
 
