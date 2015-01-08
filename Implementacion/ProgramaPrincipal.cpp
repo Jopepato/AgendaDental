@@ -125,6 +125,7 @@ while(opcion != 0){
               cout << "Introduzca el nombre de la copia que desea restaurar" << endl;
               getline(cin,copia);
               if(aux.restaurarCopiaSeguridad(copia)){
+                aux.ficheroALista();
                 cout << "Agenda restaurada" << endl;
               }else{
                 cout << "No se encuentra el fichero de la copia" << endl;

@@ -457,7 +457,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	bool Agenda::modificarCliente(string apellido){
 
 		list<Cliente> aux;
-		int encontrado;
+		int encontrado=0;
 		Cliente c;
 		int posicion;
 
@@ -495,37 +495,37 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 	bool Agenda::modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux){
 
-		string DNI;
+		string DNI="";
 		DNI = caux.getDni();
 		list<Cliente>::iterator i;
 							bool variable=false;
 							int opcion;
 
-							string nombre, apellidos, anotaciones;
+							string nombre="", apellidos="", anotaciones="";
 							char favorito;
 							int opcionMenu;
 							
-							string calle, puerta;
-							int portal;
+							string calle="", puerta="";
+							int portal=0;
 							Direcciones direccion;
 							
-							string facebook;
-							string twitter;
-							string tuenti;
-							string linkedin;
+							string facebook="";
+							string twitter="";
+							string tuenti="";
+							string linkedin="";
 							Redes redes;
 							int opcionRedes;
 							
 							
-							string hotmail;
-							string gmail;
-							string yahoo;
+							string hotmail="";
+							string gmail="";
+							string yahoo="";
 							Correos correos;
 							
 							
-							string numeroFijo;
-							string numeroMovil1;
-							string numeroMovil2;
+							string numeroFijo="";
+							string numeroMovil1="";
+							string numeroMovil2="";
 							Telefonos telefonos;
 
 							for(i=laux.begin(); i!=laux.end(); i++){
@@ -911,8 +911,59 @@ int buscado;
 }
 
 
-	bool Agenda::hacerCopiaSeguridad(string ficheroCopia){}
-	bool Agenda::restaurarCopiaSeguridad(string ficheroCopia){}
+	bool Agenda::hacerCopiaSeguridad(string ficheroCopia){
+		char line[2000];
+
+		ifstream fileAgenda;
+		ofstream fileCopia;
+
+		fileAgenda.open("Agenda.txt");
+		if(fileAgenda.fail()){
+			return false;
+		}
+
+		fileCopia.open(ficheroCopia.c_str());
+		if(!(fileCopia.fail())){
+			fileCopia.close();
+			remove (ficheroCopia.c_str());
+			fileCopia.open(ficheroCopia.c_str());
+		}
+
+		while(fileAgenda.getline(line,2000,'\n')){
+			fileCopia << line <<endl;
+		}
+
+		fileAgenda.close();
+		fileCopia.close();
+		return true;
+	}
+
+	bool Agenda::restaurarCopiaSeguridad(string ficheroCopia){
+		char line[2000];
+
+		ofstream fileAgenda;
+		ifstream fileCopia;
+
+		fileCopia.open(ficheroCopia.c_str());
+		if(fileCopia.fail()){
+			return false;
+		}
+
+		fileAgenda.open("Agenda.txt");
+		if(!(fileAgenda.fail())){
+			fileAgenda.close();
+			remove ("Agenda.txt");
+			fileAgenda.open("Agenda.txt");
+		}
+
+		while(fileCopia.getline(line,2000,'\n')){
+			fileAgenda << line <<endl;
+		}
+
+		fileAgenda.close();
+		fileCopia.close();
+		return true;
+	}
 
 
 	/*-----------------------------------------------------------------------------------------
