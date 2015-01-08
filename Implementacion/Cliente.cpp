@@ -74,7 +74,7 @@ void Cliente::setDni(const std::string& dni) {
 	DNI_ = dni;
 }
 
-bool Cliente::isFavorito() const {
+bool Cliente::getFavorito() const {
 	return favorito_;
 }
 

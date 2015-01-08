@@ -31,7 +31,7 @@ bool funcionOrdenacion(Cliente first, Cliente second){
 }
 
 
-std::list <Cliente> buscarCliente(std::string apellido){
+std::list <Cliente> Agenda::buscarCliente(std::string apellido){
 
 	list <Cliente> aux;
 
@@ -39,7 +39,7 @@ std::list <Cliente> buscarCliente(std::string apellido){
 
 	for(it=arrayClientes_.begin();it!=arrayClientes_.end();++it){
 
-		if(*it.getApellidos()==apellido){
+		if(it->getApellidos()==apellido){
 			aux.push_back(*it);
 		}		
 

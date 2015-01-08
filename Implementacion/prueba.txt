@@ -1,0 +1,30 @@
+gcc ProgramaPrincipal.cpp Agenda.cpp Cliente.cpp -g -o ProgramaPrincipal
+Agenda.cpp: In member function ‘bool Agenda::imprimirListaComprobando(const std::list<Cliente>&, const string&)’:
+Agenda.cpp:337:12: error: no match for ‘operator=’ (operand types are ‘std::list<Cliente>::iterator {aka std::_List_iterator<Cliente>}’ and ‘std::list<Cliente>::const_iterator {aka std::_List_const_iterator<Cliente>}’)
+       for(i=aux.begin(); i!=aux.end(); ++i){
+            ^
+Agenda.cpp:337:12: note: candidate is:
+In file included from /usr/include/c++/4.8/list:63:0,
+                 from Agenda.h:11,
+                 from Agenda.cpp:8:
+/usr/include/c++/4.8/bits/stl_list.h:125:12: note: std::_List_iterator<Cliente>& std::_List_iterator<Cliente>::operator=(const std::_List_iterator<Cliente>&)
+     struct _List_iterator
+            ^
+/usr/include/c++/4.8/bits/stl_list.h:125:12: note:   no known conversion for argument 1 from ‘std::list<Cliente>::const_iterator {aka std::_List_const_iterator<Cliente>}’ to ‘const std::_List_iterator<Cliente>&’
+Agenda.cpp: In member function ‘bool Agenda::ordenarClientes()’:
+Agenda.cpp:377:39: error: no matching function for call to ‘std::list<Cliente>::sort(<unresolved overloaded function type>)’
+  arrayClientes_.sort(funcionOrdenacion);
+                                       ^
+Agenda.cpp:377:39: note: candidates are:
+In file included from /usr/include/c++/4.8/list:64:0,
+                 from Agenda.h:11,
+                 from Agenda.cpp:8:
+/usr/include/c++/4.8/bits/list.tcc:353:5: note: void std::list<_Tp, _Alloc>::sort() [with _Tp = Cliente; _Alloc = std::allocator<Cliente>]
+     list<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/list.tcc:353:5: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/list.tcc:430:7: note: void std::list<_Tp, _Alloc>::sort(_StrictWeakOrdering) [with _StrictWeakOrdering = bool (Agenda::*)(Cliente, Cliente); _Tp = Cliente; _Alloc = std::allocator<Cliente>]
+       list<_Tp, _Alloc>::
+       ^
+/usr/include/c++/4.8/bits/list.tcc:430:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘bool (Agenda::*)(Cliente, Cliente)’
+make: *** [ProgramaPrincipal] Error 1

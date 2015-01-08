@@ -46,8 +46,6 @@ using namespace std;
 		}else{
 			return (false);
 		}
-
-
 	}
 
 	/***************************************************************************************************
@@ -64,11 +62,11 @@ using namespace std;
 
 	**************************************************************************************************/
 
-					void Agenda::introducirEnLista(const Cliente &c){
+					void introducirEnLista(const Cliente &c){
 						arrayClientes_.push_back(c);
 					}
 
-					bool Agenda::imprimirListaComprobando(const list <Cliente> &aux, const string &apellido){
+					bool imprimirListaComprobando(const list <Cliente> &aux, const string &apellido){
 
 						list<Cliente>::iterator i;
 						bool variable=false;

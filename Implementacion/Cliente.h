@@ -76,7 +76,7 @@ public:
 	const std::string& getDni() const;
 	void setDni(const std::string& dni);
 
-	bool isFavorito() const;
+	bool getFavorito() const;
 	void setFavorito(bool favorito);
 
 	int getMasUsados() const;
