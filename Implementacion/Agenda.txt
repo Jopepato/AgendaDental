@@ -1,2 +1,2 @@
-Jose,Perez-Parras Toledano,31014082P,Es un pro al sc2,si,0,@jopepato,,,Quierotrabajo@linkedin.com,Piruleta,3,288,joseperezparras95@gmail.com,,,957482175,-1073761160,134520833
-Ruben,Medina Zamorano,31234123,Es un pro con los gcc,si,0,@rubenmz,,,,De la Piruleta,3,288,rubenmedina@gmail.com,,,92138821,-1073761160,134520833
+Jose,Perez-Parras,31014082P,Es un pro,no,1,,,,,Piruleta,288,,,,,,,
+Ruben,Medina,23141,ifjjsdfijsfdiasadasdasdadassad,si,2,,,,,sffssdf,32432,,,,,,,

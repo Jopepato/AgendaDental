@@ -13,6 +13,7 @@ Agenda aux("Agenda.txt");
 string apellido;
 string respuesta;
 string copia;
+list<Cliente> Buscados;
 
 cout << "Bienvenido a la agenda dental" << endl;
 
@@ -57,9 +58,16 @@ while(opcion != 0){
 
               break;
 
-      case 2: cout << "Introduzca el apellido del cliente que desea buscar" << endl;
+      case 2: getchar();
+              Buscados.clear();
+              cout << "Introduzca el apellido del cliente que desea buscar" << endl;
               getline(cin,apellido);
-              aux.imprimirLista(aux.buscarCliente(apellido));
+              Buscados = aux.buscarCliente(apellido);
+              if(!Buscados.empty()){
+                aux.imprimirLista(Buscados);
+              }else{
+                cout << "No hay apellidos coincidentes" << endl;
+              }
               break;
 
       case 3:	getchar();
