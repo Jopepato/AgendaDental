@@ -1,2 +1,2 @@
-Ruben,Medina,45789865,lelelel,si,0,,,,,Plata,4,7,,,,,,
+Ruben,Medina,45789865,lelelel,si,2,,,,,Plata,4,7,,,,,,
 Pepe,PerezParras,45784545,huehue,si,1,,,,,Pepito,4,7,,,,,,

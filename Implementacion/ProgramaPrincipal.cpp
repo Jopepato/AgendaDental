@@ -67,6 +67,13 @@ while(opcion != 0){
                 aux.imprimirLista(Buscados);
               }else{
                 cout << "No hay apellidos coincidentes" << endl;
+                do{
+                  cout << "¿Desea añadir el cliente a la agenda?S/N" << endl;
+                  cin >> respuesta;
+                  if(respuesta=="S"){
+                    aux.insertarCliente();
+                  }
+                }while(respuesta!="S" && respuesta!="N");
               }
               break;
 

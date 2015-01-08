@@ -421,7 +421,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							int j=1;
 							Cliente caux;
 
-							for(i=aux.begin(); i!=aux.end(); i++){
+							for(i=aux.begin(); i!=aux.end(); ++i){
 								if(j==posicion){
 									caux = *i;
 									aux.erase(i);
@@ -439,7 +439,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							list<Cliente>::iterator i;
 							bool variable=false;
 
-							for(i=laux.begin(); i!=laux.end(); i++){
+							for(i=laux.begin(); i!=laux.end(); ++i){
 								if(DNI==i->getDni()){
 									laux.erase(i);
 									variable=true;
@@ -471,13 +471,13 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 			cout<<"paso3";
 			cin>>posicion;
 			cout<<"paso1";
-			c = sacarClienteListaComprobando(aux, posicion);
+		/*	c = sacarClienteListaComprobando(aux, posicion);
 			cout<<"paso2";
 			if(modificarClienteListaComprobando(arrayClientes_, c)==true){
 				return(true);
 			}else{
 				return(false);
-			}
+			}*/
 
 		/*PEDIR DATOS, MODIFICAR EN LA LISTA AUX Y
 		MODIFICAR EN LA LISTA GENERAL CON EL DNI

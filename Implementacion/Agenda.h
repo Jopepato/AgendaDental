@@ -73,4 +73,4 @@ public:
 	bool listaAFichero();
 };
 
-#endif 
+#endif
