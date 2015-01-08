@@ -25,7 +25,9 @@
 
 
 	Agenda::Agenda(string ficheroAgenda) {
+
 		setNombreFichero(ficheroAgenda);
+		arrayClientes_.clear();
 	}
 
 
@@ -80,37 +82,38 @@
 		getline(cin, apellidos);
 		cout<<"Introduce DNI: ";
 		getline(cin, DNI);
-		do{
-			cout<<"¿Introducir direccion? (s/n): ";
-			cin>>opcion;
+		//do{
+			//cout<<"¿Introducir direccion? (s/n): ";
+			//cin>>opcion;
 			
-				if(opcion=='s'){
+				//if(opcion=='s'){
 					cout<<"Introduce calle: ";
 					getline(cin, calle);
 					cout<<"Introduce numero: ";
 					cin>>portal;
+					getchar();
 					cout<<"Introduce puerta: ";
 					getline(cin, puerta);
 					direccion.calle=calle;
 					direccion.puerta=puerta;
 					direccion.portal=portal;
 
-				}
+				//}
 		
-		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
+		//}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 		
-		do{
-			cout<<"¿Introducir anotacion? (s/n): ";
-			cin>>opcion;
+		//do{
+		//	cout<<"¿Introducir anotacion? (s/n): ";
+		//	cin>>opcion;
 			
-				if(opcion=='s'){
+				//if(opcion=='s'){
 					cout<<"Introduce anotacion: ";
 					getline(cin, anotaciones);
-				}
+				//}
 		
-		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
+		//}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 
-		do{
+		//do{
 			cout<<"¿Es favorito? (s/n): ";
 			cin>>opcion;
 			
@@ -120,15 +123,15 @@
 					favorito=0;
 				}
 		
-		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
+		//}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 		
-		do{
+		/*do{
 			cout<<"¿Introducir redes? (s/n): ";
 			cin>>opcion;
 			
 				if(opcion=='s'){
 					
-					do{
+					*/do{
 					cout<<"¿Que redes tiene?"<<endl;
 					cout<<"1.Twitter"<<endl;
 					cout<<"2.Facebook"<<endl;					
@@ -137,6 +140,8 @@
 					cout<<"0.Salir";
 					cout<<"Opcion: ";
 					cin>>opcionMenu;
+
+					getchar();
 					
 					switch(opcionMenu){
 					
@@ -170,7 +175,7 @@
 					
 					}while(opcionMenu!=0);
 					
-				}
+				/*}
 		
 		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 		
@@ -179,7 +184,7 @@
 			cin>>opcion;
 			
 				if(opcion=='s'){
-					
+					*/
 					do{
 						cout<<"¿Cual es el correo?"<<endl;
 						cout<<"1.Gmail"<<endl;
@@ -188,7 +193,8 @@
 						cout<<"0.Salir";
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
-					
+						getchar();
+
 						switch(opcionMenu){
 						
 							case 0: break;
@@ -212,7 +218,7 @@
 									break;
 						}
 					
-					}while(opcionMenu!=0);
+					}while(opcionMenu!=0);/*
 				}
 		
 		}while(opcion!='s'||opcion!='n');
@@ -223,7 +229,7 @@
 			cin>>opcion;
 			
 				if(opcion=='s'){
-					
+					*/
 					do{
 						cout<<"¿Numero de telefono??"<<endl;
 						cout<<"1.Fijo"<<endl;
@@ -232,7 +238,7 @@
 						cout<<"0.Salir";
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
-					
+						getchar();
 						switch(opcionMenu){
 						
 							case 0: break;
@@ -257,9 +263,11 @@
 						}
 					
 					}while(opcionMenu!=0);
-				}
+				/*}
 		
-		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
+		}while(opcion!='s'||opcion!='n');*/
+
+		//Mientras la opcion no sea s o n, se vuelve a preguntar
 
 		
 		//SE MODIFICAN LAS VARIABLES DEL CLIENTE AUX CON LOS VALORES ASIGNADOS
@@ -318,7 +326,7 @@
 
 	-----------------------------------------------------------------------------------------*/
 
-					void Agenda::introducirEnLista(const Cliente &c){
+				void Agenda::introducirEnLista(const Cliente &c){
 						arrayClientes_.push_back(c);
 					}
 
@@ -804,7 +812,7 @@ return Lista;
         FUNCION AUXILIAR QUE NOS AYUDARÁ A ORDERNAR LA LISTA SEGUN EL CAMPO DE MASUSADOS
 
     -----------------------------------------------------------------------------------------*/
-    bool compare_usados(Cliente first, Cliente second){
+    bool Agenda::compare_usados(Cliente first, Cliente second){
       int primero;
       int segundo;
       primero = first.getMasUsados();

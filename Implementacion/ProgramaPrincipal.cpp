@@ -11,10 +11,12 @@ int main(){
 int opcion=1;
 Agenda aux("Agenda.txt");
 string apellido;
-string opcion;
+string respuesta;
 string copia;
 
 cout << "Bienvenido a la agenda dental" << endl;
+
+aux.ficheroALista();
 
 while(opcion != 0){
 
@@ -40,7 +42,8 @@ while(opcion != 0){
 
     switch(opcion){
 
-      case 0: cout << "Gracias por su visita" << endl;
+      case 0: aux.listaAFichero();
+              cout << "Gracias por su visita" << endl;
               break;
 
 
@@ -59,14 +62,16 @@ while(opcion != 0){
               aux.imprimirLista(aux.buscarCliente(apellido));
               break;
 
-      case 3:	if(aux.insertarCliente()){
+      case 3:	getchar();
+            if(aux.insertarCliente()){
       				cout<<"Se ha introducido el cliente con exito"<<endl;
       			}else{
       				cout<<"Ya existen clientes"<<endl;
       			}
               break;
 
-      case 4: cout << "Introduzca el apellido del cliente que desea modificar" << endl;
+      case 4: getchar();
+              cout << "Introduzca el apellido del cliente que desea modificar" << endl;
               getline(cin,apellido);
               if(aux.modificarCliente(apellido)){
                 cout << "Cliente modificado" << endl;
@@ -74,15 +79,16 @@ while(opcion != 0){
                 cout << "El cliente solicitado no se encuentra en la agenda" << endl;
                 do{
                 cout << "¿Desea añadir el cliente a la agenda?S/N" << endl;
-                cin >> opcion;
-                if(opcion=="S"){
+                cin >> respuesta;
+                if(respuesta=="S"){
                   aux.insertarCliente();
                 }
-              }while(opcion!=S || opcion!=N);
+              }while(respuesta!="S" || respuesta!="N");
               }
               break;
 
-      case 5: cout << "Introduzca el apellido del cliente que desea borrar" << endl;
+      case 5: getchar();
+              cout << "Introduzca el apellido del cliente que desea borrar" << endl;
               getline(cin,apellido);
               if(aux.borrarCliente(apellido)){
                 cout << "Cliente borrado" << endl;
@@ -97,7 +103,8 @@ while(opcion != 0){
       case 7: aux.imprimirLista(aux.mostrarClientesMasBuscados());
               break;
 
-      case 8: cout << "Introduzca el nombre que desea darle a la copia" << endl;
+      case 8: getchar();
+              cout << "Introduzca el nombre que desea darle a la copia" << endl;
               getline(cin,copia);
               if(aux.hacerCopiaSeguridad(copia)){
                 cout << "Copia realizada" << endl;
@@ -106,7 +113,8 @@ while(opcion != 0){
               }
               break;
 
-      case 9: cout << "Introduzca el nombre de la copia que desea restaurar" << endl;
+      case 9: getchar();
+              cout << "Introduzca el nombre de la copia que desea restaurar" << endl;
               getline(cin,copia);
               if(aux.restaurarCopiaSeguridad(copia)){
                 cout << "Agenda restaurada" << endl;

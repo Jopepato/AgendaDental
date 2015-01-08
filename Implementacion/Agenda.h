@@ -11,8 +11,16 @@
 
 #include "Cliente.h"
 #include <list>
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <fstream>
+#include <cctype>
 
 using namespace std;
+
 class Agenda {
 
 private:
@@ -23,6 +31,7 @@ private:
 
 public:
 	Agenda(string ficheroAgenda="Agenda.txt");
+
 	virtual ~Agenda();
 
 
@@ -64,4 +73,4 @@ public:
 	bool listaAFichero();
 };
 
-#endif /* AGENDA_H_ */
+#endif 

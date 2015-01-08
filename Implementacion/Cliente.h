@@ -9,6 +9,9 @@
 #define CLIENTE_H_
 
 #include <string>
+#include <iostream>
+
+ using namespace std;
 
 typedef struct Telefonos{
 	int numeroFijo;
