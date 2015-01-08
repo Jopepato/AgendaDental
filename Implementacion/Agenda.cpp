@@ -17,22 +17,32 @@
 
  using namespace std;
 
+	/*-----------------------------------------------------------------------------------------
+									
+										CONSTRUCTOR
 
-Agenda::Agenda(string ficheroAgenda) {
-	setNombreFichero(ficheroAgenda);
-}
+	-----------------------------------------------------------------------------------------*/
 
-	/****************************************************************************************
+
+	Agenda::Agenda(string ficheroAgenda) {
+		setNombreFichero(ficheroAgenda);
+	}
+
+
+	/*-----------------------------------------------------------------------------------------
 
 									FUNCION PEDIR DATOS CLIENTE
 
-	*******************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 	Cliente pedirDatos(){
 		
-		
+		//Creamos un cliente auxiliar para devolverlo
+
 		Cliente aux;
-		
+
+		//DECLARACION DE VARIABLES
+
 		string nombre, apellidos, DNI, anotaciones;
 		char opcion;
 		bool favorito;
@@ -62,6 +72,8 @@ Agenda::Agenda(string ficheroAgenda) {
 		Telefonos telefonos;
 		
 		
+		//Vamos asignando valores por teclado a las variables
+
 		cout<<"Introduce el nombre: ";
 		getline(cin, nombre);
 		cout<<"Introduce los apellidos: ";
@@ -85,7 +97,7 @@ Agenda::Agenda(string ficheroAgenda) {
 
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 		
 		do{
 			cout<<"¿Introducir anotacion? (s/n): ";
@@ -96,7 +108,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					getline(cin, anotaciones);
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 
 		do{
 			cout<<"¿Es favorito? (s/n): ";
@@ -108,7 +120,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					favorito=0;
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 		
 		do{
 			cout<<"¿Introducir redes? (s/n): ";
@@ -160,7 +172,7 @@ Agenda::Agenda(string ficheroAgenda) {
 					
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 		
 		do{
 			cout<<"¿Tienes correo? (s/n): ";
@@ -247,10 +259,12 @@ Agenda::Agenda(string ficheroAgenda) {
 					}while(opcionMenu!=0);
 				}
 		
-		}while(opcion!='s'||opcion!='n');
+		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
 
 		
-		
+		//SE MODIFICAN LAS VARIABLES DEL CLIENTE AUX CON LOS VALORES ASIGNADOS
+
+
 		aux.setNombre(nombre);
 		aux.setApellidos(apellidos);
 		aux.setDni(DNI);
@@ -265,11 +279,11 @@ Agenda::Agenda(string ficheroAgenda) {
 		return (aux);
 	}
 
-	/****************************************************************************************
+	/*-----------------------------------------------------------------------------------------
 									
 									FUNCION INSERTAR CLIENTE
 
-	*******************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 	bool Agenda::insertarCliente(){
 
@@ -281,28 +295,28 @@ Agenda::Agenda(string ficheroAgenda) {
 		cout<<"Introduce el apellido del cliente: ";
 		getline(cin, apellido);
 
-		aux = buscarCliente(apellido);
+		aux = buscarCliente(apellido);//Se buscan los clientes que tengan ese apellido, y se devuelve la lista de clientes.
 
-		encontrado = imprimirListaComprobando(aux, apellido);
+		encontrado = imprimirListaComprobando(aux, apellido);//Imprime la lista de clientes con ese apellido, y devuelve true si lo encuentra
 
 		if(encontrado==false){
-			c = pedirDatos();
-			introducirEnLista(c);
-			ordenarClientes();
+			c = pedirDatos();//Pide los datos por pantalla y devuelve el cliente con esos datos
+			introducirEnLista(c);//Introduce al cliente en la lista
+			ordenarClientes();//Ordena la lista por apellido con el nuevo cliente
 			return (true);
 		}else{
-			return (false);
+			return (false);//Si ya existe un cliente con ese apellido, devuelve false
 		}
 	}
 
-	/***************************************************************************************************
+	/*-----------------------------------------------------------------------------------------
 
 								FUNCIONES AUXILIARES PARA INSERTAR CLIENTE
 									- INTRODUCIR EN LA LISTA
 												Y
 									- IMPRIMIR LISTA COMPROBANDO
 
-	**************************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 					void Agenda::introducirEnLista(const Cliente &c){
 						arrayClientes_.push_back(c);
@@ -332,11 +346,11 @@ Agenda::Agenda(string ficheroAgenda) {
 					}
 
 
-	/****************************************************************************************
+	/*-----------------------------------------------------------------------------------------
 									
 									FUNCION ORDENAR CLIENTES
 
-	*******************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 bool Agenda::ordenarClientes(){
 
@@ -347,7 +361,7 @@ bool Agenda::ordenarClientes(){
 
 }
 
-bool Agenda::funcionOrdenacion(const Cliente& first, const Cliente& second){
+	bool Agenda::funcionOrdenacion(Cliente first, Cliente second){
 
 	string aux1,aux2;
 
@@ -359,11 +373,11 @@ bool Agenda::funcionOrdenacion(const Cliente& first, const Cliente& second){
 }
 
 
-	/****************************************************************************************
+	/*-----------------------------------------------------------------------------------------
 									
 									FUNCION BUSCAR CLIENTE
 
-	*******************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 
 list <Cliente> Agenda::buscarCliente(string apellido){
@@ -375,6 +389,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	for(it=arrayClientes_.begin();it!=arrayClientes_.end();++it){
 
 		if(it->getApellidos()==apellido){
+			it->setMasUsados(it->getMasUsados() + 1);
 			aux.push_back(*it);
 		}		
 
@@ -428,14 +443,14 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 	}
 
-	/****************************************************************************************
+	/*-----------------------------------------------------------------------------------------
 									
 									FUNCIONES AUXILIARES PARA BORRAR
 									- SACAR CLIENTE DE LA LISTA
 													Y
 									- ELIMINAR CLIENTE DE LA LISTA
 
-	*******************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 
 						Cliente Agenda::sacarClienteListaComprobando(list <Cliente> &aux, const int &posicion){
@@ -473,11 +488,11 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							return (variable);
 						}
 
-	/****************************************************************************************
+	/*-----------------------------------------------------------------------------------------
 									
 									FUNCION MODIFICAR CLIENTE
 
-	****************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 
 	bool Agenda::modificarCliente(string apellido){
@@ -511,12 +526,12 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	}
 
 
-		/****************************************************************************************
+	/*-----------------------------------------------------------------------------------------
 									
 									FUNCIONES AUXILIARES PARA MODIFICAR
 									- MODIFICAR CLIENTE DE LA LISTA
 
-	*******************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 
 				bool Agenda::modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux){
@@ -606,7 +621,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 															i->setFavorito(false);
 														}
 													
-													}while((favorito!='s')&&(favorito!='n'));
+													}while((favorito!='s')&&(favorito!='n'));//Mientras la opcion no sea s o n, se vuelve a preguntar
 													break;
 
 											case 6:	do{
@@ -747,11 +762,11 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 
 
-	/****************************************************************************************
+	/*-----------------------------------------------------------------------------------------
 									
 									FUNCION MOSTRAR CLIENTES MAS BUSCADOS
 
-	****************************************************************************************/
+	-----------------------------------------------------------------------------------------*/
 
 	//Esta función imprimirá los 10 clientes mas buscado por la secretaria
 list<Cliente> Agenda::mostrarClientesMasBuscados(){
@@ -763,7 +778,8 @@ list<Cliente> Agenda::mostrarClientesMasBuscados(){
   //Para coger los mas buscados, podemos ordenar la lista por ese campo
   //Y despues coger los diez primeros y devolverlos :D
   //Para eso necesitaremos una funcion que le introduciremos al sort( :D )
-  aux = imprimirClientes();
+  ficheroALista();
+  aux = getArrayClientes();
 
   aux.sort(compare_usados);
 
@@ -783,10 +799,11 @@ return Lista;
 }
 
 
-    /***********************************************************************
-        FUNCION AUXILIAR QUE NOS AYUDARÁ A ORDERNAR LA LISTA SEGUN EL CAMPO
-        DE MASUSADOS :D
-    ***********************************************************************/
+    /*-----------------------------------------------------------------------------------------
+
+        FUNCION AUXILIAR QUE NOS AYUDARÁ A ORDERNAR LA LISTA SEGUN EL CAMPO DE MASUSADOS
+
+    -----------------------------------------------------------------------------------------*/
     bool compare_usados(Cliente first, Cliente second){
       int primero;
       int segundo;
@@ -798,7 +815,11 @@ return Lista;
         return false;
     }
 
+	/*-----------------------------------------------------------------------------------------
+									
+									FUNCION MOSTRAR CLIENTES FAVORITOS
 
+	-----------------------------------------------------------------------------------------*/
 
 list<Cliente> Agenda::muestraFavoritos(){
 
@@ -806,19 +827,22 @@ list<Cliente> Agenda::muestraFavoritos(){
   list<Cliente> aux;
   list<Cliente>::iterator i;
 
-  aux = imprimirClientes();
+  ficheroALista();
+  aux = getArrayClientes();
   for(i = aux.begin(); i != aux.end(); ++i){
-    if(esfavorito(*i)){
+    if(i->getFavorito()){
       Lista.push_back(*i);
     }
   }
 
   return Lista;
 }
-              /************************************************************************
+              /*-----------------------------------------------------------------------------------------
+
               FUNCION AUXILIAR QUE RECIBE UN CLIENTE Y TE DICE SI ES FAVORITO O NO
               DEVUELVE UN BOOL
-              ************************************************************************/
+
+              -----------------------------------------------------------------------------------------*/
               bool esfavorito(Cliente C){
                 if(C.getFavorito()){
                   return true;
@@ -826,9 +850,11 @@ list<Cliente> Agenda::muestraFavoritos(){
                   return false;
                 }
               }
-              /***********************************************************************
+              /*-----------------------------------------------------------------------------------------
+
               FIN DE LA FUNCION AUXILIAR PARA SABER SI ES FAVORITO O NO :D
-              ***********************************************************************/
+
+              -----------------------------------------------------------------------------------------*/
 
 //Esta función mostrará los datos del cliente por pantalla
 
@@ -845,6 +871,13 @@ list<Cliente> Agenda::muestraFavoritos(){
 		    imprimeCliente(*i);
 		  }
 	}
+
+	/*-----------------------------------------------------------------------------------------
+									
+									FUNCION IMPRIME UN CLIENTE
+
+	-----------------------------------------------------------------------------------------*/
+
 
 
 void Agenda::imprimeCliente(Cliente C){
@@ -920,6 +953,12 @@ int buscado;
 	bool Agenda::hacerCopiaSeguridad(string ficheroCopia){}
 	bool Agenda::restaurarCopiaSeguridad(string ficheroCopia){}
 
+
+	/*-----------------------------------------------------------------------------------------
+									
+									FUNCION PASA DATOS DEL FICHERO A LA LISTA
+
+	-----------------------------------------------------------------------------------------*/
 
 bool Agenda::ficheroALista(){
 		char line[256];
@@ -1002,6 +1041,13 @@ bool Agenda::ficheroALista(){
 		return true;
 
 	}
+
+
+	/*-----------------------------------------------------------------------------------------
+									
+									FUNCION PASA LISTA AL FICHERO
+
+	-----------------------------------------------------------------------------------------*/
 
 	bool Agenda::listaAFichero(){
 		char line[256];

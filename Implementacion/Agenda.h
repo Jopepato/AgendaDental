@@ -22,7 +22,7 @@ private:
 	list <Cliente> arrayClientes_;
 
 public:
-	Agenda(string ficheroAgenda);
+	Agenda(string ficheroAgenda="Agenda.txt");
 	virtual ~Agenda();
 
 
@@ -41,9 +41,10 @@ public:
 
 	list <Cliente> buscarCliente(string apellido);
 	bool ordenarClientes();
-	bool funcionOrdenacion(const Cliente& first, const Cliente& second);
+	static bool funcionOrdenacion(Cliente first, Cliente second);
 
 	list <Cliente> mostrarClientesMasBuscados();
+	static bool compare_usados(Cliente first, Cliente second);
 	list <Cliente> muestraFavoritos();
 	void imprimirLista(list<Cliente> Lista);
 	void imprimeCliente(Cliente C);
