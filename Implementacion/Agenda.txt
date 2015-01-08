@@ -1,2 +1,1 @@
-Ruben,Medina,45789865,lelelel,si,2,,,,,Plata,4,7,,,,,,
-Pepe,PerezParras,45784545,huehue,si,1,,,,,Pepito,4,7,,,,,,
+Gcc,Medina,45789865,lelelel,si,4,,,,,Plata,4,7,,,,,,

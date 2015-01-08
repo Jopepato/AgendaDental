@@ -374,6 +374,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		int encontrado;
 		Cliente c;
 		int posicion;
+    bool resultado=false;
 
 		aux = buscarCliente(apellido);
 		encontrado = imprimirListaComprobando(aux, apellido);
@@ -382,10 +383,9 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 			cout<<"Introduce el numero del cliente para eliminar: ";
 			cin>>posicion;
-			cout<<"paso1";
 			c = sacarClienteListaComprobando(aux, posicion);
-			cout<<"paso2";
-			if(eliminarClienteListaComprobando(arrayClientes_, c)==true){
+      resultado = eliminarClienteListaComprobando(arrayClientes_, c);
+			if(resultado==true){
 				return(true);
 			}else{
 				return(false);
@@ -419,15 +419,21 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							list<Cliente>::iterator i;
 							bool variable=false;
 							int j=1;
+              int elementos = aux.size();
 							Cliente caux;
-
+              if(elementos==1){
+                i=aux.begin();
+                caux = *i;
+                aux.erase(i);
+              }else{
 							for(i=aux.begin(); i!=aux.end(); ++i){
 								if(j==posicion){
 									caux = *i;
 									aux.erase(i);
 								}
 								j++;
-							}
+							 }
+              }
 
 							return (caux);
 						}
@@ -462,22 +468,21 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		int encontrado=0;
 		Cliente c;
 		int posicion=0;
+    bool resultado=false;
 
 		aux = buscarCliente(apellido);
 		encontrado = imprimirListaComprobando(aux, apellido);
 
 		if(encontrado==true){
 			cout<<"Introduce el numero del cliente para modificar: ";
-			cout<<"paso3";
 			cin>>posicion;
-			cout<<"paso1";
-		/*	c = sacarClienteListaComprobando(aux, posicion);
-			cout<<"paso2";
-			if(modificarClienteListaComprobando(arrayClientes_, c)==true){
+			c = sacarClienteListaComprobando(aux, posicion);
+      resultado = modificarClienteListaComprobando(arrayClientes_, c);
+			if(resultado==true){
 				return(true);
 			}else{
 				return(false);
-			}*/
+			}
 
 		/*PEDIR DATOS, MODIFICAR EN LA LISTA AUX Y
 		MODIFICAR EN LA LISTA GENERAL CON EL DNI
@@ -510,7 +515,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							int opcionMenu;
 
 							string calle="", puerta="";
-							string portal=0;
+							string portal="";
 							Direcciones direccion;
 
 							string facebook="";
@@ -532,7 +537,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							string numeroMovil2="";
 							Telefonos telefonos;
 
-							for(i=laux.begin(); i!=laux.end(); i++){
+							for(i=laux.begin(); i!=laux.end(); ++i){
 								if(DNI==i->getDni()){ //SI EL DNI DEL CLIENTE DE LA LISTA COINCIDE CON EL PARAMETRO DEL DNI
 									do{
 										cout<<"¿Que desea modificar?"<<endl;
@@ -548,7 +553,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 										cout<<"\t0. SALIR"<<endl;
 										cout<<"Opcion: ";
 										cin>>opcion;
-
+                    getchar();
 
 										switch(opcion){
 											case 0: break;
