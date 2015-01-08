@@ -8,13 +8,15 @@
 #include "Cliente.h"
 #include <string>
 
+using namespace std;
+
 Cliente::Cliente() {
 	setFavorito(false);
 	setMasUsados(0);
 
 }
 
-Cliente::Cliente(std::string nombre, std::string apellidos, std::string DNI,	std::string anotaciones, bool favorito, int masUsados, Redes redes, Direcciones direcciones, Correos correos, Telefonos telefonos){
+Cliente::Cliente(string nombre, string apellidos, string DNI,	string anotaciones, bool favorito, int masUsados, Redes redes, Direcciones direcciones, Correos correos, Telefonos telefonos){
 	setNombre(nombre);
 	setApellidos(apellidos);
 	setDni(DNI);
@@ -34,19 +36,19 @@ Cliente::~Cliente() {
 	// NA
 }
 
-const std::string& Cliente::getAnotaciones() const {
+const string& Cliente::getAnotaciones() const {
 	return anotaciones_;
 }
 
-void Cliente::setAnotaciones(const std::string& anotaciones) {
+void Cliente::setAnotaciones(const string& anotaciones) {
 	anotaciones_ = anotaciones;
 }
 
-const std::string& Cliente::getApellidos() const {
+const string& Cliente::getApellidos() const {
 	return apellidos_;
 }
 
-void Cliente::setApellidos(const std::string& apellidos) {
+void Cliente::setApellidos(const string& apellidos) {
 	apellidos_ = apellidos;
 }
 
@@ -66,11 +68,11 @@ void Cliente::setDirecciones(const Direcciones& direcciones) {
 	direcciones_ = direcciones;
 }
 
-const std::string& Cliente::getDni() const {
+const string& Cliente::getDni() const {
 	return DNI_;
 }
 
-void Cliente::setDni(const std::string& dni) {
+void Cliente::setDni(const string& dni) {
 	DNI_ = dni;
 }
 
@@ -90,11 +92,11 @@ void Cliente::setMasUsados(int masUsados) {
 	masUsados_ = masUsados;
 }
 
-const std::string& Cliente::getNombre() const {
+const string& Cliente::getNombre() const {
 	return nombre_;
 }
 
-void Cliente::setNombre(const std::string& nombre) {
+void Cliente::setNombre(const string& nombre) {
 	nombre_ = nombre;
 }
 

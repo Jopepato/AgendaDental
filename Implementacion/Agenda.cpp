@@ -45,32 +45,32 @@
 
 		//DECLARACION DE VARIABLES
 
-		string nombre, apellidos, DNI, anotaciones;
+		string nombre="", apellidos="", DNI="", anotaciones="";
 		char opcion;
 		bool favorito;
 		int opcionMenu;
 		
-		string calle, puerta;
-		int portal;
+		string calle="", puerta="";
+		int portal=0;
 		Direcciones direccion;
 		
-		string facebook;
-		string twitter;
-		string tuenti;
-		string linkedin;
+		string facebook="";
+		string twitter="";
+		string tuenti="";
+		string linkedin="";
 		Redes redes;
 		int opcionRedes;
 		
 		
-		string hotmail;
-		string gmail;
-		string yahoo;
+		string hotmail="";
+		string gmail="";
+		string yahoo="";
 		Correos correos;
 		
 		
-		int numeroFijo;
-		int numeroMovil1;
-		int numeroMovil2;
+		string numeroFijo="";
+		string numeroMovil1="";
+		string numeroMovil2="";
 		Telefonos telefonos;
 		
 		
@@ -82,64 +82,39 @@
 		getline(cin, apellidos);
 		cout<<"Introduce DNI: ";
 		getline(cin, DNI);
-		//do{
-			//cout<<"¿Introducir direccion? (s/n): ";
-			//cin>>opcion;
-			
-				//if(opcion=='s'){
-					cout<<"Introduce calle: ";
-					getline(cin, calle);
-					cout<<"Introduce numero: ";
-					cin>>portal;
-					getchar();
-					cout<<"Introduce puerta: ";
-					getline(cin, puerta);
-					direccion.calle=calle;
-					direccion.puerta=puerta;
-					direccion.portal=portal;
 
-				//}
-		
-		//}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
-		
-		//do{
-		//	cout<<"¿Introducir anotacion? (s/n): ";
-		//	cin>>opcion;
-			
-				//if(opcion=='s'){
-					cout<<"Introduce anotacion: ";
-					getline(cin, anotaciones);
-				//}
-		
-		//}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
+		cout<<"Introduce calle: ";
+		getline(cin, calle);
+		cout<<"Introduce numero: ";
+		cin>>portal;
+		getchar();
+		cout<<"Introduce puerta: ";
+		getline(cin, puerta);
+		direccion.calle=calle;
+		direccion.puerta=puerta;
+		direccion.portal=portal;
 
-		//do{
-			cout<<"¿Es favorito? (s/n): ";
-			cin>>opcion;
+		cout<<"Introduce anotacion: ";
+		getline(cin, anotaciones);
+
+		cout<<"¿Es favorito? (s/n): ";
+		cin>>opcion;
 			
 				if(opcion=='s'){
 					favorito=1;
 				}else{
 					favorito=0;
 				}
-		
-		//}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
-		
-		/*do{
-			cout<<"¿Introducir redes? (s/n): ";
-			cin>>opcion;
-			
-				if(opcion=='s'){
-					
-					*/do{
-					cout<<"¿Que redes tiene?"<<endl;
-					cout<<"1.Twitter"<<endl;
-					cout<<"2.Facebook"<<endl;					
-					cout<<"3.Tuenti"<<endl;
-					cout<<"4.Linkedin"<<endl;
-					cout<<"0.Salir";
-					cout<<"Opcion: ";
-					cin>>opcionMenu;
+
+		do{
+			cout<<"¿Que redes tiene?"<<endl;
+			cout<<"\t1.Twitter"<<endl;
+			cout<<"\t2.Facebook"<<endl;					
+			cout<<"\t3.Tuenti"<<endl;
+			cout<<"\t4.Linkedin"<<endl;
+			cout<<"\t0.Salir"<<endl;
+			cout<<"Opcion: ";
+			cin>>opcionMenu;
 
 					getchar();
 					
@@ -173,24 +148,14 @@
 					
 					}
 					
-					}while(opcionMenu!=0);
+		}while(opcionMenu!=0);
 					
-				/*}
-		
-		}while(opcion!='s'||opcion!='n');//Mientras la opcion no sea s o n, se vuelve a preguntar
-		
-		do{
-			cout<<"¿Tienes correo? (s/n): ";
-			cin>>opcion;
-			
-				if(opcion=='s'){
-					*/
-					do{
+			do{
 						cout<<"¿Cual es el correo?"<<endl;
-						cout<<"1.Gmail"<<endl;
-						cout<<"2.Hotmail"<<endl;					
-						cout<<"3.Yahoo"<<endl;
-						cout<<"0.Salir";
+						cout<<"\t1.Gmail\n"<<endl;
+						cout<<"\t2.Hotmail"<<endl;					
+						cout<<"\t3.Yahoo"<<endl;
+						cout<<"\t0.Salir"<<endl;
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
 						getchar();
@@ -218,24 +183,16 @@
 									break;
 						}
 					
-					}while(opcionMenu!=0);/*
-				}
-		
-		}while(opcion!='s'||opcion!='n');
-		
-		
-		do{
-			cout<<"¿Tienes telefono? (s/n): ";
-			cin>>opcion;
-			
-				if(opcion=='s'){
-					*/
-					do{
+			}while(opcionMenu!=0);
+
+					
+
+			do{
 						cout<<"¿Numero de telefono??"<<endl;
-						cout<<"1.Fijo"<<endl;
-						cout<<"2.Movil1"<<endl;					
-						cout<<"3.Movil2"<<endl;
-						cout<<"0.Salir";
+						cout<<"\t1.Fijo"<<endl;
+						cout<<"\t2.Movil1"<<endl;					
+						cout<<"\t3.Movil2"<<endl;
+						cout<<"\t0.Salir"<<endl;
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
 						getchar();
@@ -262,13 +219,7 @@
 									break;
 						}
 					
-					}while(opcionMenu!=0);
-				/*}
-		
-		}while(opcion!='s'||opcion!='n');*/
-
-		//Mientras la opcion no sea s o n, se vuelve a preguntar
-
+			}while(opcionMenu!=0);
 		
 		//SE MODIFICAN LAS VARIABLES DEL CLIENTE AUX CON LOS VALORES ASIGNADOS
 
@@ -542,11 +493,11 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	-----------------------------------------------------------------------------------------*/
 
 
-				bool Agenda::modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux){
+	bool Agenda::modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux){
 
-							string DNI;
-							DNI = caux.getDni();
-							list<Cliente>::iterator i;
+		string DNI;
+		DNI = caux.getDni();
+		list<Cliente>::iterator i;
 							bool variable=false;
 							int opcion;
 
@@ -572,25 +523,25 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							Correos correos;
 							
 							
-							int numeroFijo;
-							int numeroMovil1;
-							int numeroMovil2;
+							string numeroFijo;
+							string numeroMovil1;
+							string numeroMovil2;
 							Telefonos telefonos;
 
 							for(i=laux.begin(); i!=laux.end(); i++){
 								if(DNI==i->getDni()){ //SI EL DNI DEL CLIENTE DE LA LISTA COINCIDE CON EL PARAMETRO DEL DNI
 									do{
 										cout<<"¿Que desea modificar?"<<endl;
-										cout<<"1.Nombre"<<endl;
-										cout<<"2.Apellidos"<<endl;
-										cout<<"3.DNI"<<endl;
-										cout<<"4.Anotaciones"<<endl;
-										cout<<"5.Favorito"<<endl;
-										cout<<"6.Redes"<<endl;
-										cout<<"7.Direcciones"<<endl;
-										cout<<"8.Correos"<<endl;
-										cout<<"9.Telefonos"<<endl;
-										cout<<"0. SALIR"<<endl;
+										cout<<"\t1.Nombre"<<endl;
+										cout<<"\t2.Apellidos"<<endl;
+										cout<<"\t3.DNI"<<endl;
+										cout<<"\t4.Anotaciones"<<endl;
+										cout<<"\t5.Favorito"<<endl;
+										cout<<"\t6.Redes"<<endl;
+										cout<<"\t7.Direcciones"<<endl;
+										cout<<"\t8.Correos"<<endl;
+										cout<<"\t9.Telefonos"<<endl;
+										cout<<"\t0. SALIR"<<endl;
 										cout<<"Opcion: ";
 										cin>>opcion;
 
@@ -634,14 +585,14 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 											case 6:	do{
 														cout<<"¿Que redes tiene?"<<endl;
-														cout<<"1.Twitter"<<endl;
-														cout<<"2.Facebook"<<endl;					
-														cout<<"3.Tuenti"<<endl;
-														cout<<"4.Linkedin"<<endl;
-														cout<<"0.Salir"<<endl;
+														cout<<"\t1.Twitter"<<endl;
+														cout<<"\t2.Facebook"<<endl;					
+														cout<<"\t3.Tuenti"<<endl;
+														cout<<"\t4.Linkedin"<<endl;
+														cout<<"\t0.Salir"<<endl;
 														cout<<"Opcion: ";
 														cin>>opcionMenu;
-														
+														getchar();
 														switch(opcionMenu){
 														
 															case 0: break;
@@ -666,7 +617,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 																	redes.linkedin = linkedin;
 																	break;
 																	
-															default: cout<<"OPCION NO VALIDA";
+															default: cout<<"OPCION NO VALIDA"<<endl;
 														}
 													}while(opcionMenu!=0);
 													i->setRedes(redes);
@@ -686,12 +637,13 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 											case 8:	do{
 														cout<<"¿Cual es el correo?"<<endl;
-														cout<<"1.Gmail"<<endl;
-														cout<<"2.Hotmail"<<endl;					
-														cout<<"3.Yahoo"<<endl;
-														cout<<"0.Salir"<<endl;
+														cout<<"\t1.Gmail"<<endl;
+														cout<<"\t2.Hotmail"<<endl;					
+														cout<<"\t3.Yahoo"<<endl;
+														cout<<"\t0.Salir"<<endl;
 														cout<<"Opcion: ";
 														cin>>opcionMenu;
+														getchar();
 													
 														switch(opcionMenu){
 														
@@ -728,7 +680,8 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 														cout<<"0.Salir"<<endl;
 														cout<<"Opcion: ";
 														cin>>opcionMenu;
-													
+														getchar();
+
 														switch(opcionMenu){
 														
 															case 0: break;
@@ -1033,11 +986,11 @@ bool Agenda::ficheroALista(){
 			cl.setCorreos(cor);
 
 			fileAgenda.getline(line,256,',');
-			tlf.numeroFijo = atoi(line);
+			tlf.numeroFijo = line;
 			fileAgenda.getline(line,256,',');
-			tlf.numeroMovil1 = atoi(line);
+			tlf.numeroMovil1 =line;
 			fileAgenda.getline(line,256,'\n');
-			tlf.numeroMovil2 = atoi(line);
+			tlf.numeroMovil2 = line;
 			cl.setTelefonos(tlf);
 
 			aux.push_back(cl);

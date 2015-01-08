@@ -47,13 +47,13 @@ while(opcion != 0){
               break;
 
 
-      case 1: if(aux.ficheroALista()){
+      case 1: 
 
                 aux.imprimirLista(aux.getArrayClientes());
 
-              }else{
-                cout << "Fallo al cargar fichero, reiniciando... 99%%" << endl;
-              }
+              //else{
+                //cout << "Fallo al cargar fichero, reiniciando... 99%%" << endl;
+              //}
 
               break;
 
