@@ -327,7 +327,7 @@ bool Agenda::ordenarClientes(){
 	aux1=first.getApellidos();
 	aux2=second.getApellidos();
 
-	return(aux1>aux2);
+	return(aux1<aux2);
 
 }
 
