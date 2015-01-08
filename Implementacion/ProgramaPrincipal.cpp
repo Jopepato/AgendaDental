@@ -23,7 +23,7 @@ while(opcion != 0){
 
     cout << "Elija una de las siguientes opciones: " << endl;
 
-    cout << "*****************************************" << endl;
+    cout << "*************************************************" << endl;
     cout << "|\tSalir :                           0\t|" << endl;
     cout << "|\tImprimir clientes por pantalla:   1\t|" << endl;
     cout << "|\tBuscar un cliente:                2\t|" << endl;
@@ -34,7 +34,7 @@ while(opcion != 0){
     cout << "|\tMostrar los clientes mas buscados 7\t|" << endl;
     cout << "|\tCrear copia de seguridad          8\t|" << endl;
     cout << "|\tRestaurar copia de seguridad      9\t|" << endl;
-    cout << "****************************************" << endl << endl;
+    cout << "*************************************************" << endl << endl;
 
 
     cout << "Opción -> ";
@@ -48,7 +48,7 @@ while(opcion != 0){
               break;
 
 
-      case 1: 
+      case 1:
 
                 aux.imprimirLista(aux.getArrayClientes());
 

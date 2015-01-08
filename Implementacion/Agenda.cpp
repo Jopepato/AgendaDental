@@ -18,7 +18,7 @@
  using namespace std;
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 										CONSTRUCTOR
 
 	-----------------------------------------------------------------------------------------*/
@@ -38,7 +38,7 @@
 	-----------------------------------------------------------------------------------------*/
 
 	Cliente pedirDatos(){
-		
+
 		//Creamos un cliente auxiliar para devolverlo
 
 		Cliente aux;
@@ -49,31 +49,31 @@
 		char opcion;
 		bool favorito;
 		int opcionMenu;
-		
+
 		string calle="", puerta="";
 		string portal="";
 		Direcciones direccion;
-		
+
 		string facebook="";
 		string twitter="";
 		string tuenti="";
 		string linkedin="";
 		Redes redes;
 		int opcionRedes;
-		
-		
+
+
 		string hotmail="";
 		string gmail="";
 		string yahoo="";
 		Correos correos;
-		
-		
+
+
 		string numeroFijo="";
 		string numeroMovil1="";
 		string numeroMovil2="";
 		Telefonos telefonos;
-		
-		
+
+
 		//Vamos asignando valores por teclado a las variables
 
 		cout<<"Introduce el nombre: ";
@@ -98,7 +98,7 @@
 
 				cout<<"¿Es favorito? (s/n): ";
 				cin>>opcion;
-			
+
 				if(opcion=='s'){
 					favorito=1;
 				}else{
@@ -108,7 +108,7 @@
 		do{
 			cout<<"¿Que redes tiene?"<<endl;
 			cout<<"\t1.Twitter"<<endl;
-			cout<<"\t2.Facebook"<<endl;					
+			cout<<"\t2.Facebook"<<endl;
 			cout<<"\t3.Tuenti"<<endl;
 			cout<<"\t4.Linkedin"<<endl;
 			cout<<"\t0.Salir"<<endl;
@@ -116,43 +116,43 @@
 			cin>>opcionMenu;
 
 					getchar();
-					
+
 					switch(opcionMenu){
-					
+
 						case 0: break;
-					
+
 						case 1: cout<<"Introduce usuario twitter: ";
 								getline(cin, twitter);
 								redes.twitter = twitter;
 								break;
-								
+
 						case 2: cout<<"Introduce usuario facebook: ";
 								getline(cin, facebook);
 								redes.facebook = facebook;
 								break;
-								
+
 						case 3: cout<<"Introduce usuario tuenti: ";
 								getline(cin, tuenti);
 								redes.tuenti = tuenti;
 								break;
-								
+
 						case 4: cout<<"Introduce usuario linkedin: ";
 								getline(cin, linkedin);
 								redes.linkedin = linkedin;
 								break;
-								
+
 						default: cout<<"OPCION NO VALIDA";
 								break;
-					
-					
+
+
 					}
-					
+
 		}while(opcionMenu!=0);
-					
+
 			do{
 						cout<<"¿Cual es el correo?"<<endl;
 						cout<<"\t1.Gmail\n"<<endl;
-						cout<<"\t2.Hotmail"<<endl;					
+						cout<<"\t2.Hotmail"<<endl;
 						cout<<"\t3.Yahoo"<<endl;
 						cout<<"\t0.Salir"<<endl;
 						cout<<"Opcion: ";
@@ -160,66 +160,66 @@
 						getchar();
 
 						switch(opcionMenu){
-						
+
 							case 0: break;
-						
+
 							case 1: cout<<"Introduce tu direccion: ";
 									getline(cin, gmail);
 									correos.gmail=gmail;
 									break;
-									
+
 							case 2: cout<<"Introduce tu direccion: ";
 									getline(cin, hotmail);
 									correos.hotmail=hotmail;
 									break;
-									
+
 							case 3: cout<<"Introduce tu direccion: ";
 									getline(cin, yahoo);
 									correos.yahoo=yahoo;
 									break;
-									
+
 							default: cout<<"OPCION NO VALIDA";
 									break;
 						}
-					
+
 			}while(opcionMenu!=0);
 
-					
+
 
 			do{
 						cout<<"¿Numero de telefono??"<<endl;
 						cout<<"\t1.Fijo"<<endl;
-						cout<<"\t2.Movil1"<<endl;					
+						cout<<"\t2.Movil1"<<endl;
 						cout<<"\t3.Movil2"<<endl;
 						cout<<"\t0.Salir"<<endl;
 						cout<<"Opcion: ";
 						cin>>opcionMenu;
 						getchar();
 						switch(opcionMenu){
-						
+
 							case 0: break;
-						
+
 							case 1: cout<<"Introduce tu numero fijo: ";
 									cin>>numeroFijo;
 									telefonos.numeroFijo=numeroFijo;
 									break;
-									
+
 							case 2: cout<<"Introduce tu movil: ";
 									cin>>numeroMovil1;
 									telefonos.numeroMovil1=numeroMovil1;
 									break;
-									
+
 							case 3: cout<<"Introduce tu movil2: ";
 									cin>>numeroMovil2;
 									telefonos.numeroMovil2=numeroMovil2;
 									break;
-									
+
 							default: cout<<"OPCION NO VALIDA";
 									break;
 						}
-					
+
 			}while(opcionMenu!=0);
-		
+
 		//SE MODIFICAN LAS VARIABLES DEL CLIENTE AUX CON LOS VALORES ASIGNADOS
 
 
@@ -233,12 +233,12 @@
 		aux.setDirecciones(direccion);
 		aux.setCorreos(correos);
 		aux.setTelefonos(telefonos);
-		
+
 		return (aux);
 	}
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION INSERTAR CLIENTE
 
 	-----------------------------------------------------------------------------------------*/
@@ -305,14 +305,14 @@
 
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION ORDENAR CLIENTES
 
 	-----------------------------------------------------------------------------------------*/
 
 bool Agenda::ordenarClientes(){
 
-	
+
 	arrayClientes_.sort(funcionOrdenacion);
 
 	return(true);
@@ -332,7 +332,7 @@ bool Agenda::ordenarClientes(){
 
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION BUSCAR CLIENTE
 
 	-----------------------------------------------------------------------------------------*/
@@ -349,7 +349,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		if(it->getApellidos()==apellido){
 			it->setMasUsados(it->getMasUsados() + 1);
 			aux.push_back(*it);
-		}		
+		}
 
 	}
 
@@ -361,7 +361,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 
 	/****************************************************************************************
-									
+
 									FUNCION BORRAR CLIENTE
 
 	*******************************************************************************************/
@@ -405,7 +405,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	}
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCIONES AUXILIARES PARA BORRAR
 									- SACAR CLIENTE DE LA LISTA
 													Y
@@ -424,7 +424,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							for(i=aux.begin(); i!=aux.end(); i++){
 								if(j==posicion){
 									caux = *i;
-									aux.erase(i);	
+									aux.erase(i);
 								}
 								j++;
 							}
@@ -450,7 +450,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 						}
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION MODIFICAR CLIENTE
 
 	-----------------------------------------------------------------------------------------*/
@@ -479,8 +479,8 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 				return(false);
 			}
 
-		/*PEDIR DATOS, MODIFICAR EN LA LISTA AUX Y 
-		MODIFICAR EN LA LISTA GENERAL CON EL DNI 
+		/*PEDIR DATOS, MODIFICAR EN LA LISTA AUX Y
+		MODIFICAR EN LA LISTA GENERAL CON EL DNI
 		BORRANDO EL ANTERIOR Y PONIENDO EL NUEVO*/
 
 		}else{
@@ -490,7 +490,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCIONES AUXILIARES PARA MODIFICAR
 									- MODIFICAR CLIENTE DE LA LISTA
 
@@ -508,25 +508,25 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							string nombre="", apellidos="", anotaciones="";
 							char favorito;
 							int opcionMenu;
-							
+
 							string calle="", puerta="";
 							string portal=0;
 							Direcciones direccion;
-							
+
 							string facebook="";
 							string twitter="";
 							string tuenti="";
 							string linkedin="";
 							Redes redes;
 							int opcionRedes;
-							
-							
+
+
 							string hotmail="";
 							string gmail="";
 							string yahoo="";
 							Correos correos;
-							
-							
+
+
 							string numeroFijo="";
 							string numeroMovil1="";
 							string numeroMovil2="";
@@ -583,14 +583,14 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 														if(favorito=='n'){
 															i->setFavorito(false);
 														}
-													
+
 													}while((favorito!='s')&&(favorito!='n'));//Mientras la opcion no sea s o n, se vuelve a preguntar
 													break;
 
 											case 6:	do{
 														cout<<"¿Que redes tiene?"<<endl;
 														cout<<"\t1.Twitter"<<endl;
-														cout<<"\t2.Facebook"<<endl;					
+														cout<<"\t2.Facebook"<<endl;
 														cout<<"\t3.Tuenti"<<endl;
 														cout<<"\t4.Linkedin"<<endl;
 														cout<<"\t0.Salir"<<endl;
@@ -598,29 +598,29 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 														cin>>opcionMenu;
 														getchar();
 														switch(opcionMenu){
-														
+
 															case 0: break;
-														
+
 															case 1: cout<<"Introduce usuario twitter: ";
 																	cin>>twitter;
 																	redes.twitter = twitter;
 																	break;
-																	
+
 															case 2: cout<<"Introduce usuario facebook: ";
 																	cin>>facebook;
 																	redes.facebook = facebook;
 																	break;
-																	
+
 															case 3: cout<<"Introduce usuario tuenti: ";
 																	cin>>tuenti;
 																	redes.tuenti = tuenti;
 																	break;
-																	
+
 															case 4: cout<<"Introduce usuario linkedin: ";
 																	cin>>linkedin;
 																	redes.linkedin = linkedin;
 																	break;
-																	
+
 															default: cout<<"OPCION NO VALIDA"<<endl;
 														}
 													}while(opcionMenu!=0);
@@ -642,36 +642,36 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 											case 8:	do{
 														cout<<"¿Cual es el correo?"<<endl;
 														cout<<"\t1.Gmail"<<endl;
-														cout<<"\t2.Hotmail"<<endl;					
+														cout<<"\t2.Hotmail"<<endl;
 														cout<<"\t3.Yahoo"<<endl;
 														cout<<"\t0.Salir"<<endl;
 														cout<<"Opcion: ";
 														cin>>opcionMenu;
 														getchar();
-													
+
 														switch(opcionMenu){
-														
+
 															case 0: break;
-														
+
 															case 1: cout<<"Introduce tu direccion: ";
 																	cin>>gmail;
 																	correos.gmail=gmail;
 																	break;
-																	
+
 															case 2: cout<<"Introduce tu direccion: ";
 																	cin>>hotmail;
 																	correos.hotmail=hotmail;
 																	break;
-																	
+
 															case 3: cout<<"Introduce tu direccion: ";
 																	cin>>yahoo;
 																	correos.yahoo=yahoo;
 																	break;
-																	
+
 															default: cout<<"OPCION NO VALIDA";
 																	break;
 														}
-													
+
 													}while(opcionMenu!=0);
 													i->setCorreos(correos);
 													break;
@@ -679,7 +679,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 											case 9:	do{
 														cout<<"¿Numero de telefono?"<<endl;
 														cout<<"1.Fijo"<<endl;
-														cout<<"2.Movil1"<<endl;					
+														cout<<"2.Movil1"<<endl;
 														cout<<"3.Movil2"<<endl;
 														cout<<"0.Salir"<<endl;
 														cout<<"Opcion: ";
@@ -687,30 +687,30 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 														getchar();
 
 														switch(opcionMenu){
-														
+
 															case 0: break;
-														
+
 															case 1: cout<<"Introduce tu numero fijo: ";
 																	cin>>numeroFijo;
 																	telefonos.numeroFijo=numeroFijo;
 																	break;
-																	
+
 															case 2: cout<<"Introduce tu movil: ";
 																	cin>>numeroMovil1;
 																	telefonos.numeroMovil1=numeroMovil1;
 																	break;
-																	
+
 															case 3: cout<<"Introduce tu movil2: ";
 																	cin>>numeroMovil2;
 																	telefonos.numeroMovil2=numeroMovil2;
 																	break;
-																	
+
 															default: cout<<"OPCION NO VALIDA";
 																	break;
 														}
 
 
-					
+
 													}while(opcionMenu!=0);
 													i->setTelefonos(telefonos);
 													break;
@@ -728,7 +728,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION MOSTRAR CLIENTES MAS BUSCADOS
 
 	-----------------------------------------------------------------------------------------*/
@@ -740,10 +740,11 @@ list<Cliente> Agenda::mostrarClientesMasBuscados(){
   list <Cliente> aux;
   list <Cliente>::iterator first;
   list <Cliente>::iterator last;
+  int j = 10;
   //Para coger los mas buscados, podemos ordenar la lista por ese campo
   //Y despues coger los diez primeros y devolverlos :D
   //Para eso necesitaremos una funcion que le introduciremos al sort( :D )
-  ficheroALista();
+
   aux = getArrayClientes();
 
   aux.sort(compare_usados);
@@ -752,9 +753,14 @@ list<Cliente> Agenda::mostrarClientesMasBuscados(){
   //Usaremos la funcion splice
   //void splice (iterator position, list& x, iterator first, iterator last);
   //Modificar para que coja los 10 primeros
+
+    if(aux.size()<10){//Esto es por si hay menos de 10 clientes en la lista
+      j = aux.size();
+    }
+
   first = aux.begin();
   last = aux.begin();
-  for(int i=0; i<10;i++){
+  for(int i=0; i<j;i++){
     ++last;
   }
 
@@ -781,7 +787,7 @@ return Lista;
     }
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION MOSTRAR CLIENTES FAVORITOS
 
 	-----------------------------------------------------------------------------------------*/
@@ -792,12 +798,14 @@ list<Cliente> Agenda::muestraFavoritos(){
   list<Cliente> aux;
   list<Cliente>::iterator i;
 
-  ficheroALista();
   aux = getArrayClientes();
   for(i = aux.begin(); i != aux.end(); ++i){
     if(i->getFavorito()){
       Lista.push_back(*i);
     }
+  }
+  if(Lista.empty()){
+    cout << "No hay favoritos entre los clientes" << endl;
   }
 
   return Lista;
@@ -831,14 +839,17 @@ list<Cliente> Agenda::muestraFavoritos(){
 	void Agenda::imprimirLista(list<Cliente> Lista){
 
 		  list<Cliente>::iterator i;
-
-		  for(i = Lista.begin(); i != Lista.end(); ++i){
-		    imprimeCliente(*i);
-		  }
+      if(!Lista.empty()){
+		      for(i = Lista.begin(); i != Lista.end(); ++i){
+		      imprimeCliente(*i);
+		    }
+      }else{
+        cout << "No hay clientes en la lista para imprimir" << endl << endl;
+      }
 	}
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION IMPRIME UN CLIENTE
 
 	-----------------------------------------------------------------------------------------*/
@@ -971,7 +982,7 @@ int buscado;
 
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION PASA DATOS DEL FICHERO A LA LISTA
 
 	-----------------------------------------------------------------------------------------*/
@@ -1060,7 +1071,7 @@ bool Agenda::ficheroALista(){
 
 
 	/*-----------------------------------------------------------------------------------------
-									
+
 									FUNCION PASA LISTA AL FICHERO
 
 	-----------------------------------------------------------------------------------------*/
@@ -1126,4 +1137,3 @@ bool Agenda::ficheroALista(){
 Agenda::~Agenda() {
 	// TODO Auto-generated destructor stub
 }
-
