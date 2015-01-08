@@ -10,7 +10,7 @@
 
 
 #include "Cliente.h"
-
+#include <list>
 
 using namespace std;
 class Agenda {
@@ -28,7 +28,7 @@ public:
 
 	bool insertarCliente();
 	void introducirEnLista(const Cliente &c);
-	bool imprimirListaComprobando(const list <Cliente> &aux, const string &apellido);
+	bool imprimirListaComprobando( list <Cliente> aux, const string &apellido);
 
 	bool borrarCliente(string apellido);
 	Cliente sacarClienteListaComprobando(list <Cliente> &aux, const int &posicion);
@@ -41,7 +41,7 @@ public:
 
 	list <Cliente> buscarCliente(string apellido);
 	bool ordenarClientes();
-	bool funcionOrdenacion(Cliente first, Cliente second);
+	bool funcionOrdenacion(const Cliente& first, const Cliente& second);
 
 	list <Cliente> mostrarClientesMasBuscados();
 	list <Cliente> muestraFavoritos();

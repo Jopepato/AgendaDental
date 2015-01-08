@@ -11,8 +11,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstdio>
- #include <cstring>
- #include <fstream>
+#include <cstring>
+#include <fstream>
+#include <cctype>
 
  using namespace std;
 
@@ -21,22 +22,11 @@ Agenda::Agenda(string ficheroAgenda) {
 	setNombreFichero(ficheroAgenda);
 }
 
-/*********
+	/****************************************************************************************
 
+									FUNCION PEDIR DATOS CLIENTE
 
-
-
-
-																						FUNCION PEDIR DATOS
-
-
-
-
-
-
-
-
-**********/
+	*******************************************************************************************/
 
 	Cliente pedirDatos(){
 		
@@ -276,10 +266,8 @@ Agenda::Agenda(string ficheroAgenda) {
 	}
 
 	/****************************************************************************************
-
-
-				FUNCION INSERTAR CLIENTE
-
+									
+									FUNCION INSERTAR CLIENTE
 
 	*******************************************************************************************/
 
@@ -309,15 +297,10 @@ Agenda::Agenda(string ficheroAgenda) {
 
 	/***************************************************************************************************
 
-
 								FUNCIONES AUXILIARES PARA INSERTAR CLIENTE
-
 									- INTRODUCIR EN LA LISTA
-
 												Y
-
 									- IMPRIMIR LISTA COMPROBANDO
-
 
 	**************************************************************************************************/
 
@@ -325,7 +308,7 @@ Agenda::Agenda(string ficheroAgenda) {
 						arrayClientes_.push_back(c);
 					}
 
-					bool Agenda::imprimirListaComprobando(const list <Cliente> &aux, const string &apellido){
+					bool Agenda::imprimirListaComprobando( list <Cliente> aux, const string &apellido){
 
 						list<Cliente>::iterator i;
 						bool variable=false;
@@ -349,27 +332,11 @@ Agenda::Agenda(string ficheroAgenda) {
 					}
 
 
-	
-	
-/****************
- 
- 
- 
- 
- 
- 
- 
- 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 FUNCION INSERTAR CLIENTE EN LA LISTA
- 
- 
- 
- 
- 
- 
- 
- 
- 
- *******************/	
+	/****************************************************************************************
+									
+									FUNCION ORDENAR CLIENTES
+
+	*******************************************************************************************/
 
 bool Agenda::ordenarClientes(){
 
@@ -380,25 +347,23 @@ bool Agenda::ordenarClientes(){
 
 }
 
-bool Agenda::funcionOrdenacion(Cliente first, Cliente second){
+bool Agenda::funcionOrdenacion(const Cliente& first, const Cliente& second){
 
 	string aux1,aux2;
 
 	aux1=first.getApellidos();
 	aux2=second.getApellidos();
 
-	if(aux1>aux2){
-
-		return(true);
-
-	}else{
-
-		return(false);
-
-	}
-
+	return(aux1>aux2);
 
 }
+
+
+	/****************************************************************************************
+									
+									FUNCION BUSCAR CLIENTE
+
+	*******************************************************************************************/
 
 
 list <Cliente> Agenda::buscarCliente(string apellido){
@@ -422,15 +387,11 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 
 
-/*******************************************************************************************************
+	/****************************************************************************************
+									
+									FUNCION BORRAR CLIENTE
 
-
-
-											FUNCION BORRAR CLIENTE
-
-
-
-*******************************************************************************************************/
+	*******************************************************************************************/
 
 
 
@@ -467,6 +428,16 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 	}
 
+	/****************************************************************************************
+									
+									FUNCIONES AUXILIARES PARA BORRAR
+									- SACAR CLIENTE DE LA LISTA
+													Y
+									- ELIMINAR CLIENTE DE LA LISTA
+
+	*******************************************************************************************/
+
+
 						Cliente Agenda::sacarClienteListaComprobando(list <Cliente> &aux, const int &posicion){
 
 							list<Cliente>::iterator i;
@@ -502,15 +473,11 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							return (variable);
 						}
 
-/*******************************************************************************************************
+	/****************************************************************************************
+									
+									FUNCION MODIFICAR CLIENTE
 
-
-
-											FUNCION MODIFICAR CLIENTE
-
-
-
-*******************************************************************************************************/
+	****************************************************************************************/
 
 
 	bool Agenda::modificarCliente(string apellido){
@@ -543,6 +510,13 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		}
 	}
 
+
+		/****************************************************************************************
+									
+									FUNCIONES AUXILIARES PARA MODIFICAR
+									- MODIFICAR CLIENTE DE LA LISTA
+
+	*******************************************************************************************/
 
 
 				bool Agenda::modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux){
@@ -773,9 +747,95 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 
 
+	/****************************************************************************************
+									
+									FUNCION MOSTRAR CLIENTES MAS BUSCADOS
 
-	list <Cliente> Agenda::mostrarClientesMasBuscados(){}
-	list <Cliente> Agenda::muestraFavoritos(){}
+	****************************************************************************************/
+
+	//Esta función imprimirá los 10 clientes mas buscado por la secretaria
+list<Cliente> Agenda::mostrarClientesMasBuscados(){
+  //Esta funcion dependerá de la funcion de imprimre cliente
+  list <Cliente> Lista;
+  list <Cliente> aux;
+  list <Cliente>::iterator first;
+  list <Cliente>::iterator last;
+  //Para coger los mas buscados, podemos ordenar la lista por ese campo
+  //Y despues coger los diez primeros y devolverlos :D
+  //Para eso necesitaremos una funcion que le introduciremos al sort( :D )
+  aux = imprimirClientes();
+
+  aux.sort(compare_usados);
+
+  //Una vez ordenada dicha lista pasamos los 10 primeros elementos a otra lista
+  //Usaremos la funcion splice
+  //void splice (iterator position, list& x, iterator first, iterator last);
+  //Modificar para que coja los 10 primeros
+  first = aux.begin();
+  last = aux.begin();
+  for(int i=0; i<10;i++){
+    ++last;
+  }
+
+    Lista.splice(Lista.begin(), aux, aux.begin(), last);
+
+return Lista;
+}
+
+
+    /***********************************************************************
+        FUNCION AUXILIAR QUE NOS AYUDARÁ A ORDERNAR LA LISTA SEGUN EL CAMPO
+        DE MASUSADOS :D
+    ***********************************************************************/
+    bool compare_usados(Cliente first, Cliente second){
+      int primero;
+      int segundo;
+      primero = first.getMasUsados();
+      segundo = second.getMasUsados();
+      if(primero > segundo){
+        return true;
+      }else
+        return false;
+    }
+
+
+
+list<Cliente> Agenda::muestraFavoritos(){
+
+  list<Cliente> Lista;
+  list<Cliente> aux;
+  list<Cliente>::iterator i;
+
+  aux = imprimirClientes();
+  for(i = aux.begin(); i != aux.end(); ++i){
+    if(esfavorito(*i)){
+      Lista.push_back(*i);
+    }
+  }
+
+  return Lista;
+}
+              /************************************************************************
+              FUNCION AUXILIAR QUE RECIBE UN CLIENTE Y TE DICE SI ES FAVORITO O NO
+              DEVUELVE UN BOOL
+              ************************************************************************/
+              bool esfavorito(Cliente C){
+                if(C.getFavorito()){
+                  return true;
+                }else{
+                  return false;
+                }
+              }
+              /***********************************************************************
+              FIN DE LA FUNCION AUXILIAR PARA SABER SI ES FAVORITO O NO :D
+              ***********************************************************************/
+
+//Esta función mostrará los datos del cliente por pantalla
+
+//Imprime cliente se beneficia de
+
+//DEP :(
+
 
 	void Agenda::imprimirLista(list<Cliente> Lista){
 
