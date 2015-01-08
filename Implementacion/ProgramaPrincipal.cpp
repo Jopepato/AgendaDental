@@ -91,7 +91,7 @@ while(opcion != 0){
                 if(respuesta=="S"){
                   aux.insertarCliente();
                 }
-              }while(respuesta!="S" || respuesta!="N");
+              }while(respuesta!="S" && respuesta!="N");
               }
               break;
 

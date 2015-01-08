@@ -51,7 +51,7 @@
 		int opcionMenu;
 		
 		string calle="", puerta="";
-		int portal=0;
+		string portal="";
 		Direcciones direccion;
 		
 		string facebook="";
@@ -86,8 +86,7 @@
 		cout<<"Introduce calle: ";
 		getline(cin, calle);
 		cout<<"Introduce numero: ";
-		cin>>portal;
-		getchar();
+		getline(cin,portal);
 		cout<<"Introduce puerta: ";
 		getline(cin, puerta);
 		direccion.calle=calle;
@@ -97,8 +96,8 @@
 		cout<<"Introduce anotacion: ";
 		getline(cin, anotaciones);
 
-		cout<<"¿Es favorito? (s/n): ";
-		cin>>opcion;
+				cout<<"¿Es favorito? (s/n): ";
+				cin>>opcion;
 			
 				if(opcion=='s'){
 					favorito=1;
@@ -380,9 +379,12 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		encontrado = imprimirListaComprobando(aux, apellido);
 
 		if(encontrado==true){
+
 			cout<<"Introduce el numero del cliente para eliminar: ";
 			cin>>posicion;
+			cout<<"paso1";
 			c = sacarClienteListaComprobando(aux, posicion);
+			cout<<"paso2";
 			if(eliminarClienteListaComprobando(arrayClientes_, c)==true){
 				return(true);
 			}else{
@@ -412,7 +414,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	-----------------------------------------------------------------------------------------*/
 
 
-						Cliente Agenda::sacarClienteListaComprobando(list <Cliente> &aux, const int &posicion){
+						Cliente Agenda::sacarClienteListaComprobando(list <Cliente> &aux, int posicion){
 
 							list<Cliente>::iterator i;
 							bool variable=false;
@@ -430,7 +432,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							return (caux);
 						}
 
-						bool Agenda::eliminarClienteListaComprobando(list <Cliente> &laux, const Cliente &caux){
+						bool Agenda::eliminarClienteListaComprobando(list <Cliente> &laux,  Cliente caux){
 
 							string DNI;
 							DNI = caux.getDni();
@@ -459,16 +461,18 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		list<Cliente> aux;
 		int encontrado=0;
 		Cliente c;
-		int posicion;
+		int posicion=0;
 
 		aux = buscarCliente(apellido);
 		encontrado = imprimirListaComprobando(aux, apellido);
 
 		if(encontrado==true){
 			cout<<"Introduce el numero del cliente para modificar: ";
+			cout<<"paso3";
 			cin>>posicion;
-
+			cout<<"paso1";
 			c = sacarClienteListaComprobando(aux, posicion);
+			cout<<"paso2";
 			if(modificarClienteListaComprobando(arrayClientes_, c)==true){
 				return(true);
 			}else{
@@ -506,7 +510,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							int opcionMenu;
 							
 							string calle="", puerta="";
-							int portal=0;
+							string portal=0;
 							Direcciones direccion;
 							
 							string facebook="";
@@ -912,7 +916,7 @@ int buscado;
 
 
 	bool Agenda::hacerCopiaSeguridad(string ficheroCopia){
-		char line[2000];
+		char line[20000];
 
 		ifstream fileAgenda;
 		ofstream fileCopia;
@@ -929,7 +933,7 @@ int buscado;
 			fileCopia.open(ficheroCopia.c_str());
 		}
 
-		while(fileAgenda.getline(line,2000,'\n')){
+		while(fileAgenda.getline(line,20000,'\n')){
 			fileCopia << line <<endl;
 		}
 
@@ -939,7 +943,7 @@ int buscado;
 	}
 
 	bool Agenda::restaurarCopiaSeguridad(string ficheroCopia){
-		char line[2000];
+		char line[20000];
 
 		ofstream fileAgenda;
 		ifstream fileCopia;
@@ -956,7 +960,7 @@ int buscado;
 			fileAgenda.open("Agenda.txt");
 		}
 
-		while(fileCopia.getline(line,2000,'\n')){
+		while(fileCopia.getline(line,20000,'\n')){
 			fileAgenda << line <<endl;
 		}
 
@@ -1025,7 +1029,7 @@ bool Agenda::ficheroALista(){
 			fileAgenda.getline(line,256,',');
 			dir.puerta = line;
 			fileAgenda.getline(line,256,',');
-			dir.portal = atoi(line);
+			dir.portal = line;
 			cl.setDirecciones(dir);
 
 			fileAgenda.getline(line,256,',');

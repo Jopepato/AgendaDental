@@ -40,8 +40,8 @@ public:
 	bool imprimirListaComprobando( list <Cliente> aux, const string &apellido);
 
 	bool borrarCliente(string apellido);
-	Cliente sacarClienteListaComprobando(list <Cliente> &aux, const int &posicion);
-	bool eliminarClienteListaComprobando(list <Cliente> &laux, const Cliente &caux);
+	Cliente sacarClienteListaComprobando(list <Cliente> &aux,  int posicion);
+	bool eliminarClienteListaComprobando(list <Cliente> &laux,  Cliente caux);
 
 	bool modificarCliente(string apellido);
 	bool modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux);
