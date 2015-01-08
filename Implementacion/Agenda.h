@@ -37,14 +37,14 @@ public:
 
 	bool insertarCliente();
 	void introducirEnLista(const Cliente &c);
-	bool imprimirListaComprobando( list <Cliente> aux, const string &apellido);
+	void imprimirListaComprobando( list <Cliente> aux, const string &apellido);
 
 	bool borrarCliente(string apellido);
 	Cliente sacarClienteListaComprobando(list <Cliente> &aux,  int posicion);
-	bool eliminarClienteListaComprobando(list <Cliente> &laux,  Cliente caux);
+	void eliminarClienteListaComprobando(list <Cliente> &laux,  Cliente caux);
 
 	bool modificarCliente(string apellido);
-	bool modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux);
+	void modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux);
 
 
 

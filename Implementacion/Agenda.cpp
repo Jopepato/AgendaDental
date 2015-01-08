@@ -247,20 +247,19 @@
 
 		string apellido;
 		list<Cliente> aux;
-		int encontrado;
 		Cliente c;
+    int elementos;
 
 		cout<<"Introduce el apellido del cliente: ";
 		getline(cin, apellido);
 
 		aux = buscarCliente(apellido);//Se buscan los clientes que tengan ese apellido, y se devuelve la lista de clientes.
-
-		encontrado = imprimirListaComprobando(aux, apellido);//Imprime la lista de clientes con ese apellido, y devuelve true si lo encuentra
-
-		if(encontrado==false){
-			c = pedirDatos();//Pide los datos por pantalla y devuelve el cliente con esos datos
-			introducirEnLista(c);//Introduce al cliente en la lista
-			ordenarClientes();//Ordena la lista por apellido con el nuevo cliente
+    elementos = aux.size();
+    if(elementos==0){
+		imprimirLista(aux);//Imprime la lista de clientes con ese apellido
+		c = pedirDatos();//Pide los datos por pantalla y devuelve el cliente con esos datos
+		introducirEnLista(c);//Introduce al cliente en la lista
+		ordenarClientes();//Ordena la lista por apellido con el nuevo cliente
 			return (true);
 		}else{
 			return (false);//Si ya existe un cliente con ese apellido, devuelve false
@@ -280,10 +279,9 @@
 						arrayClientes_.push_back(c);
 					}
 
-					bool Agenda::imprimirListaComprobando( list <Cliente> aux, const string &apellido){
+					void Agenda::imprimirListaComprobando( list <Cliente> aux, const string &apellido){
 
 						list<Cliente>::iterator i;
-						bool variable=false;
 						int j=1;
 
 						cout<<"CLIENTES CON APELLIDO < "<<apellido<<" >\n";
@@ -292,15 +290,9 @@
 						for(i=aux.begin(); i!=aux.end(); ++i){
 							if((i->getApellidos())==apellido){
 								cout<<j<<" ) Cliente con nombre < "<<i->getApellidos()<<", "<<i->getNombre()<<" > y DNI < "<<i->getDni()<<" >\n";
-								variable=true;
 								j++;
-							}else{
-								cout<<"Los clientes no tienen este apellido\n";
-								variable=false;
 							}
 						}
-
-						return (variable);
 					}
 
 
@@ -382,25 +374,19 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	bool Agenda::borrarCliente(string apellido){
 
 		list<Cliente> aux;
-		int encontrado;
+		int elementos;
 		Cliente c;
 		int posicion;
-    bool resultado=false;
 
 		aux = buscarCliente(apellido);
-		encontrado = imprimirListaComprobando(aux, apellido);
 
-		if(encontrado==true){
-
+    elementos = aux.size();
+		if(elementos!=0){
+      imprimirListaComprobando(aux, apellido);
 			cout<<"Introduce el numero del cliente para eliminar: ";
 			cin>>posicion;
 			c = sacarClienteListaComprobando(aux, posicion);
-      resultado = eliminarClienteListaComprobando(arrayClientes_, c);
-			if(resultado==true){
-				return(true);
-			}else{
-				return(false);
-			}
+      eliminarClienteListaComprobando(arrayClientes_, c);
 
 		/*SEGUN LA POSICION, COGER EL CLIENTE DE AUX
 		Y CON EL DNI BORRARLO EN LA LISTA GENERAL
@@ -428,14 +414,12 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 						Cliente Agenda::sacarClienteListaComprobando(list <Cliente> &aux, int posicion){
 
 							list<Cliente>::iterator i;
-							bool variable=false;
 							int j=1;
               int elementos = aux.size();
 							Cliente caux;
               if(elementos==1){
                 i=aux.begin();
                 caux = *i;
-                aux.erase(i);
               }else{
 							for(i=aux.begin(); i!=aux.end(); ++i){
 								if(j==posicion){
@@ -449,21 +433,23 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 							return (caux);
 						}
 
-						bool Agenda::eliminarClienteListaComprobando(list <Cliente> &laux,  Cliente caux){
+						void Agenda::eliminarClienteListaComprobando(list <Cliente> &laux,  Cliente caux){
 
 							string DNI;
 							DNI = caux.getDni();
 							list<Cliente>::iterator i;
-							bool variable=false;
+              int elementos = laux.size();
 
+              if(elementos==1){
+                i=laux.begin();
+                laux.erase(i);
+              }else{
 							for(i=laux.begin(); i!=laux.end(); ++i){
 								if(DNI==i->getDni()){
 									laux.erase(i);
-									variable=true;
 								}
-							}
-
-							return (variable);
+							 }
+              }
 						}
 
 	/*-----------------------------------------------------------------------------------------
@@ -476,24 +462,21 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	bool Agenda::modificarCliente(string apellido){
 
 		list<Cliente> aux;
-		int encontrado=0;
+		int elementos;
 		Cliente c;
-		int posicion=0;
+		int posicion;
     bool resultado=false;
 
 		aux = buscarCliente(apellido);
-		encontrado = imprimirListaComprobando(aux, apellido);
+		elementos = aux.size();
 
-		if(encontrado==true){
+  if(elementos!=0){
+      imprimirListaComprobando(aux, apellido);
 			cout<<"Introduce el numero del cliente para modificar: ";
 			cin>>posicion;
 			c = sacarClienteListaComprobando(aux, posicion);
-      resultado = modificarClienteListaComprobando(arrayClientes_, c);
-			if(resultado==true){
-				return(true);
-			}else{
-				return(false);
-			}
+      modificarClienteListaComprobando(arrayClientes_, c);
+			return (true);
 
 		/*PEDIR DATOS, MODIFICAR EN LA LISTA AUX Y
 		MODIFICAR EN LA LISTA GENERAL CON EL DNI
@@ -513,12 +496,11 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	-----------------------------------------------------------------------------------------*/
 
 
-	bool Agenda::modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux){
+	void Agenda::modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux){
 
 		string DNI="";
 		DNI = caux.getDni();
 		list<Cliente>::iterator i;
-							bool variable=false;
 							int opcion;
 
 							string nombre="", apellidos="", anotaciones="";
@@ -734,11 +716,8 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 												}
 
 									}while(opcion!=0);
-									variable=true;
 								}
 							}
-
-							return (variable);
 				}
 
 

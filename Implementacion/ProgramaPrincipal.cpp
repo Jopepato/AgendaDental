@@ -40,6 +40,7 @@ while(opcion != 0){
     cout << "Opción -> ";
     cin >> opcion;
     cout << endl;
+    getchar();
 
     switch(opcion){
 
@@ -58,7 +59,7 @@ while(opcion != 0){
 
               break;
 
-      case 2: getchar();
+      case 2:
               Buscados.clear();
               cout << "Introduzca el apellido del cliente que desea buscar" << endl;
               getline(cin,apellido);
@@ -77,7 +78,7 @@ while(opcion != 0){
               }
               break;
 
-      case 3:	getchar();
+      case 3:
             if(aux.insertarCliente()){
       				cout<<"Se ha introducido el cliente con exito"<<endl;
       			}else{
@@ -85,7 +86,7 @@ while(opcion != 0){
       			}
               break;
 
-      case 4: getchar();
+      case 4:
               cout << "Introduzca el apellido del cliente que desea modificar" << endl;
               getline(cin,apellido);
               if(aux.modificarCliente(apellido)){
@@ -102,7 +103,7 @@ while(opcion != 0){
               }
               break;
 
-      case 5: getchar();
+      case 5:
               cout << "Introduzca el apellido del cliente que desea borrar" << endl;
               getline(cin,apellido);
               if(aux.borrarCliente(apellido)){
@@ -118,7 +119,7 @@ while(opcion != 0){
       case 7: aux.imprimirLista(aux.mostrarClientesMasBuscados());
               break;
 
-      case 8: getchar();
+      case 8:
               cout << "Introduzca el nombre que desea darle a la copia" << endl;
               getline(cin,copia);
               if(aux.hacerCopiaSeguridad(copia)){
@@ -128,7 +129,7 @@ while(opcion != 0){
               }
               break;
 
-      case 9: getchar();
+      case 9:
               cout << "Introduzca el nombre de la copia que desea restaurar" << endl;
               getline(cin,copia);
               if(aux.restaurarCopiaSeguridad(copia)){
