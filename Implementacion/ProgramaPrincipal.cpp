@@ -66,6 +66,7 @@ while(opcion != '0'){
               cout << "Introduzca el apellido del cliente que desea buscar" << endl;
               getline(cin,apellido);
               Buscados = aux.buscarCliente(apellido);
+              aux.AumentarNumeroCliente(Buscados);
               if(!Buscados.empty()){
                 aux.imprimirLista(Buscados);
               }else{

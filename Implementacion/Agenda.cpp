@@ -114,7 +114,7 @@
 			cout<<"\t2.Facebook"<<endl;
 			cout<<"\t3.Tuenti"<<endl;
 			cout<<"\t4.Linkedin"<<endl;
-			cout<<"\t0.Salir"<<endl;
+			cout<<"\t0.Siguiente"<<endl;
 			cout<<endl<<"Opcion: ";
 			cin>>opcionMenu;
 
@@ -157,7 +157,7 @@
 						cout<<"\t1.Gmail"<<endl;
 						cout<<"\t2.Hotmail"<<endl;
 						cout<<"\t3.Yahoo"<<endl;
-						cout<<"\t0.Salir"<<endl;
+						cout<<"\t0.Siguiente"<<endl;
 						cout<<endl<<"Opcion: ";
 						cin>>opcionMenu;
 						getchar();//Para que no pille el intro de la opcion
@@ -194,7 +194,7 @@
 						cout<<"\t1.Fijo"<<endl;
 						cout<<"\t2.Movil1"<<endl;
 						cout<<"\t3.Movil2"<<endl;
-						cout<<"\t0.Salir"<<endl;
+						cout<<"\t0.Siguiente"<<endl;
 						cout<<endl<<"Opcion: ";
 						cin>>opcionMenu;
 						getchar();//Para que no pille el intro de la opcion
@@ -263,8 +263,10 @@
     	elementos = aux.size();
 
    		if(elementos==0){
-   		//En el caso de que la lista con ese apellido este vacia, es decir, 
+   		//En el caso de que la lista con ese apellido este vacia, es decir,
    		//no existen clientes con ese apellido
+       cout << endl << "No hay clientes con este apellido" << endl;
+       cout << "Procedemos a su introduccion" << endl << endl;
 
 
    			//Pide los datos por pantalla y devuelve el cliente con esos datos
@@ -294,7 +296,7 @@
 							break;
 
 					case 1: //MODIFICAR
-							//Introduces el numero de la lista, 
+							//Introduces el numero de la lista,
 							//y te sale un menu con los datos para modificar
 							cout<<endl<<"Introduce el numero del cliente para modificar: ";
 							cin>>posicion;
@@ -420,7 +422,6 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 	for(it=array.begin();it!=array.end();++it){
 
 		if(it->getApellidos()==apellido){
-			it->setMasUsados(it->getMasUsados() + 1);
 			aux.push_back(*it);
 		}
 
@@ -430,7 +431,23 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 
 }
+    //Con esta funcion aumentaremos los numeros de mas usados
+    //De las personas buscadas
+    void Agenda::AumentarNumeroCliente(list<Cliente> lista){
+      string DNI;
+      list<Cliente>::iterator i, j;
 
+      //Recorremos la lista que recibimos por parametro
+      for(i=lista.begin();i != lista.end();++i){
+        DNI = i->getDni();
+        for(j=arrayClientes_.begin(); j != arrayClientes_.end(); ++j){
+          if(DNI == j->getDni()){
+            j->setMasUsados(j->getMasUsados() +1);
+          }
+        }
+      }
+
+    }
 
 
 	/****************************************************************************************
@@ -439,7 +456,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 	*******************************************************************************************/
 
-	
+
 
 	bool Agenda::borrarCliente(string apellido){
 
@@ -491,7 +508,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 				Cliente caux;
 
 				//Devuelve un cliente caux, que este en la posicion del parametro
-				//Comprueba si la lista tiene un elemento o varios 
+				//Comprueba si la lista tiene un elemento o varios
 	            if(elementos==1){
 	                i=aux.begin();
 	                caux = *i;
@@ -499,7 +516,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 					for(i=aux.begin(); i!=aux.end(); ++i){
 						if(j==posicion){
 							caux = *i;
-							
+
 						}
 						j++;
 					}

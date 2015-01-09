@@ -49,6 +49,7 @@ public:
 
 
 	list <Cliente> buscarCliente(string apellido);
+	void AumentarNumeroCliente(list<Cliente> lista);
 	bool ordenarClientes();
 	static bool funcionOrdenacion(Cliente first, Cliente second);
 
