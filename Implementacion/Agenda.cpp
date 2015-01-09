@@ -258,7 +258,7 @@
 		aux = buscarCliente(apellido);//Se buscan los clientes que tengan ese apellido, y se devuelve la lista de clientes.
     	elementos = aux.size();
    		if(elementos==0){
-		
+
 			c = pedirDatos();//Pide los datos por pantalla y devuelve el cliente con esos datos
 			introducirEnLista(c);//Introduce al cliente en la lista
 			ordenarClientes();//Ordena la lista por apellido con el nuevo cliente
@@ -296,7 +296,7 @@
 
 
 			}while((opcion!=0)&&(opcion!=1)&&(opcion!=2));
-			
+
 			return (false);//Si ya existe un cliente con ese apellido, devuelve false
 		}
 	}
@@ -947,17 +947,30 @@ int buscado;
 }
 
 
+/*-----------------------------------------------------------------------------------------
+
+                FUNCION HACER COPIA DE SEGURIDAD
+
+-----------------------------------------------------------------------------------------*/
+
+  //Con esta función hacemos una copia de seguridad del fichero "Agenda.txt"
+  //De esta forma salvamos los datos de una versión concreta para su futuro uso
+  //Ya sea por perdida del fichero "Agenda.txt" o porque se quiera volver a una versión anterior
 	bool Agenda::hacerCopiaSeguridad(string ficheroCopia){
 		char line[20000];
 
 		ifstream fileAgenda;
 		ofstream fileCopia;
 
+    //Comprobamos si existe el fichero "Agenda.txt"
+    //Si no existe devolvemos false al programa principal
 		fileAgenda.open("Agenda.txt");
 		if(fileAgenda.fail()){
 			return false;
 		}
 
+    //Comprobamos si existe ya un fichero copia de seguridad con el nombre solicitado
+    //Si existe, lo borramos y lo creamos de nuevo en blanco
 		fileCopia.open(ficheroCopia.c_str());
 		if(!(fileCopia.fail())){
 			fileCopia.close();
@@ -965,6 +978,7 @@ int buscado;
 			fileCopia.open(ficheroCopia.c_str());
 		}
 
+    //Copiamos los datos de un fichero a otro línea a línea
 		while(fileAgenda.getline(line,20000,'\n')){
 			fileCopia << line <<endl;
 		}
@@ -974,17 +988,30 @@ int buscado;
 		return true;
 	}
 
+
+/*-----------------------------------------------------------------------------------------
+
+                FUNCION RESTAURAR COPIA DE SEGURIDAD
+
+-----------------------------------------------------------------------------------------*/
+
+  //Con esta función recuperamos una copia de segurar del fichero "Agenda.txt"
+  //De esta forma recuperamos los datos de una versión anterior del fichero
 	bool Agenda::restaurarCopiaSeguridad(string ficheroCopia){
 		char line[20000];
 
 		ofstream fileAgenda;
 		ifstream fileCopia;
 
+    //Comprobamos que existe el fichero copia de seguridad pedido
+    //Si no existe devuelve false al programa principal
 		fileCopia.open(ficheroCopia.c_str());
 		if(fileCopia.fail()){
 			return false;
 		}
 
+    //Comprobamos que existe el fichero "Agenda.txt"
+    //Si existe, lo borramos y lo volvemos a crear en blanco
 		fileAgenda.open("Agenda.txt");
 		if(!(fileAgenda.fail())){
 			fileAgenda.close();
@@ -992,6 +1019,7 @@ int buscado;
 			fileAgenda.open("Agenda.txt");
 		}
 
+    //Copiamos los datos de un fichero a otro línea a línea
 		while(fileCopia.getline(line,20000,'\n')){
 			fileAgenda << line <<endl;
 		}
@@ -1008,6 +1036,8 @@ int buscado;
 
 	-----------------------------------------------------------------------------------------*/
 
+//Con esta función pasamos los datos del fichero "Agenda.txt" a la lista de clientes
+//De este modo podremos utilizar esos datos en las demás funciones
 bool Agenda::ficheroALista(){
 		char line[256];
 		Cliente cl;
@@ -1019,11 +1049,14 @@ bool Agenda::ficheroALista(){
 
 		ifstream fileAgenda;
 
+    //Comprobamos si existe el fichero "Agenda.txt"
+    //Si no existe devuelve false al programa principal
 		fileAgenda.open("Agenda.txt");
 		if(fileAgenda.fail()){
 			return false;
 		}
 
+    //Leemos el fichero y pasamos los datos de los clientes de uno en uno a la lista de clientes
 		while(fileAgenda.getline(line,256,',')){
 			cl.setNombre(line);
 
@@ -1097,6 +1130,8 @@ bool Agenda::ficheroALista(){
 
 	-----------------------------------------------------------------------------------------*/
 
+  //Con esta función pasamos los datos de la lista de clientes al fichero "Agenda.txt"
+  //De este modo los datos quedarán salvados para próximos usos
 	bool Agenda::listaAFichero(){
 		char line[256];
 		Cliente cl;
@@ -1111,6 +1146,8 @@ bool Agenda::ficheroALista(){
 
 		ofstream fileAgenda;
 
+    //Comprobamos si existe el fichero "Agenda.txt"
+    //Y si existe, lo borramos y lo volvemos a crear en blanco
 		fileAgenda.open("Agenda.txt");
 		if(!(fileAgenda.fail())){
 			fileAgenda.close();
@@ -1118,6 +1155,7 @@ bool Agenda::ficheroALista(){
 			fileAgenda.open("Agenda.txt");
 		}
 
+    //Recorremos la lista de clientes y pasamos sus datos uno a uno al fichero
 		while(pos != aux.end()){
 			fileAgenda << (*pos).getNombre() << ',';
 			fileAgenda << (*pos).getApellidos() << ',';
