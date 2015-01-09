@@ -421,8 +421,8 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 			cout<<endl<<"Introduce el numero del cliente para eliminar: ";
 			cin>>posicion;
 			c = sacarClienteListaComprobando(aux, posicion);
-      eliminarClienteListaComprobando(arrayClientes_, c);
-
+      eliminarClienteListaComprobando(c);
+      return (true);
 		/*SEGUN LA POSICION, COGER EL CLIENTE DE AUX
 		Y CON EL DNI BORRARLO EN LA LISTA GENERAL
 		DESPUES PASARLO A FICHERO
@@ -461,7 +461,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 					for(i=aux.begin(); i!=aux.end(); ++i){
 						if(j==posicion){
 							caux = *i;
-							aux.erase(i);
+							//aux.erase(i);
 						}
 						j++;
 					}
@@ -470,23 +470,25 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 				return (caux);
 			}
 
-			void Agenda::eliminarClienteListaComprobando(list <Cliente> &laux,  Cliente caux){
+			void Agenda::eliminarClienteListaComprobando(Cliente caux){
 
 				string DNI;
 				DNI = caux.getDni();
 				list<Cliente>::iterator i;
-              	int elementos = laux.size();
+        list<Cliente> aux = getArrayClientes();
+        int elementos = aux.size();
 
-              	if(elementos==1){
-                	i=laux.begin();
-                	laux.erase(i);
-              	}else{
-					for(i=laux.begin(); i!=laux.end(); ++i){
+        if(elementos==1){
+        	i=aux.begin();
+        	i=aux.erase(i);
+      	}else{
+					for(i=aux.begin(); i!=aux.end(); ++i){
 						if(DNI==i->getDni()){
-							laux.erase(i);
+							i=aux.erase(i);
 						}
 					}
-              	}
+      	}
+        setArrayClientes(aux);
 			}
 
 	/*-----------------------------------------------------------------------------------------
@@ -502,18 +504,17 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		int elementos;
 		Cliente c;
 		int posicion;
-    	bool resultado=false;
 
 		aux = buscarCliente(apellido);
 		elementos = aux.size();
 
   		if(elementos!=0){
       		imprimirListaComprobando(aux, apellido);
-			cout<<endl<<"Introduce el numero del cliente para modificar: ";
-			cin>>posicion;
-			c = sacarClienteListaComprobando(aux, posicion);
+			    cout<<endl<<"Introduce el numero del cliente para modificar: ";
+			    cin>>posicion;
+			    c = sacarClienteListaComprobando(aux, posicion);
       		modificarClienteListaComprobando(arrayClientes_, c);
-			return (true);
+			    return (true);
 
 		/*PEDIR DATOS, MODIFICAR EN LA LISTA AUX Y
 		MODIFICAR EN LA LISTA GENERAL CON EL DNI

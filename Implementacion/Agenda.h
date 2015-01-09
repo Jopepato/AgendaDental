@@ -41,7 +41,7 @@ public:
 
 	bool borrarCliente(string apellido);
 	Cliente sacarClienteListaComprobando(list <Cliente> &aux,  int posicion);
-	void eliminarClienteListaComprobando(list <Cliente> &laux,  Cliente caux);
+	void eliminarClienteListaComprobando(Cliente caux);
 
 	bool modificarCliente(string apellido);
 	void modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux);

@@ -1,4 +1,4 @@
-Ruben,Medina,45789865,lelelel,si,10,,,,,Plata,4,7,,,,,,
+Ruben,Medina,45789865,lelelel,si,11,,,,,Plata,4,7,,,,,,
 Jose,Perez,45786578,Pues si,no,2,,,,,Montero,-,9,,,,957457854,,
-Jose,Ruano,12345678H,Mi pae es pirotecnico,si,3,@ruanito,,,,La mora,4,7,,,,957432145,658741245,
-Jose,Ruano,478547864,Aro pae,no,1,,,,,La rosa,65,7,correito@gmail.com,,,,658745878,
+Jose,Ruano,12345678H,Mi pae es pirotecnico,si,9,@ruanito,,,,La mora,4,7,,,,957432145,658741245,
+Jose,Ruano,478547864,Aro pae,no,7,,,,,La rosa,65,7,correito@gmail.com,,,,658745878,
