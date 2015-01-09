@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
 
-int opcion=1;
+char opcion='1';
 Agenda aux("Agenda.txt");
 string apellido;
 string respuesta;
@@ -26,7 +26,7 @@ list<Cliente> Buscados;
         cout<<"Fallo al cargar fichero, reiniciando... 99%%"<<endl<<endl;
     }
 
-while(opcion != 0){
+while(opcion != '0'){
 
     cout << "Elija una de las siguientes opciones: " << endl;
 
@@ -51,17 +51,17 @@ while(opcion != 0){
 
     switch(opcion){
 
-      case 0: aux.listaAFichero();
+      case '0': aux.listaAFichero();
               cout << endl<< "*** Gracias por su visita ***" << endl<<endl;
               break;
 
 
-      case 1:
+      case '1':
 
               aux.imprimirLista(aux.getArrayClientes());
               break;
 
-      case 2:
+      case '2':
               Buscados.clear();
               cout << "Introduzca el apellido del cliente que desea buscar" << endl;
               getline(cin,apellido);
@@ -73,6 +73,7 @@ while(opcion != 0){
                 do{
                   cout << "¿Desea añadir el cliente a la agenda?S/N" << endl;
                   cin >> respuesta;
+                  getchar();
                   if(respuesta=="S"){
                     aux.insertarCliente();
                   }
@@ -80,7 +81,7 @@ while(opcion != 0){
               }
               break;
 
-      case 3:
+      case '3':
             if(aux.insertarCliente()){
       				cout<<"Se ha introducido el cliente con exito"<<endl;
       			}else{
@@ -88,7 +89,7 @@ while(opcion != 0){
       			}
               break;
 
-      case 4:
+      case '4':
               cout << "Introduzca el apellido del cliente que desea modificar" << endl;
               getline(cin,apellido);
               if(aux.modificarCliente(apellido)){
@@ -99,13 +100,14 @@ while(opcion != 0){
                 cout << "¿Desea añadir el cliente a la agenda?S/N" << endl;
                 cin >> respuesta;
                 if(respuesta=="S"){
+                  getchar();
                   aux.insertarCliente();
                 }
               }while(respuesta!="S" && respuesta!="N");
               }
               break;
 
-      case 5:
+      case '5':
               cout << "Introduzca el apellido del cliente que desea borrar" << endl;
               getline(cin,apellido);
               if(aux.borrarCliente(apellido)){
@@ -115,17 +117,17 @@ while(opcion != 0){
               }
               break;
 
-      case 6: cout<<endl<<"\t*** CLIENTES FAVORITOS ***"<<endl;
+      case '6': cout<<endl<<"\t*** CLIENTES FAVORITOS ***"<<endl;
               cout<<"-----------------------------------------"<<endl<<endl;
               aux.imprimirLista(aux.muestraFavoritos());
               break;
 
-      case 7: cout<<endl<<"\t*** CLIENTES MAS BUSCADOS ***"<<endl;
+      case '7': cout<<endl<<"\t*** CLIENTES MAS BUSCADOS ***"<<endl;
               cout<<"-----------------------------------------"<<endl<<endl;
               aux.imprimirLista(aux.mostrarClientesMasBuscados());
               break;
 
-      case 8:
+      case '8':
               aux.listaAFichero();
               cout << "Introduzca el nombre que desea darle a la copia: " << endl;
               getline(cin,copia);
@@ -136,7 +138,7 @@ while(opcion != 0){
               }
               break;
 
-      case 9:
+      case '9':
               cout << "Introduzca el nombre de la copia que desea restaurar: " << endl;
               getline(cin,copia);
               if(aux.restaurarCopiaSeguridad(copia)){

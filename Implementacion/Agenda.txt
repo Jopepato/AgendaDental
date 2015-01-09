@@ -1,3 +1,6 @@
-Ruben,Medina,45789865,lelelel,si,11,,,,,Plata,4,7,,,,,,
+Ruben,Medina,45789865,lelelel,si,12,,,,,Plata,4,7,,,,,,
 Jose,Perez,45786578,Pues si,no,2,,,,,Montero,-,9,,,,957457854,,
-Jose Manuel,Ruano,478547864,Aro pae,no,16,,,,,La rosa,65,7,correito@gmail.com,,,,658745878,
+Sergio,Perez,47895645,,no,0,,,,,El almendro,7,45,,,,,,
+Jose Manuel,Ruano,478547864,Aro pae,si,19,,,,,La rosa,65,7,correito@gmail.com,,,,658745878,
+Carlos,Ruano,45789865,jijijijij troleito,no,0,,,,,,,,,,,,,
+Fran,Torres,45789865,Pues si padre...,si,0,,,,,Alcantara,7,45,,,hola@yahoo.es,957845412,,

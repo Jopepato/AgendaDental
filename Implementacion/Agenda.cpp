@@ -75,7 +75,7 @@
 
 
 		//Vamos asignando valores por teclado a las variables
-
+		//Datos obligatorios: nombre, apellidos y dni
 		cout<<"Introduce el nombre: ";
 		getline(cin, nombre);
 		cout<<"Introduce los apellidos: ";
@@ -83,6 +83,7 @@
 		cout<<"Introduce DNI: ";
 		getline(cin, DNI);
 
+		//Datos obligatorios de direccion
 		cout<<endl<<"Introduce calle: ";
 		getline(cin, calle);
 		cout<<"Introduce numero: ";
@@ -93,6 +94,7 @@
 		direccion.puerta=puerta;
 		direccion.portal=portal;
 
+		//Anotaciones para el cliente
 		cout<<endl<<"Introduce anotacion: ";
 		getline(cin, anotaciones);
 
@@ -105,6 +107,7 @@
 					favorito=0;
 				}
 
+		//MENUS con opciones para introducir redes sociales, correos, telefonos (opcionales)
 		do{
 			cout<<endl<<"¿Que redes tiene?"<<endl;
 			cout<<"\t1.Twitter"<<endl;
@@ -115,7 +118,7 @@
 			cout<<endl<<"Opcion: ";
 			cin>>opcionMenu;
 
-					getchar();
+					getchar();//Para que no pille el intro de la opcion
 
 					switch(opcionMenu){
 
@@ -157,7 +160,7 @@
 						cout<<"\t0.Salir"<<endl;
 						cout<<endl<<"Opcion: ";
 						cin>>opcionMenu;
-						getchar();
+						getchar();//Para que no pille el intro de la opcion
 
 						switch(opcionMenu){
 
@@ -194,7 +197,8 @@
 						cout<<"\t0.Salir"<<endl;
 						cout<<endl<<"Opcion: ";
 						cin>>opcionMenu;
-						getchar();
+						getchar();//Para que no pille el intro de la opcion
+
 						switch(opcionMenu){
 
 							case 0: break;
@@ -221,7 +225,6 @@
 			}while(opcionMenu!=0);
 
 		//SE MODIFICAN LAS VARIABLES DEL CLIENTE AUX CON LOS VALORES ASIGNADOS
-
 
 		aux.setNombre(nombre);
 		aux.setApellidos(apellidos);
@@ -255,16 +258,26 @@
 		cout<<endl<<endl<<"Introduce el apellido del cliente: ";
 		getline(cin, apellido);
 
-		aux = buscarCliente(apellido);//Se buscan los clientes que tengan ese apellido, y se devuelve la lista de clientes.
+		//Se buscan los clientes que tengan ese apellido, y se devuelve la lista de clientes.
+		aux = buscarCliente(apellido);
     	elementos = aux.size();
-   		if(elementos==0){
 
-			c = pedirDatos();//Pide los datos por pantalla y devuelve el cliente con esos datos
-			introducirEnLista(c);//Introduce al cliente en la lista
-			ordenarClientes();//Ordena la lista por apellido con el nuevo cliente
+   		if(elementos==0){
+   		//En el caso de que la lista con ese apellido este vacia, es decir, 
+   		//no existen clientes con ese apellido
+
+
+   			//Pide los datos por pantalla y devuelve el cliente con esos datos
+			c = pedirDatos();
+			//Introduce al cliente en la lista
+			introducirEnLista(c);
+			//Ordena la lista por apellido con el nuevo cliente
+			ordenarClientes();
 				return (true);
+
 		}else{
-			imprimirListaComprobando(aux, apellido);//Imprime la lista de clientes con ese apellido
+			//Imprime la lista de clientes con ese apellido
+			imprimirListaComprobando(aux, apellido);
 			do{
 
 				cout<<endl<<"Introduce una opcion: "<<endl;
@@ -276,18 +289,25 @@
 
 				switch(opcion){
 
-					case 0: return(false);
+					case 0: //SALIR, por si el cliente ya esta introducido
+							return(false);
 							break;
 
-					case 1: cout<<endl<<"Introduce el numero del cliente para modificar: ";
+					case 1: //MODIFICAR
+							//Introduces el numero de la lista, 
+							//y te sale un menu con los datos para modificar
+							cout<<endl<<"Introduce el numero del cliente para modificar: ";
 							cin>>posicion;
+							//Saca el cliente de la lista aux y lo modifica en ArrayClientes
 							c = sacarClienteListaComprobando(aux, posicion);
 			      			modificarClienteListaComprobando(arrayClientes_, c);
 			      			ordenarClientes();//Ordena la lista por si se ha modificado el apellido
 			      			return(true);
 			      			break;
 
-			      	case 2:	getchar();
+			      	case 2:	//INTRODUCIR
+			      			//Pide los datos para un usuario y lo introduce en la lista
+			      			getchar();
 			      			c = pedirDatos();//Pide los datos por pantalla y devuelve el cliente con esos datos
 							introducirEnLista(c);//Introduce al cliente en la lista
 							ordenarClientes();//Ordena la lista por apellido con el nuevo cliente
@@ -314,11 +334,15 @@
 									- IMPRIMIR LISTA COMPROBANDO
 
 	-----------------------------------------------------------------------------------------*/
-
+				//Introduce el cliente del parametro al final de la lista
 				void Agenda::introducirEnLista(const Cliente &c){
-						arrayClientes_.push_back(c);
+						list<Cliente> array;
+						array = getArrayClientes();
+						array.push_back(c);
+						setArrayClientes(array);
 					}
 
+					//Imprime la lista de clientes que tengan el apellido del parametro
 					void Agenda::imprimirListaComprobando( list <Cliente> aux, const string &apellido){
 
 						list<Cliente>::iterator i;
@@ -347,7 +371,11 @@
 bool Agenda::ordenarClientes(){
 
   //Para ello hacemos uso de la función sort() de la clase list
-	arrayClientes_.sort(funcionOrdenacion);
+	list<Cliente> aux;
+	aux = getArrayClientes();
+	aux.sort(funcionOrdenacion);
+
+	setArrayClientes(aux);
 
 	return(true);
 
@@ -383,11 +411,13 @@ bool Agenda::ordenarClientes(){
 list <Cliente> Agenda::buscarCliente(string apellido){
 
 	list <Cliente> aux;
-
+	list <Cliente> array;
 	list <Cliente>::iterator it;
 
+	array = getArrayClientes();
+
   //Recorremos toda la lista con un iterator
-	for(it=arrayClientes_.begin();it!=arrayClientes_.end();++it){
+	for(it=array.begin();it!=array.end();++it){
 
 		if(it->getApellidos()==apellido){
 			it->setMasUsados(it->getMasUsados() + 1);
@@ -409,29 +439,30 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 	*******************************************************************************************/
 
-
+	
 
 	bool Agenda::borrarCliente(string apellido){
 
+		//VARIABLES
 		list<Cliente> aux;
 		int elementos;
 		Cliente c;
 		int posicion;
 
+		//Primero busca si existen clientes con ese apellido y devuelve una lista con ellos
 		aux = buscarCliente(apellido);
 
-    elementos = aux.size();
+		//Comprueba si hay clientes con ese apellido o no, es decir, si hay elementos en la lista
+   		elementos = aux.size();
 		if(elementos!=0){
+			//Imprime la lista comprobando el apellido
       		imprimirListaComprobando(aux, apellido);
+      		//Pide el numero del usuario, y segun la posicion lo saca y lo borra de ArrayClientes
 			cout<<endl<<"Introduce el numero del cliente para eliminar: ";
 			cin>>posicion;
 			c = sacarClienteListaComprobando(aux, posicion);
       		eliminarClienteListaComprobando(c);
-      return (true);
-		/*SEGUN LA POSICION, COGER EL CLIENTE DE AUX
-		Y CON EL DNI BORRARLO EN LA LISTA GENERAL
-		DESPUES PASARLO A FICHERO
-		*/
+		    return (true);
 
 		}else{
 
@@ -453,12 +484,14 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 			Cliente Agenda::sacarClienteListaComprobando(list <Cliente> &aux, int posicion){
 
+				//VARIABLES
 				list<Cliente>::iterator i;
 				int j=1;
               	int elementos = aux.size();
 				Cliente caux;
 
-
+				//Devuelve un cliente caux, que este en la posicion del parametro
+				//Comprueba si la lista tiene un elemento o varios 
 	            if(elementos==1){
 	                i=aux.begin();
 	                caux = *i;
@@ -466,7 +499,7 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 					for(i=aux.begin(); i!=aux.end(); ++i){
 						if(j==posicion){
 							caux = *i;
-							//aux.erase(i);
+							
 						}
 						j++;
 					}
@@ -483,6 +516,9 @@ list <Cliente> Agenda::buscarCliente(string apellido){
         		list<Cliente> aux = getArrayClientes();
         		int elementos = aux.size();
 
+        	//Si la lista tiene un elemento lo borra
+        	//Si la lista tienes varios elementos comprueba el dni del cliente del parametro con cada
+        	//dni de los clientes de ArrayClientes
         	if(elementos==1){
         			i=aux.begin();
         			i=aux.erase(i);
@@ -505,26 +541,27 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 	bool Agenda::modificarCliente(string apellido){
 
+		//VARIABLES
 		list<Cliente> aux;
 		int elementos;
 		Cliente c;
 		int posicion;
 
+		//Primero busca si existen clientes con ese apellido y devuelve una lista con ellos
 		aux = buscarCliente(apellido);
+
+		//Comprueba si hay clientes con ese apellido o no, es decir, si hay elementos en la lista
 		elementos = aux.size();
 
   		if(elementos!=0){
-      		imprimirListaComprobando(aux, apellido);
+  				//Imprime la lista comprobando el apellido
+      			imprimirListaComprobando(aux, apellido);
+      			//Pide el numero del usuario, y segun la posicion lo saca y pregunta que desea modificar
 			    cout<<endl<<"Introduce el numero del cliente para modificar: ";
 			    cin>>posicion;
 			    c = sacarClienteListaComprobando(aux, posicion);
-      		modificarClienteListaComprobando(arrayClientes_, c);
-			    return (true);
-
-		/*PEDIR DATOS, MODIFICAR EN LA LISTA AUX Y
-		MODIFICAR EN LA LISTA GENERAL CON EL DNI
-		BORRANDO EL ANTERIOR Y PONIENDO EL NUEVO*/
-
+	      		modificarClienteListaComprobando(arrayClientes_, c);//Lo modifica directamente en arrayClientes
+ 			    return (true);
 		}else{
 			return (false); /*NO SE ENCUENTRA EL CLIENTE Y PREGUNTAR EN EL MAIN SI DESEA INTRODUCIRLO*/
 		}
@@ -541,6 +578,8 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 	void Agenda::modificarClienteListaComprobando(list <Cliente> &laux, Cliente &caux){
 
+
+		//VARIABLES
 		string DNI="";
 		DNI = caux.getDni();
 		list<Cliente>::iterator i;
@@ -573,9 +612,11 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 		string numeroMovil2="";
 		Telefonos telefonos;
 
+		//Busca en toda la lista de arrayClientes, el cliente con el mismo dni que el dni del cliente del parametro.
 		for(i=laux.begin(); i!=laux.end(); ++i){
 			if(DNI==i->getDni()){ //SI EL DNI DEL CLIENTE DE LA LISTA COINCIDE CON EL PARAMETRO DEL DNI
 				do{
+					//Muestra un menu para seleccionar que desea modificar de ese cliente
 					cout<<"¿Que desea modificar?"<<endl;
 					cout<<"\t1.Nombre"<<endl;
 					cout<<"\t2.Apellidos"<<endl;
@@ -751,15 +792,17 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
 
 
-									}while(opcionMenu!=0);
+								}while(opcionMenu!=0);
 									i->setTelefonos(telefonos);
 									break;
 
 								}
 
-					}while(opcion!=0);
-				}
-			}
+					}while(opcion!=0);//dowhile del menu
+					//Despues de cambiar el campo deseado,
+					//el cliente queda modificado en ArrayClientes que se ha pasado por referencia
+				}//if DNI==i->getDni()
+			}//while que recorre la lista
 }
 
 
