@@ -276,18 +276,23 @@
 
 				switch(opcion){
 
-					case 0: break;
+					case 0: return(false);
+							break;
 
 					case 1: cout<<endl<<"Introduce el numero del cliente para modificar: ";
 							cin>>posicion;
 							c = sacarClienteListaComprobando(aux, posicion);
 			      			modificarClienteListaComprobando(arrayClientes_, c);
+			      			ordenarClientes();//Ordena la lista por si se ha modificado el apellido
+			      			return(true);
 			      			break;
 
 			      	case 2:	getchar();
 			      			c = pedirDatos();//Pide los datos por pantalla y devuelve el cliente con esos datos
 							introducirEnLista(c);//Introduce al cliente en la lista
 							ordenarClientes();//Ordena la lista por apellido con el nuevo cliente
+							return(true);
+							break;
 
 					default: cout<<endl<<"OPCION NO VALIDA"<<endl<<endl;
 
@@ -319,7 +324,7 @@
 						list<Cliente>::iterator i;
 						int j=1;
 
-						cout<<endl<<"CLIENTES CON APELLIDO < '"<<apellido<<"'' >"<<endl;
+						cout<<endl<<"CLIENTES CON APELLIDO < '"<<apellido<<"' >"<<endl;
 						cout<<"-----------------------------------------"<<endl<<endl;
 
 						for(i=aux.begin(); i!=aux.end(); ++i){
@@ -417,11 +422,11 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 
     elementos = aux.size();
 		if(elementos!=0){
-      imprimirListaComprobando(aux, apellido);
+      		imprimirListaComprobando(aux, apellido);
 			cout<<endl<<"Introduce el numero del cliente para eliminar: ";
 			cin>>posicion;
 			c = sacarClienteListaComprobando(aux, posicion);
-      eliminarClienteListaComprobando(c);
+      		eliminarClienteListaComprobando(c);
       return (true);
 		/*SEGUN LA POSICION, COGER EL CLIENTE DE AUX
 		Y CON EL DNI BORRARLO EN LA LISTA GENERAL
@@ -470,26 +475,26 @@ list <Cliente> Agenda::buscarCliente(string apellido){
 				return (caux);
 			}
 
-			void Agenda::eliminarClienteListaComprobando(Cliente caux){
+	void Agenda::eliminarClienteListaComprobando(Cliente caux){
 
 				string DNI;
 				DNI = caux.getDni();
 				list<Cliente>::iterator i;
-        list<Cliente> aux = getArrayClientes();
-        int elementos = aux.size();
+        		list<Cliente> aux = getArrayClientes();
+        		int elementos = aux.size();
 
-        if(elementos==1){
-        	i=aux.begin();
-        	i=aux.erase(i);
-      	}else{
+        	if(elementos==1){
+        			i=aux.begin();
+        			i=aux.erase(i);
+      		}else{
 					for(i=aux.begin(); i!=aux.end(); ++i){
 						if(DNI==i->getDni()){
 							i=aux.erase(i);
 						}
 					}
-      	}
-        setArrayClientes(aux);
-			}
+      		}
+        		setArrayClientes(aux);
+	}
 
 	/*-----------------------------------------------------------------------------------------
 
