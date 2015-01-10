@@ -1,4 +1,4 @@
-// jugador_unittest.cc: Juan A. Romero
+// Agenda_unittest.cpp: Brotherhood team
 // A sample program demonstrating using Google C++ testing framework.
 //
 // This sample shows how to write a more complex unit test for a class
@@ -109,4 +109,3 @@ TEST(Agenda, existenClientes) {
 
 
 }
-

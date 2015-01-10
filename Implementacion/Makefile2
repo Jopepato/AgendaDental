@@ -14,7 +14,7 @@
 
 # Points to the root of Google Test, relative to where this file is.
 # Remember to tweak this if you move this file.
-GTEST_DIR = /home/ruben/Documentos/AgendaDental/Implementacion/gtest-1.7.0
+GTEST_DIR = /home/i32petoj/AgendaDental/Implementacion/gtest-1.7.0
 
 # Where to find user code.
 # USER_DIR = ../samples
@@ -79,6 +79,3 @@ Test.o : Test.cpp Agenda.h Agenda.cpp Cliente.h Cliente.cpp
 
 Test : Agenda.o Cliente.o Test.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
-
-
-
