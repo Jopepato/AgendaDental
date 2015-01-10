@@ -156,7 +156,10 @@ while(opcion != '0'){
 
     }
 
-
+    if(opcion!='0'){
+        cout<<endl<<"\tPulse ENTER para continuar...";
+        getchar();
+    }
 
 
 }

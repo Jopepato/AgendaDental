@@ -26,8 +26,12 @@
 
 	Agenda::Agenda(string ficheroAgenda) {
 
+		list <Cliente> aux;
+		aux = getArrayClientes();
+
 		setNombreFichero(ficheroAgenda);
-		arrayClientes_.clear();
+		aux.clear();
+		setArrayClientes(aux);
 	}
 
 
@@ -436,16 +440,19 @@ list <Cliente> Agenda::buscarCliente(string apellido){
     void Agenda::AumentarNumeroCliente(list<Cliente> lista){
       string DNI;
       list<Cliente>::iterator i, j;
+      list<Cliente> aux;
+      aux = getArrayClientes();
 
       //Recorremos la lista que recibimos por parametro
       for(i=lista.begin();i != lista.end();++i){
         DNI = i->getDni();
-        for(j=arrayClientes_.begin(); j != arrayClientes_.end(); ++j){
+        for(j=aux.begin(); j != aux.end(); ++j){
           if(DNI == j->getDni()){
             j->setMasUsados(j->getMasUsados() +1);
           }
         }
       }
+      setArrayClientes(aux);
 
     }
 
