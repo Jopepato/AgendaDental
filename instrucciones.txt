@@ -1,0 +1,3 @@
+Actualizaciones para 2016:
+  1) Aprobar IS
+  2) En caso de que la instruccion 1 ya este completada, descartar este documento
