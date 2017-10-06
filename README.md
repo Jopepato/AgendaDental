@@ -26,3 +26,5 @@ Primero se subirán las historias de usuario y los casos de uso. Para la primera
 - [x] Diagrama de clases. :+1:
 - [x] Diagramas secuenciales. :+1:
 - [x] Implementación. :+1:
+
+Todo perfecto.
